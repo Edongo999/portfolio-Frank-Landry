@@ -44,6 +44,7 @@ It highlights her skills, experiences, and projects through a modern and animate
 
 ## 🎯 Purpose
 Showcase the client’s expertise and projects in digital marketing with a premium, interactive design.
+
 ---
 
 ## ✨ Features
@@ -51,4 +52,4 @@ Showcase the client’s expertise and projects in digital marketing with a premi
 - Smooth animations powered by Framer Motion  
 - Modern icons with Lucide React  
 - Bilingual support (French / English)  
-- Interactive buttons (WhatsApp.)  
+- Interactive buttons (WhatsApp)

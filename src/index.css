@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* ---------------- Global base ---------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --reveal-duration: 1000ms;
+  --reveal-easing: cubic-bezier(.4,0,.2,1); /* ease-out fluide */
+  --reveal-overshoot: 2px;
+}
+
+/* Animation très douce */
+@keyframes reveal-smooth {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.999);
+    filter: blur(2px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(calc(-1 * var(--reveal-overshoot))) scale(1.001);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(6px) scale(0.999);
+  filter: blur(2px);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.reveal--visible {
+  animation: reveal-smooth var(--reveal-duration) var(--reveal-easing) both;
+}
+
+/* Variante fade-only */
+.reveal.reveal--visible--fade {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
+}
