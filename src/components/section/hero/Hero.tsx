@@ -7,63 +7,32 @@ import { Linkedin } from "lucide-react";
 const Hero = () => {
   const { t } = useTranslation();
 
-  // 🔹 Liste des noms et rôles (traduits via i18n)
-  const names = [t("hero.name1"), t("hero.name2")];
-  const roles = [t("hero.role1"), t("hero.role2")];
+  // 🔹 Liste des noms (traduits via i18n)
+  const names = [t("hero.name1"), t("hero.name2"), t("hero.name3")];
 
   // 🔹 États pour le texte affiché
   const [displayedName, setDisplayedName] = useState("");
-  const [displayedRole, setDisplayedRole] = useState("");
   const [nameIndex, setNameIndex] = useState(0);
-  const [roleIndex, setRoleIndex] = useState(0);
   const [nameChar, setNameChar] = useState(0);
-  const [roleChar, setRoleChar] = useState(0);
-  const [phase, setPhase] = useState<"name" | "role" | "deleteRole">("name");
 
-  // 🔹 Effet d’écriture automatique
+  // 🔹 Effet d’écriture automatique (uniquement pour les noms)
   useEffect(() => {
     const timeout = setTimeout(() => {
-      if (phase === "name") {
-        const currentName = names[nameIndex];
-        if (nameChar < currentName.length) {
-          setDisplayedName(currentName.slice(0, nameChar + 1));
-          setNameChar(nameChar + 1);
-        } else {
-          setPhase("role");
-          setRoleChar(0);
-          setDisplayedRole("");
-        }
-      } else if (phase === "role") {
-        const currentRole = roles[roleIndex];
-        if (roleChar < currentRole.length) {
-          setDisplayedRole(currentRole.slice(0, roleChar + 1));
-          setRoleChar(roleChar + 1);
-        } else {
-          setPhase("deleteRole");
-        }
-      } else if (phase === "deleteRole") {
-        const currentRole = roles[roleIndex];
-        if (roleChar > 0) {
-          setDisplayedRole(currentRole.slice(0, roleChar - 1));
-          setRoleChar(roleChar - 1);
-        } else {
-          const nextRoleIndex = roleIndex + 1 < roles.length ? roleIndex + 1 : 0;
-          const nextPhase = nextRoleIndex === 0 ? "name" : "role";
-          const nextNameIndex = nextRoleIndex === 0 ? (nameIndex + 1) % names.length : nameIndex;
-
-          setRoleIndex(nextRoleIndex);
-          setNameIndex(nextNameIndex);
-          setPhase(nextPhase);
-          setNameChar(nextPhase === "name" ? 0 : nameChar);
-          setRoleChar(0);
-          setDisplayedName(nextPhase === "name" ? "" : displayedName);
-          setDisplayedRole("");
-        }
+      const currentName = names[nameIndex];
+      if (nameChar < currentName.length) {
+        setDisplayedName(currentName.slice(0, nameChar + 1));
+        setNameChar(nameChar + 1);
+      } else {
+        // passe au nom suivant
+        const nextNameIndex = (nameIndex + 1) % names.length;
+        setNameIndex(nextNameIndex);
+        setNameChar(0);
+        setDisplayedName("");
       }
-    }, 120);
+    }, 220); // délai augmenté pour un rythme plus professionnel
 
     return () => clearTimeout(timeout);
-  }, [phase, nameChar, roleChar, nameIndex, roleIndex, displayedName]);
+  }, [nameChar, nameIndex, displayedName]);
 
   // 🔹 Variants cascade
   const cascadeVariant: Variants = {
@@ -73,9 +42,8 @@ const Hero = () => {
       y: 0,
       transition: {
         delay: i * 0.3,
-        duration: 0.6,
+        duration: 1.6,
         ease: "easeOut"
-        
       }
     })
   };
@@ -98,22 +66,13 @@ const Hero = () => {
           <span className="text-[#9333EA]">{displayedName}</span>
         </motion.h1>
 
-        <motion.h2
-          className="text-xl md:text-2xl font-semibold text-gray-200"
-          variants={cascadeVariant}
-          initial="hidden"
-          animate="visible"
-          custom={1}
-        >
-          {displayedRole}
-        </motion.h2>
-
+        {/* 🔹 Description */}
         <motion.p
           className="text-gray-400 text-justify text-xl leading-relaxed max-w-xl"
           variants={cascadeVariant}
           initial="hidden"
           animate="visible"
-          custom={2}
+          custom={1}
         >
           {t("hero.description")}
         </motion.p>
@@ -124,14 +83,14 @@ const Hero = () => {
           variants={cascadeVariant}
           initial="hidden"
           animate="visible"
-          custom={3}
+          custom={2}
         >
           <a href="#projects" className="w-full md:w-auto">
             <Button text={t("hero.btnProjects")} />
           </a>
 
           <motion.a
-            href="/public/Document/CV_LEMOUDJI_KEMTA_Miranda.pdf"
+            href="/Document/CV_LEMOUDJI_KEMTA_Miranda.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileTap={{ scale: 0.9 }}
@@ -144,7 +103,7 @@ const Hero = () => {
 
           <div className="group flex justify-center md:justify-start relative">
             <a
-              href="https://linkedin.com/in/tonprofil"
+              href="https://www.linkedin.com/in/miranda-kemta-557788375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-11 h-11 rounded-full 
@@ -157,7 +116,7 @@ const Hero = () => {
             <span
               className="absolute top-full mt-2 left-1/2 -translate-x-1/2 
                          px-3 py-1 rounded-md text-xs md:text-sm font-medium 
-                          text-white whitespace-nowrap 
+                         text-white whitespace-nowrap 
                          opacity-0 group-hover:opacity-100 
                          transition-all duration-300 transform group-hover:-translate-y-1
                          hidden md:block"
@@ -174,7 +133,7 @@ const Hero = () => {
         variants={cascadeVariant}
         initial="hidden"
         animate="visible"
-        custom={4}
+        custom={3}
       >
         <img
           src="/images/Miranda.png"

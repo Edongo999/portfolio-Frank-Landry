@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/solid";
-import emailjs from "@emailjs/browser";
 import Confetti from "react-confetti";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -13,35 +12,38 @@ const Contact = () => {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setStatus("idle");
 
     if (form.current) {
-      emailjs
-        .sendForm(
-          "service_c8xlkze",
-          "template_nwa3j7u",
-          form.current,
-          "xFXuA8DNI-Hv9vgtF"
-        )
-        .then(
-          () => {
-            setLoading(false);
-            setStatus("success");
-            setShowConfetti(true);
-            form.current?.reset();
+      try {
+        const response = await fetch(import.meta.env.VITE_FORMSPREE_URL, {
+          method: "POST",
+          body: new FormData(form.current),
+          headers: { Accept: "application/json" },
+        });
 
-            setTimeout(() => setShowConfetti(false), 5000);
-            setTimeout(() => setStatus("idle"), 4000); // ✅ retour automatique à "Envoyer"
-          },
-          () => {
-            setLoading(false);
-            setStatus("error");
-            setTimeout(() => setStatus("idle"), 4000); // ✅ retour automatique à "Envoyer"
-          }
-        );
+        if (response.ok) {
+          setLoading(false);
+          setStatus("success");
+          setShowConfetti(true);
+          form.current.reset();
+
+          setTimeout(() => setShowConfetti(false), 5000);
+          setTimeout(() => setStatus("idle"), 4000);
+        } else {
+          throw new Error("Form submission failed");
+        }
+      } catch (error) {
+        // Utilise la variable pour éviter l'erreur ESLint
+        // Tu peux enlever le console.error en production si tu veux
+        console.error("Formspree error:", error);
+        setLoading(false);
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 4000);
+      }
     }
   };
 
@@ -110,36 +112,36 @@ const Contact = () => {
               <div className="flex items-center gap-4">
                 <FaLinkedin className="w-7 h-7 text-blue-500" />
                 <a
-                href="https://www.linkedin.com/in/ton-identifiant-linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-200 text-lg hover:text-blue-400 transition-colors"
-              >
-                {t("contact.linkedin")}
-              </a>
+                  href="https://www.linkedin.com/in/miranda-kemta-557788375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-200 text-lg hover:text-blue-400 transition-colors"
+                >
+                  {t("contact.linkedin")}
+                </a>
               </div>
 
               <div className="flex items-center gap-4">
                 <FaPhoneAlt className="w-7 h-7 text-indigo-400" />
-              <a
-                href="https://wa.me/237652491246"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-200 text-lg hover:text-green-400 transition-colors"
-              >
-                {t("contact.phone")}
-              </a>
+                <a
+                  href="https://wa.me/237652491246"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-200 text-lg hover:text-green-400 transition-colors"
+                >
+                  {t("contact.phone")}
+                </a>
               </div>
               <div className="flex items-center gap-4">
                 <FaPhoneAlt className="w-7 h-7 text-indigo-400" />
-              <a
-                href="https://wa.me/237652491246"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-200 text-lg hover:text-green-400 transition-colors"
-              >
-                {t("contact.phone1")}
-              </a>
+                <a
+                  href="https://wa.me/237689363034"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-200 text-lg hover:text-green-400 transition-colors"
+                >
+                  {t("contact.phone1")}
+                </a>
               </div>
               <div className="flex items-center gap-4">
                 <FaMapMarkerAlt className="w-7 h-7 text-indigo-400" />

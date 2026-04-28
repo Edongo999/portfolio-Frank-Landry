@@ -1,9 +1,9 @@
 // src/components/section/projects/Projects.tsx
 import React, { useEffect, useRef, useState } from "react";
-import MediaViewer from "./MediaViewer";
+import MediaViewer from "@/components/section/projects/MediaViewer";
 import ProjectCard, { Project } from "@/components/ui/ProjectCard";
 import useReveal from "@/components/hooks/useReveal";
-import ModalPortal from "./ModalPortal";
+import ModalPortal from "@/components/section/projects/ModalPortal";
 import { motion } from "framer-motion";
 import { Variants } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -162,7 +162,7 @@ const Projects: React.FC = () => {
       results: t("projects.items.beaute.results"),
       impact: t("projects.items.beaute.impact"),
       tools: t("projects.items.beaute.tools"),
-      medias: [{ type: "video", src: "/public/videos/clientvideo0.mp4" }],
+      medias: [{ type: "video", src: "/videos/clientvideo0.mp4" }],
       category: "Client"
     },
 
@@ -174,7 +174,7 @@ const Projects: React.FC = () => {
       results: t("projects.items.carte.results"),
       impact: t("projects.items.carte.impact"),
       tools: t("projects.items.carte.tools"),
-      medias: [{ type: "image", src: "/public/images/carte_de_visite.jpg" }],
+      medias: [{ type: "image", src: "/images/carte_de_visite.jpg" }],
       category: "Client"
     },
       {
@@ -185,7 +185,7 @@ const Projects: React.FC = () => {
     results: t("projects.items.transit.results"),
     impact: t("projects.items.transit.impact"),
     tools: t("projects.items.transit.tools"),
-    medias: [{ type: "image", src: "/public/images/client4.jpg" }],
+    medias: [{ type: "image", src: "/images/client4.jpg" }],
     category: "Client"
   }
 
@@ -323,7 +323,7 @@ const Projects: React.FC = () => {
       <div key={`client-${idx}`} className="relative reveal" data-reveal-index={globalIndex}>
         <ProjectCard
           project={project}
-          isVertical={true} // 👉 forcé en vertical
+          isVertical={true} //  forcé en vertical
           onSelectMedia={(media) => {
             const start = project.medias.findIndex((m) => m.src === media.src);
             openProject(project, start >= 0 ? start : 0);

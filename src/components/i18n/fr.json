@@ -13,8 +13,8 @@
     "greeting": "Bonjour, je suis",
     "name1": "LEMOUDJI KEMTA",
     "name2": "MIRANDA",
+    "name3": "Community Manager",
     "role1": "Community Manager",
-    "role2": "Créatrice de contenu",
     "description": "J’aide les entreprises à développer leur présence digitale et à améliorer leur visibilité grâce à des stratégies marketing efficaces. Mon objectif est de créer du contenu pertinent et engageant, tout en mettant en place des actions qui renforcent l’image de marque et favorisent une meilleure interaction avec la communauté en ligne.",
     "btnProjects": "Voir mes réalisations",
     "btnCV": "Télécharger mon CV",
@@ -233,7 +233,7 @@
           "Gestion des réseaux sociaux : création de contenu, engagement et suivi des performances"
         ],
         "tools": ["Facebook Business Suite", "Canva", "Photoshop", "Premiere Pro"],
-        "certificate": "/public/images/certificat2.jpg"
+        "certificate": "/images/certificat2.jpg"
       },
       "hopital": {
         "role": "Stagiaire Professionnel en Informatique",
@@ -288,7 +288,7 @@
         "period": "2021 – 2022",
         "description": [],
         "tools": [],
-        "certificate": "/public/images/certificat1.jpg"
+        "certificate": "/images/certificat1.jpg"
       },
       "maintenance": {
         "role": "Certificat en Maintenance Informatique",
