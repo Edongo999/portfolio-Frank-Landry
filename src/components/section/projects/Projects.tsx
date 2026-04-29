@@ -46,7 +46,6 @@ const Projects: React.FC = () => {
         { type: "video", src: "/videos/AFRICANA_VIDEO.mp4" },
         { type: "image", src: "/images/AFRICANA1.webp" },
         { type: "image", src: "/images/AFRICANA5.webp" },
-        { type: "image", src: "/images/AFRICANA7.webp" },
         { type: "video", src: "/videos/AFRICANA_VIDEO2.mp4" },
         { type: "image", src: "/images/AFRICANA2.webp" },
         { type: "image", src: "/images/AFRICANA8.webp" },
