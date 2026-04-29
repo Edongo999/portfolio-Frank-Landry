@@ -233,7 +233,7 @@
           "Gestion des réseaux sociaux : création de contenu, engagement et suivi des performances"
         ],
         "tools": ["Facebook Business Suite", "Canva", "Photoshop", "Premiere Pro"],
-        "certificate": "/images/certificat2.jpg"
+        "certificate": "/images/certificat2.webp"
       },
       "hopital": {
         "role": "Stagiaire Professionnel en Informatique",
@@ -288,7 +288,7 @@
         "period": "2021 – 2022",
         "description": [],
         "tools": [],
-        "certificate": "/images/certificat1.jpg"
+        "certificate": "/images/certificat1.webp"
       },
       "maintenance": {
         "role": "Certificat en Maintenance Informatique",

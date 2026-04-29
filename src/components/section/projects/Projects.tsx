@@ -40,20 +40,20 @@ const Projects: React.FC = () => {
       link: "https://www.facebook.com/AFRICANADA",
       medias: [
         { type: "video", src: "/videos/AFRICANA_VIDEO1.mp4" },
-        { type: "image", src: "/images/AFRICANA.jpg" },
-        { type: "image", src: "/images/AFRICANA4.jpg" },
-        { type: "image", src: "/images/AFRICANA6.jpg" },
+        { type: "image", src: "/images/AFRICANA.webp" },
+        { type: "image", src: "/images/AFRICANA4.webp" },
+        { type: "image", src: "/images/AFRICANA6.webp" },
         { type: "video", src: "/videos/AFRICANA_VIDEO.mp4" },
-        { type: "image", src: "/images/AFRICANA1.jpg" },
-        { type: "image", src: "/images/AFRICANA5.jpg" },
-        { type: "image", src: "/images/AFRICANA7.jpg" },
+        { type: "image", src: "/images/AFRICANA1.webp" },
+        { type: "image", src: "/images/AFRICANA5.webp" },
+        { type: "image", src: "/images/AFRICANA7.webp" },
         { type: "video", src: "/videos/AFRICANA_VIDEO2.mp4" },
-        { type: "image", src: "/images/AFRICANA2.jpg" },
-        { type: "image", src: "/images/AFRICANA8.jpg" },
-        { type: "image", src: "/images/AFRICANA9.jpg" },
-        { type: "image", src: "/images/AFRICANA10.jpg" },
-        { type: "image", src: "/images/AFRICANA11.jpg" },
-        { type: "image", src: "/images/AFRICANA3.jpg" }
+        { type: "image", src: "/images/AFRICANA2.webp" },
+        { type: "image", src: "/images/AFRICANA8.webp" },
+        { type: "image", src: "/images/AFRICANA9.webp" },
+        { type: "image", src: "/images/AFRICANA10.webp" },
+        { type: "image", src: "/images/AFRICANA11.webp" },
+        { type: "image", src: "/images/AFRICANA3.webp" }
       ],
       category: "Entreprise"
     },
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
       impact: t("projects.items.wonder.impact"),
       tools: t("projects.items.wonder.tools"),
       link: "https://www.facebook.com/Bekalaind",
-      medias: [{ type: "image", src: "/images/WONDER.jpg" }],
+      medias: [{ type: "image", src: "/images/WONDER.webp" }],
       category: "Entreprise"
     },
 
@@ -80,13 +80,13 @@ const Projects: React.FC = () => {
       impact: t("projects.items.horizon.impact"),
       tools: t("projects.items.horizon.tools"),
       medias: [
-        { type: "image", src: "/images/logo0.jpg" },
-        { type: "image", src: "/images/logo1.jpg" },
-        { type: "image", src: "/images/logo2.jpg" },
-        { type: "image", src: "/images/logo3.jpg" },
-        { type: "image", src: "/images/logo4.jpg" },
-        { type: "image", src: "/images/logo6.jpg" },
-        { type: "image", src: "/images/logo4.jpg" }
+        { type: "image", src: "/images/logo0.webp" },
+        { type: "image", src: "/images/logo1.webp" },
+        { type: "image", src: "/images/logo2.webp" },
+        { type: "image", src: "/images/logo3.webp" },
+        { type: "image", src: "/images/logo4.webp" },
+        { type: "image", src: "/images/logo6.webp" },
+        { type: "image", src: "/images/logo4.webp" }
       ],
       category: "Client"
     },
@@ -99,7 +99,7 @@ const Projects: React.FC = () => {
       results: t("projects.items.onglerie.results"),
       impact: t("projects.items.onglerie.impact"),
       tools: t("projects.items.onglerie.tools"),
-      medias: [{ type: "image", src: "/images/cliente1.jpg" }],
+      medias: [{ type: "image", src: "/images/cliente1.webp" }],
       category: "Client"
     },
 
@@ -111,7 +111,7 @@ const Projects: React.FC = () => {
       results: t("projects.items.import.results"),
       impact: t("projects.items.import.impact"),
       tools: t("projects.items.import.tools"),
-      medias: [{ type: "image", src: "/images/cliente2.jpg" }],
+      medias: [{ type: "image", src: "/images/cliente2.webp" }],
       category: "Client"
     },
 
@@ -123,7 +123,7 @@ const Projects: React.FC = () => {
       results: t("projects.items.gems.results"),
       impact: t("projects.items.gems.impact"),
       tools: t("projects.items.gems.tools"),
-      medias: [{ type: "image", src: "/images/clientEntreprise.jpg" }],
+      medias: [{ type: "image", src: "/images/clientEntreprise.webp" }],
       category: "Client"
     },
 
@@ -135,7 +135,7 @@ const Projects: React.FC = () => {
       results: t("projects.items.multiservices.results"),
       impact: t("projects.items.multiservices.impact"),
       tools: t("projects.items.multiservices.tools"),
-      medias: [{ type: "image", src: "/images/cliente3.jpg" }],
+      medias: [{ type: "image", src: "/images/cliente3.webp" }],
       category: "Client"
     },
 
@@ -148,8 +148,8 @@ const Projects: React.FC = () => {
       impact: t("projects.items.concours.impact"),
       tools: t("projects.items.concours.tools"),
       medias: [
-        { type: "image", src: "/images/candidate0.jpg" },
-        { type: "image", src: "/images/candidate1.jpg" }
+        { type: "image", src: "/images/candidate0.webp" },
+        { type: "image", src: "/images/candidate1.webp" }
       ],
       category: "Client"
     },
@@ -174,7 +174,7 @@ const Projects: React.FC = () => {
       results: t("projects.items.carte.results"),
       impact: t("projects.items.carte.impact"),
       tools: t("projects.items.carte.tools"),
-      medias: [{ type: "image", src: "/images/carte_de_visite.jpg" }],
+      medias: [{ type: "image", src: "/images/carte_de_visite.webp" }],
       category: "Client"
     },
       {
@@ -185,7 +185,7 @@ const Projects: React.FC = () => {
     results: t("projects.items.transit.results"),
     impact: t("projects.items.transit.impact"),
     tools: t("projects.items.transit.tools"),
-    medias: [{ type: "image", src: "/images/client4.jpg" }],
+    medias: [{ type: "image", src: "/images/client4.webp" }],
     category: "Client"
   }
 

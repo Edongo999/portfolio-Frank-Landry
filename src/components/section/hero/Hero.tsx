@@ -136,7 +136,7 @@ const Hero = () => {
         custom={3}
       >
         <img
-          src="/images/Miranda.png"
+          src="/images/Miranda.webp"
           alt={t("hero.imageAlt")}
           className="w-80 h-96 md:w-[23rem] md:h-[26rem] rounded-full shadow-lg animate-updown"
         />
