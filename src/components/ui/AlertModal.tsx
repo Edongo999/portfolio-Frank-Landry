@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { AlertTriangle, Phone } from "lucide-react"; //  Icône téléphone premium
+import { AlertTriangle, Phone } from "lucide-react"; // Icône téléphone premium
 
 type Props = {
   show: boolean;
@@ -52,16 +52,19 @@ const AlertModal: React.FC<Props> = ({ show }) => {
               </motion.div>
             </div>
 
+            {/* Titre protégé */}
             <motion.h2
               id="alert-title"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg sm:text-xl md:text-2xl font-bold text-red-600 mb-2"
+              className="text-lg sm:text-xl md:text-2xl font-bold text-red-600 mb-2 notranslate"
+              translate="no"
             >
-              Portfolio verrouillé
+               Portfolio verrouillé
             </motion.h2>
 
+            {/* Texte avec protection ciblée */}
             <motion.p
               id="alert-desc"
               initial={{ opacity: 0 }}
@@ -69,11 +72,12 @@ const AlertModal: React.FC<Props> = ({ show }) => {
               transition={{ delay: 0.4 }}
               className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-200 mb-4"
             >
-              Ce portfolio est temporairement bloqué.  
-              Veuillez contacter l’entreprise <strong>E-Technology</strong> pour finaliser le paiement et obtenir l’accès complet.
+              Ce <span className="notranslate" translate="no">portfolio</span> est temporairement bloqué.  
+              Veuillez contacter l’entreprise <strong className="notranslate" translate="no">E‑Technology</strong> 
+              pour finaliser le paiement et obtenir l’accès complet.
             </motion.p>
 
-            {/* Bouton WhatsApp avec icône téléphone */}
+            {/* Bouton WhatsApp avec icône téléphone et protection */}
             <motion.a
               href="https://wa.me/237676471601" 
               target="_blank"
@@ -81,10 +85,11 @@ const AlertModal: React.FC<Props> = ({ show }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-2 inline-flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="mt-2 inline-flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-green-500 notranslate"
+              translate="no"
             >
               <Phone className="w-5 h-5" /> {/* Icône téléphone */}
-              Contacter E-Technology
+              Contacter E‑Technology
             </motion.a>
           </motion.div>
         </motion.div>
