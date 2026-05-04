@@ -5,6 +5,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  /* Fond gris uniforme pour tout le site */
+  background-color: bg-gray-900; /* équivalent Tailwind bg-gray-800 */
+  min-height: 100vh;
+}
+
 :root {
   --reveal-duration: 1000ms;
   --reveal-easing: cubic-bezier(.4,0,.2,1); /* ease-out fluide */
