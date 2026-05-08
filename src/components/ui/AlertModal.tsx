@@ -64,18 +64,24 @@ const AlertModal: React.FC<Props> = ({ show }) => {
                Portfolio verrouillé
             </motion.h2>
 
-            {/* Texte avec protection ciblée */}
-            <motion.p
-              id="alert-desc"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-200 mb-4"
-            >
-              Ce <span className="notranslate" translate="no">portfolio</span> est temporairement bloqué.  
-              Veuillez contacter l’entreprise <strong className="notranslate" translate="no">E‑Technology</strong> 
-              pour finaliser le paiement et obtenir l’accès complet.
-            </motion.p>
+           <motion.p
+  id="alert-desc"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.4 }}
+  className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200 mb-4"
+>
+  Ce <span className="notranslate" translate="no">portfolio</span> est temporairement bloqué.  
+  Veuillez contacter l’entreprise{" "}
+  <strong
+    className="notranslate animate-gradient-x bg-gradient-to-r from-[#097c75] via-orange-500 to-blue-600 bg-clip-text text-transparent font-semibold"
+    translate="no"
+  >
+    E‑Technology
+  </strong>{" "}
+  pour finaliser le paiement et obtenir l’accès complet.
+</motion.p>
+
 
             {/* Bouton WhatsApp avec icône téléphone et protection */}
             <motion.a
