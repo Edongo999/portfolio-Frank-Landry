@@ -6,205 +6,300 @@
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
+    "bloc": "Block",
     "close": "Close"
   },
+  "blogModal": {
+  "message": "You are about to enter Franck Landry's blog. Click Continue to discover my articles.",
+  "continue": "Continue"
+},
+"pageLoader": {
+  "message": "Please wait..."
+},
 
-    "hero": {
-    "greeting": "Hello, I am",
-    "name1": "LEMOUDJI KEMTA",
-    "name2": "MIRANDA",
-    "role1": "Community Manager",
-    "role2": "Content Creator",
-    "description": "I help businesses grow their digital presence and improve visibility through effective marketing strategies. My goal is to create relevant and engaging content while implementing actions that strengthen brand image and foster better interaction with the online community.",
-    "btnProjects": "View my projects",
-    "btnCV": "Download my CV",
+
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name1": "EDONGO AMENGNE",
+    "name2": "FRANK LANDRY",
+    "name3": "TRAINER",
+    "role1": "Full-Stack Developer",
+    "role2": "UI/UX Designer",
+    "role3": "IT Maintenance Specialist",
+    "role4": "Content Creator",
+    "role5": "Trainer",
+    "description": "Passionate about digital technology, I design modern websites, business websites, as well as web and desktop applications. I also create professional visual materials such as flyers, posters and visual identities, while providing IT maintenance to deliver complete and reliable solutions.",
+    "btnProjects": "Discover my projects",
+    "btnCV": "Contact me",
     "linkedinTooltip": "My LinkedIn profile",
-    "imageAlt": "Portrait of Miranda"
+    "githubTooltip": "My GitHub",
+    "imageAlt": "Premium portrait of Landry"
   },
 
   "about": {
-    "title": "About Me",
-    "subtitle": "Who am I?",
-    "intro": "Passionate about digital marketing, I use my creativity and expertise to help businesses strengthen their online visibility. Each project is an opportunity to transform an idea into a dynamic digital strategy capable of capturing attention and creating a real connection with audiences.",
-    "point1": "Designing digital strategies tailored to brand needs.",
-    "point2": "Creating engaging visual and video content for social media.",
-    "point3": "Managing communities to strengthen interaction and loyalty.",
-    "point4": "Analyzing performance to measure impact and optimize campaigns.",
-    "goal": "My goal is to support businesses in their growth by offering modern, effective and sustainable solutions.",
-    "cta": "Let's work together",
-    "valuesTitle": "My Values",
+    "title": "About",
+    "me": "Me",
+    "badge": "My profile",
+    "who": "Who am I?",
+
+    "description": "I am a full-stack web developer and graphic designer, passionate about creating modern, high-performance applications and websites tailored to users' needs. I design interactive interfaces, develop backend solutions and databases, and also create professional visual materials. My background in software engineering has allowed me to develop an approach that is both technical and creative, with a strong focus on user experience.",
+
+    "valuesTitle": "My values",
+
     "values": {
-      "creativity": "Digital Creativity",
-      "impact": "Measurable Impact",
-      "engagement": "Social Engagement",
-      "innovation": "Continuous Innovation",
-      "teamwork": "Teamwork",
-      "client": "Client Focus"
+      "cleanCode": "Clean Code",
+      "ux": "User Experience",
+      "accessibility": "Accessibility",
+      "learning": "Continuous Learning"
+    },
+
+    "downloadCV": "Download my CV"
+  },
+  
+  "cvModal": {
+    "title": "CV Request",
+    "heading": "Would you like to receive my CV?",
+    "intro": "You are about to request the CV of",
+    "name": "Frank Landry",
+    "instructions": "Please leave me a message specifying your request. I will reply as soon as possible to send you my CV.",
+    "btnMessage": "Leave a message",
+    "btnCancel": "Cancel"
+  },
+
+
+  "skills": {
+    "badge": "My skills",
+    "title": "What I",
+    "me": "master",
+    "description": "I develop modern, high-performance web solutions tailored to the specific needs of each project. From designing intuitive interfaces to developing and integrating advanced features, all the way to secure deployment, I approach every stage with precision and creativity. My goal is to deliver reliable, visually appealing and scalable digital experiences that enhance each client's image and success.",
+    "mastery": "Proficiency",
+    "count": "skills available",
+    "footer": "Skills that I continue to improve through my projects and experiences.",
+
+    "filters": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "desktop": "Desktop Applications"
+
+    },
+"items": {
+  "html": "I use it to structure my pages and organize interface content.",
+  "css": "I use it to create modern and responsive interfaces.",
+  "react": "I use it to build dynamic and interactive interfaces.",
+  "typescript": "I use it to make my code safer and improve the reliability of my React applications.",
+  "tailwind": "I use it to quickly design responsive interfaces.",
+  "php": "I use it to develop backend logic and server-side features.",
+  "laravel": "I use it to develop backend systems and manage business logic.",
+  "mysql": "I use it to store, organize and manage application data.",
+  "supabase": "I use it to host my PostgreSQL databases online, manage authentication, and enable realtime features.",
+  "git": "I use it to version my projects and track changes.",
+  "postman": "I use it to test my APIs and verify their responses.",
+  "adobeXd": "I use it to design mockups and prepare user experiences.",
+  "photoshop": "I use it to create, edit and optimize visual materials for my projects.",
+  "illustrator": "I use it to create logos, illustrations and vector graphic elements.",
+  "vercel": "I use it to deploy my frontend applications and make them accessible online.",
+  "render": "I use it to host my backend Laravel applications and connect them to my databases.",
+  "java": "I use it to develop robust and cross-platform desktop applications.",
+  "python": "I use it to develop desktop applications and automate complex tasks."
+
+
     }
   },
 
-  "skills": {
-    "title": "My Skills",
-    "intro": "Passionate about digital marketing, I have progressively built a rich and diverse expertise,\ndeveloping strong skills in strategy, content creation and performance analysis,\nwhich today allow me to support businesses in managing their online presence effectively, consistently and sustainably.",
-    "marketing": {
-      "title": "Digital Marketing",
-      "item1": "Social media management",
-      "item2": "Digital strategy",
-      "item3": "Community engagement"
-    },
-    "content": {
-      "title": "Content Creation",
-      "item1": "Visuals & posts",
-      "item2": "Video editing",
-      "item3": "Social publications"
-    },
-    "analysis": {
-      "title": "Analysis & Tools",
-      "item1": "Reporting",
-      "item2": "Performance analysis",
-      "item3": "Campaign optimization"
-    },
-    "other": {
-      "title": "Other Skills",
-      "item1": "Graphic design",
-      "item2": "IT maintenance",
-      "item3": "Office administration",
-      "item4": "Customer service",
-      "item5": "Data entry"
-    },
-    "showMore": "Show more",
-    "showLess": "Show less"
-  },
-
   "projects": {
-    "title": "My Projects",
-    "intro": "My journey in digital marketing has allowed me to create a wide range of creative projects, including visuals, posters, flyers, logos and social media content, with the constant goal of helping both businesses and individuals communicate effectively and enhance their identity.",
+    "badge": "My Creations",
+    "title": "My",
+    "me": "Projects",
 
-    "view": "View",
+    "description": "Discover a selection of projects created with passion and attention to detail, combining web development, design and digital creation. Each project is designed to meet a specific need, with particular attention to user experience, aesthetics and performance.",
+
+    "view": "View project",
+    "consultSite": "Visit website",
+    "consultApplication": "Open application",
     "role": "Role",
     "results": "Results",
     "impact": "Impact",
     "tools": "Tools",
 
     "categories": {
-      "entreprise": "Company",
-      "client": "Client"
+      "all": "All",
+      "web": "Web Development",
+      "design": "Design",
+      "desktop": "Applications Desktop"
     },
+    "counter": {
+    "single": "project",
+    "multiple": "projects"
+  },
 
     "items": {
-        "africanada": {
-            "title": "AFRICANADA Social Media Management",
-            "description": "Complete social media management: visual content creation, post scheduling, and community engagement.",
-            "descriptionLong": "Full management of AFRICANADA’s social media: design of visuals, writing posts, editorial calendar, daily community engagement, and performance tracking. Coordination of promotional campaigns and adaptation of content based on user feedback.",
-            "role": "Community Manager & Executive Assistant",
-            "results": "Increased engagement, improved visibility, and stronger customer interactions.",
-            "impact": "Strengthened brand image and enhanced community loyalty online.",
-            "tools": "Canva Pro, Photoshop, CapCut"
-          },
-
-      "wonder": {
-        "title": "Digital Marketing – CB WONDER Enterprise",
-        "description": "Participation in digital marketing: visuals, competitive analysis, web design, and email campaigns.",
-        "descriptionLong": "Creation of visuals, competitive analysis, basic web integration, and targeted email campaigns.",
-        "role": "Digital Marketing Intern",
-        "results": "Improved digital presence and optimized content.",
-        "impact": "Direct contribution to the company’s visibility and improved consistency of marketing campaigns.",
-        "tools": "Canva Pro"
+      "siteVirtuel": {
+        "title": "E-Technology Project – Business Website",
+        "description": "Mockup and business website created as part of my online company, E-Technology.",
+        "descriptionLong": "Design and development of a modern business website created to showcase the services and identity of my virtual company, E-Technology. The project was designed as a professional showcase, with particular attention to the interface, navigation and user experience.",
+        "role": "Web Developer & Designer",
+        "results": "A modern professional showcase website presenting the company's activities and services.",
+        "impact": "Strengthened my skills in interface design, React development and integration of modern solutions.",
+        "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
       },
 
-
-      "horizon": {
-        "title": "Logo Proposals – HORIZON",
-        "description": "Creation of several modern and minimalist logo variations.",
-        "descriptionLong": "Design of multiple graphic proposals to modernize the visual identity.",
-        "role": "Graphic Designer",
-        "results": "Several options delivered to the client.",
-        "impact": "Strengthened the company’s visual identity.",
-        "tools": "Illustrator, Photoshop"
+      "111Studio": {
+        "title": "111Studio – Business Website",
+        "description": "Modern business website for a photography company specializing in weddings and content creation.",
+        "descriptionLong": "Development of a premium website designed to showcase the services of 111Studio, a creative company specializing in wedding photography, major events and visual content production.",
+        "role": "Full-Stack Developer",
+        "results": "A modern and responsive business website deployed to strengthen the brand's image.",
+        "impact": "Demonstrated my ability to transform a company's identity into a modern and interactive web experience.",
+        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
       },
 
-      "onglerie": {
-        "title": "Premium Nail Salon Poster",
-        "description": "Elegant poster promoting the salon’s services.",
-        "descriptionLong": "High-end visual design aimed at a feminine audience to reinforce the salon’s premium image.",
+      "portfolioMarketing": {
+        "title": "Digital Marketing Portfolio",
+        "description": "Modern portfolio designed to showcase the services of a digital marketing professional.",
+        "descriptionLong": "Design and development of a modern portfolio created to showcase the skills, services and work of a digital marketing professional.",
+        "role": "Frontend Developer",
+        "results": "A modern professional portfolio developed and deployed to effectively showcase the client's business.",
+        "impact": "Demonstrated my ability to transform a professional identity into a modern and interactive web experience.",
+        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+      },
+
+      "imageCompression": {
+        "title": "Image Compression Application",
+        "description": "Modern web application for easily compressing and converting multimedia files.",
+        "descriptionLong": "Development of a modern web application designed to simplify multimedia file optimization. The application allows users to compress and convert files through a simple and intuitive interface.",
+        "role": "Frontend Developer",
+        "results": "A functional application allowing users to easily optimize files through a responsive interface.",
+        "impact": "Demonstrated my skills in designing practical, user-focused web tools.",
+        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+      },
+
+      "photographerPortfolio": {
+        "title": "Portfolio for Photographers",
+        "description": "Modern portfolio designed to showcase photographers' work and projects online.",
+        "descriptionLong": "Design and development of a portfolio for photographers who want to present their work professionally. The interface highlights visual content, provides smooth navigation and adapts to all screen sizes for an optimal experience.",
+        "role": "Frontend Developer",
+        "results": "A modern and responsive portfolio designed to effectively showcase photographic work and strengthen the professional image.",
+        "impact": "Demonstrated my ability to design interfaces tailored to creative professions, focused on visual content and user experience.",
+        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+      },
+
+      "adminDashboard": {
+        "title": "Admin Dashboard",
+        "description": "Modern and responsive dashboard created during a technical assessment to display statistics.",
+        "descriptionLong": "Development of a modern admin dashboard for visualizing statistics, security indicators and user management information.",
+        "role": "Frontend Developer",
+        "results": "A functional dashboard providing a clear interface, detailed statistics and useful management indicators.",
+        "impact": "Demonstrated my ability to design modern and well-structured administration interfaces.",
+        "tools": "React.js, Tailwind CSS, Recharts, Lucide React"
+      },
+
+      "fecacfop": {
+        "title": "Internship – FECACFOP Web Platform",
+        "description": "Web platform developed during my internship to centralize training programs and job opportunities.",
+        "descriptionLong": "Development of a web platform designed to centralize information about professional training programs and facilitate the publication of job opportunities for FECACFOP. The project was interrupted following a management decision.",
+        "role": "Web Developer Intern",
+        "results": "A first functional version of the platform completed before the project was put on hold.",
+        "impact": "Strengthened my web development skills with PHP, MySQL, HTML and CSS in a professional environment.",
+        "tools": "PHP, MySQL, HTML, CSS"
+      },
+
+      "javaDesktop": {
+        "title": "Internship – Java Desktop Application",
+        "description": "Desktop application developed in Java to facilitate the management of trainee information.",
+        "descriptionLong": "Development of a desktop application designed to facilitate the management, tracking and organization of information related to trainees.",
+        "role": "Java Developer Intern",
+        "results": "An operational desktop application providing structured management of trainee information.",
+        "impact": "Strengthened my skills in Java, desktop interfaces and database management.",
+        "tools": "Java, NetBeans, MySQL"
+      },
+
+      "salons": {
+        "title": "Visual Campaigns – Salons & Dressmaker",
+        "description": "Creation of modern flyers to promote the services of hair salons and a dressmaker.",
+        "descriptionLong": "Design of several visual materials intended to promote the services of hair salons and a dressmaker.",
         "role": "Graphic Designer",
-        "results": "Aesthetic and marketing‑optimized poster.",
-        "impact": "Positioned the salon as a local reference.",
+        "results": "Several visual materials created to strengthen professional communication.",
+        "impact": "Improved the visibility and visual communication of the businesses.",
         "tools": "Photoshop, Illustrator"
       },
 
-      "import": {
-        "title": "Import‑Export China Flyer",
-        "description": "Professional flyer highlighting import‑export services.",
-        "descriptionLong": "Design of a flyer showcasing reliability, speed and security of import‑export services.",
+      "visualEtechnology": {
+        "title": "Visual Identity – E-Technology",
+        "description": "Creation of a visual identity including a professional logo and promotional materials.",
+        "descriptionLong": "Design of the visual identity of my virtual company, E-Technology, through the creation of a logo and several promotional graphic materials.",
         "role": "Graphic Designer",
-        "results": "Effective marketing material attracting new clients.",
-        "impact": "Strengthened credibility with partners.",
+        "results": "A professional visual identity consisting of a logo and consistent graphic materials.",
+        "impact": "Developed my skills in visual identity, graphic design and communication.",
         "tools": "Illustrator, Photoshop"
       },
 
-      "gems": {
-        "title": "Gems Immo Flyer",
-        "description": "Professional flyer for on‑site visits.",
-        "descriptionLong": "Design of a flyer highlighting transparency, availability and importance of on‑site visits.",
+      "wedding": {
+        "title": "Wedding Invitations & Posters",
+        "description": "Creation of personalized invitations and posters for different wedding ceremonies.",
+        "descriptionLong": "Design of personalized invitation cards and posters for several couples, with an elegant and refined style.",
         "role": "Graphic Designer",
-        "results": "Improved visibility of company activities.",
-        "impact": "Increased participation in site visits.",
+        "results": "Several personalized materials created to elegantly support different wedding ceremonies.",
+        "impact": "Enhanced events through elegant visual communication.",
+        "tools": "Photoshop"
+      },
+
+      "motorcycle": {
+        "title": "Logo & Poster – Motorcycle Rental",
+        "description": "Creation of a modern logo and promotional poster for a specialized business.",
+        "descriptionLong": "Design of a visual identity including a logo and promotional poster for a company specializing in motorcycle rental.",
+        "role": "Graphic Designer",
+        "results": "A professional visual identity consisting of a logo and a consistent promotional material.",
+        "impact": "Strengthened the company's professional image.",
         "tools": "Illustrator, Photoshop"
       },
 
-      "multiservices": {
-        "title": "Multi‑Service Entrepreneur Poster",
-        "description": "Professional poster showcasing various services.",
-        "descriptionLong": "Poster presenting administrative assistance, graphic design, copywriting and web content.",
+      "trainingCenters": {
+        "title": "Flyers – Training Centers",
+        "description": "Creation of flyers to promote the activities of tutoring and computer training centers.",
+        "descriptionLong": "Design of several flyers intended to promote the services of tutoring and computer training centers.",
         "role": "Graphic Designer",
-        "results": "Effective marketing support promoting all services.",
-        "impact": "Increased collaboration requests.",
-        "tools": "Illustrator, Photoshop, InDesign"
+        "results": "Several communication materials created to effectively present the centers' activities.",
+        "impact": "Improved the presentation and visual communication of the services.",
+        "tools": "Photoshop, Illustrator"
       },
 
-      "concours": {
-        "title": "Contest Poster – Two Candidates",
-        "description": "Personalized poster for two participants.",
-        "descriptionLong": "Poster highlighting photos, background and skills of the candidates.",
+      "businessCards": {
+        "title": "Business Cards & Logos",
+        "description": "Creation of modern business cards and professional logos for different clients.",
+        "descriptionLong": "Design of several business cards and logos for various professionals and businesses.",
         "role": "Graphic Designer",
-        "results": "Improved visibility with the jury and public.",
-        "impact": "Enhanced presentation of candidates’ profiles.",
-        "tools": "Illustrator, Photoshop, InDesign"
+        "results": "Several professional identities and materials created to meet different clients' needs.",
+        "impact": "Strengthened the professional image of the clients.",
+        "tools": "Photoshop, Illustrator"
       },
 
-      "beaute": {
-        "title": "Beauty Care Flyer",
-        "description": "Professional flyer for beauty and wellness services.",
-        "descriptionLong": "Elegant and soothing flyer design with premium visuals.",
+      "twoJM": {
+        "title": "Posters – 2JM Company",
+        "description": "Design of three promotional posters for a company specializing in psychology.",
+        "descriptionLong": "Creation of three promotional posters designed to present the services of a company specializing in psychology.",
         "role": "Graphic Designer",
-        "results": "More appointments and stronger local reputation.",
-        "impact": "Customer loyalty through aesthetic communication.",
-        "tools": "Photoshop, Illustrator, InDesign"
+        "results": "Three professional posters created to clearly present the company's services.",
+        "impact": "Improved the company's presentation and visual communication.",
+        "tools": "Photoshop"
       },
 
-      "carte": {
-        "title": "Business Card",
-        "description": "Clean and professional business card.",
-        "descriptionLong": "Vector file and color variations for printing.",
-        "role": "Designer",
-        "results": "Successfully distributed during networking events.",
-        "impact": "Strengthened professional image.",
-        "tools": "Illustrator"
-      },
-         "transit": {
-      "title": "FN Transit Flyer",
-      "description": "Promotional flyer for an import and transit company.",
-      "descriptionLong": "Design of a clear and engaging visual highlighting FN Transit’s international transport services. The flyer presents destinations, pricing, and contact details in a professional and accessible way.",
-      "role": "Graphic Designer",
-      "results": "Used by the client to promote services to prospects and partners.",
-      "impact": "Enhanced visibility and strengthened credibility with potential customers.",
-      "tools": "Photoshop, Illustrator"
-    }
+      "churches": {
+        "title": "Flyers – Churches & Priest",
+        "description": "Design of personalized flyers to present religious activities and events.",
+        "descriptionLong": "Creation of several graphic materials designed to promote church activities and events, as well as a priest's initiatives. The visuals were designed to reflect the religious identity, strengthen communication with the congregation and provide a clear, aesthetic and professional presentation.",
+        "role": "Graphic Designer",
+        "results": "Creation of unique and customized flyers providing better visibility for religious events and more effective communication.",
+        "impact": "Improved the distribution of information to the public and enhanced the presentation of religious activities.",
+        "tools": "Photoshop"
+      }
     }
   },
 
   "media": {
+    "pause": "Pause",
+    "play": "Play",
     "prev": "Previous",
     "next": "Next",
     "mute": "Mute",
@@ -214,118 +309,200 @@
   "modal": {
     "close": "Close"
   },
-  
+
   "experience": {
-    "title": "My Experience & Training",
-    "viewCertificate": "View certificate",
-    "certificateAlt": "Training certificate",
+    "badge": "My Experience & Education",
+
+    "title": {
+      "first": "My",
+      "highlight": "Journey"
+    },
+
+    "description": "Discover my journey through my professional experiences, personal projects and education. Each step has allowed me to progressively develop my skills in web development, graphic design, IT and knowledge sharing, while building a versatile approach focused on creating practical digital solutions.",
+
     "items": {
-      "africanada": {
-        "role": "Executive Assistant & Community Manager",
-        "company": "AFRICANADA",
-        "location": "Douala, Cameroon (Littoral Region)",
-        "period": "January 2025 – August 2025",
-        "description": [
-          "Strategic planning and agenda management",
-          "Administrative support: handling correspondence, emails, and organizing documents",
-          "Client reception and management of online interactions",
-          "Creation of visuals and video editing for communication",
-          "Social media management: content creation, engagement, and performance tracking"
-        ],
-        "tools": ["Facebook Business Suite", "Canva", "Photoshop", "Premiere Pro"],
-        "certificate": "/public/images/certificat2.jpg"
+      "trainer": {
+        "title": "Trainer in Office Tools, Design & IT Maintenance",
+        "place": "Joseph and Julienne Professional Training Center – Douala",
+        "date": "July - September 2026",
+        "description": "Training learners in computer basics, office tools and graphic design. Providing practical IT maintenance training to develop their technical independence and strengthen their digital skills."
       },
-      "hopital": {
-        "role": "Professional IT Intern",
-        "company": "Gyneco-Obstetric and Pediatric Hospital",
-        "location": "Douala, Cameroon (Littoral Region)",
-        "period": "February 2024 – April 2024",
-        "description": [
-          "Diagnosis and troubleshooting issues in Microsoft Word",
-          "Resolving printer and scanner problems",
-          "Data entry management in Excel",
-          "Modem configuration",
-          "Virus removal on staff computers and USB drives"
-        ],
-        "tools": ["MS Word", "MS Excel", "IT Maintenance"]
+
+      "etechnology": {
+        "title": "E-Technology Online Company – Personal Projects",
+        "place": "Personal Projects",
+        "date": "February - June 2026",
+        "description": "Creation of a virtual structure to simulate a professional environment and strengthen my skills in web development and design. All projects are hosted on Vercel."
       },
-      "wonder": {
-        "role": "Digital Marketing Intern",
-        "company": "CB WONDER Enterprise",
-        "location": "Douala, Cameroon (Littoral Region)",
-        "period": "June 2023 – August 2023",
-        "description": [
-          "Managing social media pages (Facebook, Twitter, Instagram)",
-          "Creating visual content and websites",
-          "Competitive analysis and email campaigns"
-        ],
-        "tools": ["Facebook", "Twitter", "Instagram", "WordPress", "Mailchimp"]
+
+      "companyWebsite": {
+        "title": "Online Company Website",
+        "place": "E-Technology Virtual Company",
+        "date": "February - June 2026",
+        "description": "Creation of the mockup and development of the virtual company's business website with database integration through Supabase."
       },
-      "serveuse": {
-        "role": "Waitress",
-        "company": "B'SSADI Galeries Restaurant",
-        "location": "Douala, Cameroon (Littoral Region)",
-        "period": "June 2020 – September 2020",
-        "description": [
-          "Welcoming customers and menu recommendations",
-          "Responding to requests and ensuring satisfaction",
-          "Order management and communication with the kitchen"
-        ],
-        "tools": ["Customer service", "Communication", "Organization"]
+
+      "photographerPortfolio": {
+        "title": "Demonstration Portfolio for Photographers",
+        "place": "E-Technology Online Company",
+        "date": "February - June 2026",
+        "description": "Design of a demonstration portfolio allowing photographers to professionally showcase their galleries online. The portfolio highlights their skills and allows clients to contact them directly through the platform."
       },
-      "marketing": {
-        "role": "Certificate in Digital Marketing",
-        "company": "Professional Training Center of Arts and Crafts",
-        "location": "Douala, Cameroon (Littoral Region)",
-        "period": "2021 – 2022",
-        "description": [],
-        "tools": [],
-        "certificate": "/public/images/certificat1.jpg"
+
+      "digitalMarketing": {
+        "title": "Digital Marketing Portfolio",
+        "place": "E-Technology Online Company",
+        "date": "February - June 2026",
+        "description": "Creation of a portfolio for a digital marketing client. The project is currently offline due to non-payment."
       },
-      "maintenance": {
-        "role": "Certificate in IT Maintenance",
-        "company": "Professional Training Center of Arts and Crafts",
-        "location": "Douala, Cameroon (Littoral Region)",
-        "period": "2021 – 2022",
-        "description": [],
-        "tools": []
+
+      "imageCompressor": {
+        "title": "Frontend Image Conversion & Compression Application",
+        "place": "Online Company",
+        "date": "February - June 2026",
+        "description": "Development of a 100% frontend application allowing users to convert, compress and optimize images directly from their browser."
+      },
+
+      "fecacfop": {
+        "title": "Full-Stack Developer – Academic Internship",
+        "place": "FECACFOP (Cameroonian Federation of Professional Training Centers)",
+        "date": "March 2025 - June 2025",
+        "description": "Development of a web platform for FECACFOP including a PHP backend and a frontend built with HTML, CSS, JavaScript and Bootstrap."
+      },
+
+      "licence": {
+        "title": "Bachelor's Degree in Software Engineering",
+        "place": "University Institute of Technology of Douala (IUT)",
+        "date": "2024 - 2025",
+        "description": "Advanced training in software development, system design and project management."
+      },
+
+      "hgoped": {
+        "title": "Full-Stack Developer – Academic Internship",
+        "place": "HGOPED (Gyneco-Obstetric and Pediatric Hospital of Douala)",
+        "date": "2023 - 2024",
+        "description": "Development of a native Java desktop application for managing trainees."
+      },
+
+      "dut": {
+        "title": "DUT in Software Engineering",
+        "place": "University Institute of Technology of Douala (IUT)",
+        "date": "2023 - 2024",
+        "description": "Fundamental training in computer science covering software development, networks and computer systems."
       }
     }
   },
 
-"contact": {
-  "title": "Contact Me",
-  "intro": "Do you have a project, a question or a collaboration in mind? Feel free to contact me via the form or directly by phone or email. I am available to discuss and respond quickly.",
-  "location": "Douala, Cameroon",
-  "linkedin": "My LinkedIn Profile",
-  "email": "lemoudjimiranda@gmail.com",
-  "phone": "(+237) 652 49 12 46",
-  "phone1": "(+237) 689 36 30 34",
-  "form": {
-    "name": "Your name",
-    "email": "Your email",
-    "phone": "Your phone",
-    "service": "Requested service",
-    "details": "Describe your project...",
-    "send": "Send",
-    "success": "Message sent",
-    "error": "Error"
-  }
+  
+  "temoignages": {
+    "badge": "Testimonials",
+    "title": "They speak about my work",
+    "description": "Discover authentic testimonials that highlight the quality, impact, and added value of my work through diverse and inspiring experiences.",
+    "hint": "Swipe to navigate →",
+    "items": {
+      "1": {
+        "nom": "Miranda",
+        "texte": "Landry designed my portfolio with a modern and elegant presentation. Thanks to this site, I was able to impress recruiters and secure new opportunities.",
+        "type": "Portfolio"
+      },
+      "2": {
+        "nom": "Local company",
+        "texte": "The posters created for our center had an immediate impact. They attracted attention and gave a professional image to our activities.",
+        "type": "Posters"
+      },
+      "3": {
+        "nom": "NDIOMO BOMOKIN",
+        "texte": "The maintenance performed on my computer was quick and efficient. I was able to resume my work without interruption.",
+        "type": "Maintenance"
+      },
+      "4": {
+        "nom": "Gladys",
+        "texte": "His advice helped me better organize my digital activity. A real added value for my business.",
+        "type": "Consulting"
+      },
+      "5": {
+        "nom": "Training center",
+        "texte": "Landry trained our learners with pedagogy and professionalism. His practical courses allowed participants to progress quickly and gain autonomy.",
+        "type": "Training"
+      }
+    }
+  },
+
+"blog": {
+  "badge": "News",
+
+  "title": {
+    "part1": "My creations",
+    "part2": "& inspirations"
+  },
+
+  "description": "Discover my latest work, thoughts, tips and projects around design and web development.",
+
+  "card": {
+    "viewImage": "View image",
+    "viewImageArticle": "View the image of the article {{title}}",
+    "readMore": "Read more"
+  },
+
+  "footer": {
+    "latestPosts": "My latest posts"
+  },
+
+  "imageViewer": {
+    "close": "Close",
+    "reset": "Reset",
+    "preview": "Preview"
+  },
+  "share": {
+    "button": "Share",
+    "whatsapp": "Share on WhatsApp",
+    "facebook": "Share on Facebook",
+    "linkedin": "Share on LinkedIn"
+  },
+  "category": {
+  "Actu": "News",
+  "Design": "Design",
+  "Tech": "Tech"
+}
 },
 
-"footer": {
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "experiences": "Experiences",
-    "contact": "Contact"
+  "contact": {
+    "badge": "Let's get in touch",
+    "title": "Contact",
+    "me": "Me",
+    "description": "Need information or want to discuss a project? I'm available to answer your questions and guide you.",
+    "imageAlt": "Illustration representing contact",
+
+    "phone": "+237 659 322 137",
+    "phone1": "+237 689 363 034",
+    "email": "landryamengne@gmail.com",
+    "location": "Douala, Cameroon",
+
+    "form": {
+      "name": "Your name",
+      "email": "Your email address",
+      "phone": "Your phone number",
+      "service": "Service needed",
+      "details": "Describe your project or your needs...",
+      "send": "Send message",
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    }
   },
-  "portfolio": "Portfolio of",
-  "company": "E‑Technology",
-  "rights": "All rights reserved"
-}
 
+  "footer": {
+    "company": "Frank Landry",
+    "tagline": "Web Developer & Designer",
+    "rights": "All rights reserved.",
+    "madeWith": "Designed with passion for the web.",
+    "backToTop": "Back to top",
 
-
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "experiences": "Experience",
+      "contact": "Contact"
+    }
+  }
 }

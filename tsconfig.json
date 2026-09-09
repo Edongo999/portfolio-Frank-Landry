@@ -3,17 +3,17 @@
     "target": "ESNext",
     "module": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "jsx": "react-jsx",          // ← très important pour JSX en TSX
-    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",   // corrigé
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]           // pour utiliser @ comme alias
+      "@/*": ["./src/*"]
     },
-     "resolveJsonModule": true    
+    "resolveJsonModule": true,
+    "ignoreDeprecations": "6.0"      // masque les warnings si besoin
   },
   "include": ["src", "vite-env.d.ts"],
   "exclude": ["node_modules", "dist"]

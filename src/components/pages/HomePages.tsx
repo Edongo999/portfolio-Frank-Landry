@@ -1,10 +1,11 @@
-import React from "react";
-import Hero from "@/components/section/hero/Hero";
-import About from "@/components/section/about/About";
-import Skills from "@/components/section/skills/Skills";
-import Projects from "@/components/section/projects/Projects";
-import Experience from "@/components/section/experience/Experience";
-import Contact from "@/components/section/contact/Contact";
+import React from 'react';
+import Hero from '@/components/section/hero/Hero';
+import About from '@/components/section/about/About';
+import Skills from '@/components/section/skills/SkillsSection';
+import Projects from '@/components/section/projects/Projects';
+import Experience from '@/components/section/experience/ExperienceSection';
+import Contact from '@/components/section/contact/Contact';
+import Temoignages from '@/components/section/temoignages/temoignages';
 
 const Home = () => {
   return (
@@ -12,7 +13,6 @@ const Home = () => {
       <section id="hero">
         <Hero />
       </section>
-
       <section id="about">
         <About />
       </section>
@@ -28,6 +28,7 @@ const Home = () => {
       <section id="experience">
         <Experience />
       </section>
+      <Temoignages />
 
       <section id="contact">
         <Contact />

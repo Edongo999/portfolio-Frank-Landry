@@ -1,34 +1,50 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-/* ---------------- Global base ---------------- */
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  /* Fond gris uniforme pour tout le site */
-  background-color: bg-gray-900; /* équivalent Tailwind bg-gray-800 */
+  margin: 0;
   min-height: 100vh;
+
+  /* Fond officiel du portfolio */
+  background-color: #030712;
+  color: #ffffff;
 }
+
+/* =========================================================
+   VARIABLES
+========================================================= */
 
 :root {
   --reveal-duration: 1000ms;
-  --reveal-easing: cubic-bezier(.4,0,.2,1); /* ease-out fluide */
+  --reveal-easing: cubic-bezier(0.4, 0, 0.2, 1);
   --reveal-overshoot: 2px;
 }
 
-/* Animation très douce */
+/* =========================================================
+   ANIMATION REVEAL
+========================================================= */
+
 @keyframes reveal-smooth {
   0% {
     opacity: 0;
     transform: translateY(6px) scale(0.999);
     filter: blur(2px);
   }
+
   80% {
     opacity: 1;
     transform: translateY(calc(-1 * var(--reveal-overshoot))) scale(1.001);
+
     filter: blur(1px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -40,6 +56,7 @@ body {
   opacity: 0;
   transform: translateY(6px) scale(0.999);
   filter: blur(2px);
+
   will-change: opacity, transform, filter;
 }
 
@@ -47,18 +64,29 @@ body {
   animation: reveal-smooth var(--reveal-duration) var(--reveal-easing) both;
 }
 
-/* Variante fade-only */
+/* =========================================================
+   FADE ONLY
+========================================================= */
+
 .reveal.reveal--visible--fade {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
+
+  transition:
+    opacity 1000ms ease-out,
+    transform 1000ms ease-out;
 }
 
-/* Variante pour le titre E-Technology sur le modaal  */
+/* =========================================================
+   GRADIENT ANIMATION
+========================================================= */
+
 @keyframes gradient-x {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -67,4 +95,34 @@ body {
 .animate-gradient-x {
   background-size: 200% 200%;
   animation: gradient-x 4s ease infinite;
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background: rgba(59, 130, 246, 0.35);
+  color: white;
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }

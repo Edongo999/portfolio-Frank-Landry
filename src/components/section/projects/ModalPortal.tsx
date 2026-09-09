@@ -1,6 +1,7 @@
 // src/components/ModalPortal.tsx
-import React, { useEffect, useRef, useCallback } from "react";
-import { createPortal } from "react-dom";
+import React, { useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
+import { X } from 'lucide-react';
 
 const ANIM_DURATION = 260;
 
@@ -13,7 +14,7 @@ export default function ModalPortal({
   onClose: () => void;
   onKeyDown?: (e: KeyboardEvent) => void;
 }) {
-  const isClient = typeof document !== "undefined";
+  const isClient = typeof document !== 'undefined';
   const contentRef = useRef<HTMLDivElement | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement | null>(null);
   const visibleTimeout = useRef<number | null>(null);
@@ -37,21 +38,21 @@ export default function ModalPortal({
     }, ANIM_DURATION);
 
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === 'Escape') onClose();
       if (onKeyDown) onKeyDown(e);
     };
 
-    document.addEventListener("keydown", handleKey);
+    document.addEventListener('keydown', handleKey);
 
     const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
 
     return () => {
       if (visibleTimeout.current) {
         clearTimeout(visibleTimeout.current);
         visibleTimeout.current = null;
       }
-      document.removeEventListener("keydown", handleKey);
+      document.removeEventListener('keydown', handleKey);
       document.body.style.overflow = prevOverflow;
     };
   }, [onClose, onKeyDown, focusFirst]);
@@ -60,7 +61,7 @@ export default function ModalPortal({
   const modalRoot = document.body;
 
   const handleKeyDownInside = (e: React.KeyboardEvent) => {
-    if (e.key !== "Tab" || !contentRef.current) return;
+    if (e.key !== 'Tab' || !contentRef.current) return;
     const focusable = Array.from(
       contentRef.current.querySelectorAll<HTMLElement>(
         'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
@@ -96,21 +97,21 @@ export default function ModalPortal({
         className="absolute inset-0 bg-black/85 transition-opacity duration-[260ms]"
       />
 
-      {/* Contenu sans fond gris */}
+      {/* Contenu */}
       <div
         ref={contentRef}
         onClick={(e) => e.stopPropagation()}
         onKeyDown={handleKeyDownInside}
         className="relative z-[1210] w-full max-w-[1100px] mx-4 transform opacity-100 transition duration-[260ms]"
       >
-        {/* Bouton fermer */}
+        {/* Bouton fermer avec rotation */}
         <button
           ref={closeBtnRef}
-          onClick={() => onClose()}
+          onClick={onClose}
           aria-label="Fermer"
-          className="absolute right-3 top-3 z-[1220] bg-black/60 border border-white/10 text-white px-3 py-2 rounded-lg cursor-pointer backdrop-blur-sm hover:bg-black/80 transition"
+          className="absolute right-3 top-3 z-[1220] bg-black/60 border border-white/10 text-white p-2 rounded-full cursor-pointer backdrop-blur-sm hover:bg-black/80 transition transform hover:rotate-90 duration-300 ease-in-out"
         >
-          ✕
+          <X size={22} strokeWidth={2.5} />
         </button>
 
         {children}

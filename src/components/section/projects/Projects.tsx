@@ -1,357 +1,372 @@
-// src/components/section/projects/Projects.tsx
-import React, { useEffect, useRef, useState } from "react";
-import MediaViewer from "@/components/section/projects/MediaViewer";
-import ProjectCard, { Project } from "@/components/ui/ProjectCard";
-import useReveal from "@/components/hooks/useReveal";
-import ModalPortal from "@/components/section/projects/ModalPortal";
-import { motion } from "framer-motion";
-import { Variants } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
-const mainTitleVariants: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }
-  }
-};
+import MediaViewer from '@/components/section/projects/MediaViewer';
+import ModalPortal from '@/components/section/projects/ModalPortal';
+
+import ProjectFilters, { ProjectFilter } from './ProjectFilters';
+
+import ProjectCounter from './ProjectCounter';
+import ProjectGrid from './ProjectGrid';
+
+import { useProjectsData } from './ProjectsData';
+
+import { Project } from '@/components/ui/ProjectCard';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
 
+  const projects = useProjectsData();
+
+  /* =========================
+     FILTRE
+  ========================= */
+
+  const [filter, setFilter] = useState<ProjectFilter>('Tous');
+
+  /* =========================
+     PROJET SÉLECTIONNÉ
+  ========================= */
+
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const revealRef = useReveal({ stagger: 120, mode: "smooth" });
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const cardVideoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  /* =========================
+     PROJETS FILTRÉS
+  ========================= */
 
-  // LISTE DES PROJETS — TOUT TRADUIT VIA i18n
-  const projects: Project[] = [
-    {
-      title: t("projects.items.africanada.title"),
-      description: t("projects.items.africanada.description"),
-      descriptionLong: t("projects.items.africanada.descriptionLong"),
-      role: t("projects.items.africanada.role"),
-      results: t("projects.items.africanada.results"),
-      impact: t("projects.items.africanada.impact"),
-      tools: t("projects.items.africanada.tools"),
-      link: "https://www.facebook.com/AFRICANADA",
-      medias: [
-        { type: "video", src: "/videos/AFRICANA_VIDEO1.mp4" },
-        { type: "image", src: "/images/AFRICANA.webp" },
-        { type: "image", src: "/images/AFRICANA4.webp" },
-        { type: "image", src: "/images/AFRICANA6.webp" },
-        { type: "video", src: "/videos/AFRICANA_VIDEO.mp4" },
-        { type: "image", src: "/images/AFRICANA1.webp" },
-        { type: "image", src: "/images/AFRICANA5.webp" },
-        { type: "video", src: "/videos/AFRICANA_VIDEO2.mp4" },
-        { type: "image", src: "/images/AFRICANA2.webp" },
-        { type: "image", src: "/images/AFRICANA8.webp" },
-        { type: "image", src: "/images/AFRICANA9.webp" },
-        { type: "image", src: "/images/AFRICANA10.webp" },
-        { type: "image", src: "/images/AFRICANA11.webp" },
-        { type: "image", src: "/images/AFRICANA3.webp" }
-      ],
-      category: "Entreprise"
-    },
+  const filteredProjects =
+    filter === 'Tous'
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
-    {
-      title: t("projects.items.wonder.title"),
-      description: t("projects.items.wonder.description"),
-      descriptionLong: t("projects.items.wonder.descriptionLong"),
-      role: t("projects.items.wonder.role"),
-      results: t("projects.items.wonder.results"),
-      impact: t("projects.items.wonder.impact"),
-      tools: t("projects.items.wonder.tools"),
-      link: "https://www.facebook.com/Bekalaind",
-      medias: [{ type: "image", src: "/images/WONDER.webp" }],
-      category: "Entreprise"
-    },
-
-    {
-      title: t("projects.items.horizon.title"),
-      description: t("projects.items.horizon.description"),
-      descriptionLong: t("projects.items.horizon.descriptionLong"),
-      role: t("projects.items.horizon.role"),
-      results: t("projects.items.horizon.results"),
-      impact: t("projects.items.horizon.impact"),
-      tools: t("projects.items.horizon.tools"),
-      medias: [
-        { type: "image", src: "/images/logo0.webp" },
-        { type: "image", src: "/images/logo1.webp" },
-        { type: "image", src: "/images/logo2.webp" },
-        { type: "image", src: "/images/logo3.webp" },
-        { type: "image", src: "/images/logo4.webp" },
-        { type: "image", src: "/images/logo6.webp" },
-        { type: "image", src: "/images/logo4.webp" }
-      ],
-      category: "Client"
-    },
-
-    {
-      title: t("projects.items.onglerie.title"),
-      description: t("projects.items.onglerie.description"),
-      descriptionLong: t("projects.items.onglerie.descriptionLong"),
-      role: t("projects.items.onglerie.role"),
-      results: t("projects.items.onglerie.results"),
-      impact: t("projects.items.onglerie.impact"),
-      tools: t("projects.items.onglerie.tools"),
-      medias: [{ type: "image", src: "/images/cliente1.webp" }],
-      category: "Client"
-    },
-
-    {
-      title: t("projects.items.import.title"),
-      description: t("projects.items.import.description"),
-      descriptionLong: t("projects.items.import.descriptionLong"),
-      role: t("projects.items.import.role"),
-      results: t("projects.items.import.results"),
-      impact: t("projects.items.import.impact"),
-      tools: t("projects.items.import.tools"),
-      medias: [{ type: "image", src: "/images/cliente2.webp" }],
-      category: "Client"
-    },
-
-    {
-      title: t("projects.items.gems.title"),
-      description: t("projects.items.gems.description"),
-      descriptionLong: t("projects.items.gems.descriptionLong"),
-      role: t("projects.items.gems.role"),
-      results: t("projects.items.gems.results"),
-      impact: t("projects.items.gems.impact"),
-      tools: t("projects.items.gems.tools"),
-      medias: [{ type: "image", src: "/images/clientEntreprise.webp" }],
-      category: "Client"
-    },
-
-    {
-      title: t("projects.items.multiservices.title"),
-      description: t("projects.items.multiservices.description"),
-      descriptionLong: t("projects.items.multiservices.descriptionLong"),
-      role: t("projects.items.multiservices.role"),
-      results: t("projects.items.multiservices.results"),
-      impact: t("projects.items.multiservices.impact"),
-      tools: t("projects.items.multiservices.tools"),
-      medias: [{ type: "image", src: "/images/cliente3.webp" }],
-      category: "Client"
-    },
-
-    {
-      title: t("projects.items.concours.title"),
-      description: t("projects.items.concours.description"),
-      descriptionLong: t("projects.items.concours.descriptionLong"),
-      role: t("projects.items.concours.role"),
-      results: t("projects.items.concours.results"),
-      impact: t("projects.items.concours.impact"),
-      tools: t("projects.items.concours.tools"),
-      medias: [
-        { type: "image", src: "/images/candidate0.webp" },
-        { type: "image", src: "/images/candidate1.webp" }
-      ],
-      category: "Client"
-    },
-
-    {
-      title: t("projects.items.beaute.title"),
-      description: t("projects.items.beaute.description"),
-      descriptionLong: t("projects.items.beaute.descriptionLong"),
-      role: t("projects.items.beaute.role"),
-      results: t("projects.items.beaute.results"),
-      impact: t("projects.items.beaute.impact"),
-      tools: t("projects.items.beaute.tools"),
-      medias: [{ type: "video", src: "/videos/clientvideo0.mp4" }],
-      category: "Client"
-    },
-
-    {
-      title: t("projects.items.carte.title"),
-      description: t("projects.items.carte.description"),
-      descriptionLong: t("projects.items.carte.descriptionLong"),
-      role: t("projects.items.carte.role"),
-      results: t("projects.items.carte.results"),
-      impact: t("projects.items.carte.impact"),
-      tools: t("projects.items.carte.tools"),
-      medias: [{ type: "image", src: "/images/carte_de_visite.webp" }],
-      category: "Client"
-    },
-      {
-    title: t("projects.items.transit.title"),
-    description: t("projects.items.transit.description"),
-    descriptionLong: t("projects.items.transit.descriptionLong"),
-    role: t("projects.items.transit.role"),
-    results: t("projects.items.transit.results"),
-    impact: t("projects.items.transit.impact"),
-    tools: t("projects.items.transit.tools"),
-    medias: [{ type: "image", src: "/images/client4.webp" }],
-    category: "Client"
-  }
-
-  ];
-
-  const validProjects = projects.filter((p) => p && typeof p === "object");
-  const firstTwo = validProjects.slice(0, 2);
-  const rest = validProjects.slice(2);
-
-  // VIDEO PREVIEW
-  const registerCardVideo = (el: HTMLVideoElement | null, idx: number) => {
-    cardVideoRefs.current[idx] = el;
-    if (el) {
-      try {
-        el.muted = true;
-        el.loop = true;
-        el.playsInline = true;
-        el.play().catch((err) => {
-          console.debug("Preview autoplay blocked", err);
-        });
-      } catch (err) {
-        console.debug("Error configuring preview video", err);
-      }
-    }
-  };
+  /* =========================
+     OUVRIR PROJET
+  ========================= */
 
   const openProject = (project: Project, startIndex = 0) => {
-    cardVideoRefs.current.forEach((v) => {
-      try {
-        v?.pause();
-      } catch (err) {
-        console.debug("Error pausing preview", err);
-      }
-    });
-
     setSelectedProject(project);
     setCurrentIndex(startIndex);
   };
 
-  const closeModal = () => {
-    cardVideoRefs.current.forEach((v) => {
-      try {
-        v?.play().catch((err) => {
-          console.debug("Preview replay blocked", err);
-        });
-      } catch (err) {
-        console.debug("Error resuming preview", err);
-      }
-    });
+  /* =========================
+     FERMER MODAL
+  ========================= */
 
+  const closeModal = () => {
     setSelectedProject(null);
     setCurrentIndex(0);
   };
 
-  const goNext = () => {
-    if (!selectedProject) return;
-    setCurrentIndex((i) => (i + 1) % selectedProject.medias.length);
+  /* =========================
+     SÉLECTION MEDIA
+  ========================= */
+
+  const handleSelectMedia = (project: Project, mediaSrc: string) => {
+    if (!project.medias || project.medias.length === 0) {
+      return;
+    }
+
+    const index = project.medias.findIndex((media) => media.src === mediaSrc);
+
+    openProject(project, index >= 0 ? index : 0);
   };
-
-  const goPrev = () => {
-    if (!selectedProject) return;
-    setCurrentIndex((i) => (i - 1 + selectedProject.medias.length) % selectedProject.medias.length);
-  };
-
-  // KEYBOARD NAVIGATION
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (!selectedProject) return;
-      if (e.key === "ArrowLeft") goPrev();
-      if (e.key === "ArrowRight") goNext();
-      if (e.key === "Escape") closeModal();
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [selectedProject]);
-
-  // BLOCK SCROLL WHEN MODAL OPEN
-  useEffect(() => {
-    if (selectedProject) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [selectedProject]);
 
   return (
-    <section className="relative min-h-screen bg-gray-800 text-white px-6 sm:px-8 pt-12 pb-16">
-      <div className="max-w-6xl mx-auto space-y-12" ref={revealRef as React.RefObject<HTMLDivElement>}>
+    <section
+      id="realisations"
+      className="
+        relative
+        overflow-hidden
+        bg-gray-900
+        py-20
+        text-white
+        sm:py-24
+        md:py-10
+      "
+    >
+      {/* =========================
+          BACKGROUND
+      ========================= */}
 
-        {/* TITLE */}
-        <div className="text-center">
-          <motion.h2
-            variants={mainTitleVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.6 }}
-            className="text-2xl sm:text-4xl font-bold inline-block px-6 py-2 rounded-lg text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 animate-gradient-x"
-          >
-            {t("projects.title")}
-          </motion.h2>
-        </div>
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="
+            absolute
+            left-1/2
+            top-0
+            h-[350px]
+            w-[350px]
+            -translate-x-1/2
+            rounded-full
+            bg-green-500/5
+            blur-[120px]
+          "
+        />
 
-        {/* INTRO */}
-        <motion.p
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.4 }}
-          className="text-gray-100 text-lg md:text-xl leading-relaxed text-left md:text-justify"
-        >
-          {t("projects.intro")}
-        </motion.p>
-
-        {/* ENTREPRISE → cartes horizontales */}
-<div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-  {firstTwo.map((project, idx) => (
-    <div key={`enterprise-${idx}`} className="relative reveal" data-reveal-index={idx}>
-      <ProjectCard
-        project={project}
-        isVertical={false} // 👉 forcé en horizontal
-        onSelectMedia={(media) => {
-          const start = project.medias.findIndex((m) => m.src === media.src);
-          openProject(project, start >= 0 ? start : 0);
-        }}
-        registerVideo={(el) => registerCardVideo(el, idx)}
-      />
-    </div>
-  ))}
-</div>
-
-{/* CLIENTS → cartes verticales */}
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-  {rest.map((project, idx) => {
-    const globalIndex = firstTwo.length + idx;
-    return (
-      <div key={`client-${idx}`} className="relative reveal" data-reveal-index={globalIndex}>
-        <ProjectCard
-          project={project}
-          isVertical={true} //  forcé en vertical
-          onSelectMedia={(media) => {
-            const start = project.medias.findIndex((m) => m.src === media.src);
-            openProject(project, start >= 0 ? start : 0);
-          }}
-          registerVideo={(el) => registerCardVideo(el, globalIndex)}
+        <div
+          className="
+            absolute
+            bottom-0
+            right-0
+            h-[300px]
+            w-[300px]
+            rounded-full
+            bg-[#f3f009]/5
+            blur-[120px]
+          "
         />
       </div>
-    );
-  })}
-</div>
 
+      {/* =========================
+          CONTAINER
+      ========================= */}
 
-      
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          max-w-7xl
+          px-4
+          sm:px-6
+          lg:px-8
+        "
+      >
+        {/* =========================
+            HEADER
+        ========================= */}
+
+        <div className="mb-12 text-center">
+          {/* BADGE */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              x: -20,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+          >
+            <span
+              className="
+                mb-5
+                inline-flex
+                items-center
+                gap-2
+                rounded-full
+                border
+                border-green-500/20
+                bg-green-500/10
+                px-4
+                py-2
+                text-xs
+                font-semibold
+                uppercase
+                tracking-[0.2em]
+                text-green-400
+              "
+            >
+              <span
+                className="
+                  h-2
+                  w-2
+                  rounded-full
+                  bg-green-500
+                  shadow-[0_0_8px_rgba(74,222,128,0.7)]
+                "
+              />
+
+              {t('projects.badge')}
+            </span>
+          </motion.div>
+
+          {/* TITRE */}
+
+          <motion.h2
+            initial={{
+              opacity: 0,
+              x: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.1,
+            }}
+            className="
+              mx-auto
+              mt-4
+              max-w-3xl
+              text-3xl
+              font-extrabold
+              leading-tight
+              tracking-tight
+              sm:text-4xl
+              md:text-5xl
+            "
+          >
+            <span className="text-white">{t('projects.title')} </span>
+
+            <span className="text-[#f3f009]">{t('projects.me')}</span>
+          </motion.h2>
+
+          {/* LIGNE */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              scaleX: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              scaleX: 1,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.5,
+            }}
+            transition={{
+              duration: 1.2,
+              ease: 'easeOut',
+              delay: 0.2,
+            }}
+            className="
+              mx-auto
+              mt-6
+              h-1
+              w-24
+              rounded-full
+              bg-gradient-to-r
+              from-green-500
+              to-[#f3f009]
+            "
+          />
+
+          {/* DESCRIPTION */}
+
+          <motion.p
+            initial={{
+              opacity: 0,
+              y: 15,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.25,
+            }}
+            className="
+              mx-auto
+              mt-6
+              max-w-[95%]
+              text-justify
+              text-base
+              leading-relaxed
+              text-gray-100
+              hyphens-auto
+              [overflow-wrap:break-word]
+              sm:max-w-5xl
+              sm:text-lg
+              sm:leading-8
+              md:max-w-6xl
+              md:text-xl
+              md:leading-9
+            "
+          >
+            {t('projects.description')}
+          </motion.p>
+        </div>
+
+        {/* =========================
+            FILTRES
+        ========================= */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 15,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="mb-10"
+        >
+          <ProjectFilters filter={filter} setFilter={setFilter} />
+        </motion.div>
+
+        {/* =========================
+            COMPTEUR
+        ========================= */}
+
+        <ProjectCounter count={filteredProjects.length} />
+
+        {/* =========================
+            GRILLE
+        ========================= */}
+
+        <ProjectGrid
+          projects={filteredProjects}
+          onSelectMedia={handleSelectMedia}
+        />
       </div>
 
-      {/* MODAL */}
-      {selectedProject && (
-        <ModalPortal onClose={closeModal}>
-          <div className="relative z-10 w-full max-w-5xl mx-auto">
-            <MediaViewer
-              project={selectedProject}
-              index={currentIndex}
-              onPrev={goPrev}
-              onNext={goNext}
-              startMuted={true}
-            />
-          </div>
-        </ModalPortal>
-      )}
+      {/* =========================
+          MODAL
+      ========================= */}
+
+      {selectedProject &&
+        selectedProject.medias &&
+        selectedProject.medias.length > 0 && (
+          <ModalPortal onClose={closeModal}>
+            <div
+              className="
+                relative
+                z-10
+                mx-auto
+                w-full
+                max-w-6xl
+              "
+            >
+              <MediaViewer
+                project={selectedProject}
+                index={currentIndex}
+                startMuted={true}
+              />
+            </div>
+          </ModalPortal>
+        )}
     </section>
   );
 };

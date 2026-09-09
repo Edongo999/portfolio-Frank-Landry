@@ -14,37 +14,50 @@ export default function NavArrow({
     <button
       onClick={onClick}
       aria-label={ariaLabel}
-      style={{
-        position: "absolute",
-        [left ? "left" : "right"]: 12,
-        top: "50%",
-        transform: "translateY(-50%)",
-        background: "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))",
-        color: "#fff",
-        padding: "12px 14px",
-        borderRadius: 9999,
-        border: "none",
-        cursor: "pointer",
-        zIndex: 40,
-        boxShadow: "0 8px 24px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.5)",
-        transition: "transform 160ms cubic-bezier(.2,.8,.2,1), box-shadow 160ms cubic-bezier(.2,.8,.2,1)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backdropFilter: "blur(6px)",
-        fontSize: 22,
-        lineHeight: 1,
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-50%) scale(1.06)")}
-      onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(-50%) scale(1)")}
+      className={`absolute top-1/2 -translate-y-1/2 
+        ${left ? "left-3" : "right-3"} 
+        flex items-center justify-center 
+        rounded-full cursor-pointer z-40
+        px-[14px] py-[12px] text-white text-[22px] leading-none
+        shadow-[0_8px_24px_rgba(0,0,0,0.6),0_2px_6px_rgba(0,0,0,0.5)]
+        backdrop-blur-md
+        bg-gradient-to-b from-white/10 to-white/5
+        transition duration-200 ease-in-out
+        hover:scale-105 hover:bg-orange-500 hover:text-white
+        active:bg-orange-600 active:text-white active:animate-pulse
+        focus:ring-2 focus:ring-orange-400`}
     >
       {left ? (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden
+          className="stroke-current"
+        >
+          <path
+            d="M15 18l-6-6 6-6"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       ) : (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-          <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden
+          className="stroke-current"
+        >
+          <path
+            d="M9 6l6 6-6 6"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       )}
     </button>

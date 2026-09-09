@@ -1,15 +1,18 @@
-import { StrictMode } from "react"
-import { createRoot } from "react-dom/client"
-import "./index.css"
+// src/main.tsx
+
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+import './index.css';
 import './App.css';
 
-import App from "./App"
+//  Initialisation i18n
+import './components/i18n';
 
-// ⚡ Ajoute ton initialisation i18n ici
-import "./components/i18n"
+import App from './App';
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
   </StrictMode>
-)
+);

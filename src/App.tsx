@@ -1,18 +1,27 @@
-import React from "react";
-import Layout from "@/components/layout/Layout";
-import Home from "@/components/pages/HomePages";
-import WhatsAppFloatingButton from "@/components/ui/WhatsAppFloatingButton";
-import AlertModal from "@/components/ui/AlertModal";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from '@/components/layout/Layout';
+import Home from '@/components/pages/HomePages';
+import BlogPage from '@/components/pages/BlogSection';
+import WhatsAppFloatingButton from '@/components/ui/WhatsAppFloatingButton';
+import ScrollToTop from './components/pages/ScrollToTop';
 
 function App() {
-  const showLock = true; 
-
   return (
-    <Layout>
-      <Home /> {/*  portfolio reste affiché */}
-      <WhatsAppFloatingButton />
-      <AlertModal show={showLock} /> {/* Modal par-dessus */}
-    </Layout>
+    <Router>
+      <ScrollToTop />
+      <Layout>
+        <Routes>
+          {/* Page principale */}
+          <Route path="/" element={<Home />} />
+
+          {/* Page Blog */}
+          <Route path="/blog" element={<BlogPage />} />
+        </Routes>
+
+        <WhatsAppFloatingButton />
+      </Layout>
+    </Router>
   );
 }
 
