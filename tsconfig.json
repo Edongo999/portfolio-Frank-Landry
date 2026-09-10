@@ -4,7 +4,7 @@
     "module": "ESNext",
     "lib": ["DOM", "ESNext"],
     "jsx": "react-jsx",
-    "moduleResolution": "bundler",   // corrigé
+    "moduleResolution": "bundler", // corrigé
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -12,8 +12,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "resolveJsonModule": true,
-    "ignoreDeprecations": "6.0"      // masque les warnings si besoin
+    "resolveJsonModule": true
   },
   "include": ["src", "vite-env.d.ts"],
   "exclude": ["node_modules", "dist"]
