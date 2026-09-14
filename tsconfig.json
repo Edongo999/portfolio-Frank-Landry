@@ -10,13 +10,13 @@
     "strict": true,
     "skipLibCheck": true,
 
-    "baseUrl": ".",
+    "noEmit": true,
+
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
 
-    "resolveJsonModule": true,
-    "ignoreDeprecations": "6.0"
+    "resolveJsonModule": true
   },
   "include": ["src", "vite-env.d.ts"],
   "exclude": ["node_modules", "dist"]

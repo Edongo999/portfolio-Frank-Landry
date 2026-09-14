@@ -68,7 +68,7 @@ export const useProjectsData = (): Project[] => {
       medias: [
         {
           type: 'video',
-          src: '/images/Conversion/demo.mp4',
+          src: '/videos/demo.mp4',
         },
       ],
     },
