@@ -1,11 +1,9 @@
-// src/components/Navigation/SmartLink.tsx
-
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import BlogModal from '@/components/layout/common/Navigation/BlogModal';
-import PageLoader from '@/components/loaders/PageLoader';
+import { usePageTransition } from '@/components/hooks/PageTransitionContext';
 
 type SmartLinkProps = {
   path: string;
@@ -23,30 +21,13 @@ export default function SmartLink({
   const navigate = useNavigate();
   const location = useLocation();
 
+  const { startTransition } = usePageTransition();
+
   const [showModal, setShowModal] = useState(false);
-  const [pageLoading, setPageLoading] = useState(false);
 
-  /*
-   * ==========================================================
-   * ARRÊTER LE LOADER UNE FOIS QUE LE BLOG EST CHARGÉ
-   * ==========================================================
-   */
-  useEffect(() => {
-    if (pageLoading && location.pathname === '/blog') {
-      const timer = window.setTimeout(() => {
-        setPageLoading(false);
-      }, 350);
-
-      return () => {
-        window.clearTimeout(timer);
-      };
-    }
-  }, [location.pathname, pageLoading]);
-  /*
-   * ==========================================================
-   * RENITIALISE LE SCROL ET AFFICHE LA PAGE EN HAUT
-   * ==========================================================
-   */
+  // =====================================================
+  // RESET SCROLL SUR LE BLOG
+  // =====================================================
 
   useEffect(() => {
     if (location.pathname === '/blog') {
@@ -58,13 +39,12 @@ export default function SmartLink({
     }
   }, [location.pathname]);
 
-  /*
-   * ==========================================================
-   * SCROLL VERS UNE SECTION
-   * ==========================================================
-   */
-  const scrollToSection = () => {
-    const element = document.querySelector(path);
+  // =====================================================
+  // SCROLL VERS UNE SECTION
+  // =====================================================
+
+  const scrollToSection = (sectionPath: string) => {
+    const element = document.querySelector(sectionPath);
 
     if (!element) return;
 
@@ -76,99 +56,127 @@ export default function SmartLink({
     });
   };
 
-  /*
-   * ==========================================================
-   * CLIC SUR UN LIEN
-   * ==========================================================
-   */
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    /*
-     * --------------------------------------------------------
-     * SECTIONS DE LA PAGE D'ACCUEIL
-     * --------------------------------------------------------
-     */
-    if (path.startsWith('#')) {
-      e.preventDefault();
+  // =====================================================
+  // CLIC SUR UN LIEN
+  // =====================================================
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    // ===================================================
+    // LIENS VERS LES SECTIONS DE L'ACCUEIL
+    // ===================================================
+
+    if (path.startsWith('#')) {
       const key = path.replace('#', '');
 
       setActiveSection(key);
 
-      if (location.pathname !== '/') {
-        navigate('/');
+      // -------------------------------------------------
+      // CAS 1 : DÉJÀ SUR L'ACCUEIL
+      // -------------------------------------------------
 
-        setTimeout(() => {
-          scrollToSection();
-        }, 200);
-      } else {
-        scrollToSection();
+      if (location.pathname === '/') {
+        scrollToSection(path);
+        onClick?.();
+
+        return;
       }
 
+      // -------------------------------------------------
+      // CAS 2 : SUR LE BLOG
+      // → changement de page
+      // → DONC LOADER
+      // -------------------------------------------------
+
+      sessionStorage.setItem('portfolioTargetSection', path);
+
       onClick?.();
+
+      startTransition(() => {
+        navigate('/');
+      });
 
       return;
     }
 
-    /*
-     * --------------------------------------------------------
-     * BLOG
-     * --------------------------------------------------------
-     */
-    if (path === '/blog') {
-      e.preventDefault();
+    // ===================================================
+    // BLOG
+    // ===================================================
 
-      /*
-       * Si on est déjà sur le blog,
-       * on ne montre pas le modal.
-       */
+    if (path === '/blog') {
+      // Déjà sur le Blog
       if (location.pathname === '/blog') {
-        navigate('/blog');
+        onClick?.();
         return;
       }
 
-      /*
-       * Sinon, afficher le modal.
-       */
+      // Accueil → Blog
+      // → changement de page
+      // → loader
       setShowModal(true);
     }
   };
 
-  /*
-   * ==========================================================
-   * CONTINUER VERS LE BLOG
-   * ==========================================================
-   */
-  const handleContinueToBlog = () => {
+  // =====================================================
+  // APRÈS RETOUR SUR L'ACCUEIL
+  // =====================================================
+
+  useEffect(() => {
+    if (location.pathname !== '/') return;
+
+    const targetSection = sessionStorage.getItem('portfolioTargetSection');
+
+    if (!targetSection) return;
+
     /*
-     * 1. Fermer immédiatement le modal
+     * On attend que l'accueil soit réellement rendu
+     * avant de chercher la section.
      */
+    const timeout = window.setTimeout(() => {
+      const element = document.querySelector(targetSection);
+
+      if (!element) return;
+
+      const y = element.getBoundingClientRect().top + window.pageYOffset - 80;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
+
+      sessionStorage.removeItem('portfolioTargetSection');
+    }, 100);
+
+    return () => {
+      window.clearTimeout(timeout);
+    };
+  }, [location.pathname]);
+
+  // =====================================================
+  // CONTINUER VERS LE BLOG
+  // =====================================================
+
+  const handleContinueToBlog = () => {
     setShowModal(false);
 
     /*
-     * 2. Afficher le loader plein écran
+     * Le loader est global.
+     * Le menu mobile peut donc être fermé immédiatement.
      */
-    setPageLoading(true);
+    onClick?.();
 
-    /*
-     * 3. Laisser le loader jouer son animation
-     */
-    window.setTimeout(() => {
+    startTransition(() => {
       navigate('/blog');
-    }, 1800);
+    });
   };
 
   return (
     <>
-      {/* ======================================================
-          LIEN
-      ====================================================== */}
       <a href={path} onClick={handleClick} className="block">
         {children}
       </a>
 
-      {/* ======================================================
-          MODAL BLOG
-      ====================================================== */}
       <AnimatePresence>
         {showModal && (
           <BlogModal
@@ -178,11 +186,6 @@ export default function SmartLink({
           />
         )}
       </AnimatePresence>
-
-      {/* ======================================================
-          LOADER DE TRANSITION
-      ====================================================== */}
-      <AnimatePresence>{pageLoading && <PageLoader />}</AnimatePresence>
     </>
   );
 }

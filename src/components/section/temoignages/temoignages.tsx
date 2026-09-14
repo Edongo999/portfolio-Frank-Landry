@@ -107,7 +107,7 @@ const Temoignages: React.FC = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="
     mt-0
-    mb-2
+    mb-4
     text-center
     text-4xl
     font-bold
@@ -128,6 +128,7 @@ const Temoignages: React.FC = () => {
     mx-auto
     h-1
     w-24
+     mb-4 
     rounded-full
     bg-gradient-to-r
     from-[#f3f009]

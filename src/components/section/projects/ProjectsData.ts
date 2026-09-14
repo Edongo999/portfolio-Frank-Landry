@@ -1,5 +1,4 @@
-import { Project } from '@/components/ui/ProjectCard';
-
+import { Project } from '@/components/section/projects/types';
 export const useProjectsData = (): Project[] => {
   return [
     // =====================================================

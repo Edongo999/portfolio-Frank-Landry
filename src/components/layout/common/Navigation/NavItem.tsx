@@ -12,6 +12,7 @@ type NavItemProps = {
   active: boolean;
   setActiveSection: (key: string) => void;
   onClick?: () => void;
+  scrolled?: boolean;
 };
 
 export default function NavItem({
@@ -19,6 +20,7 @@ export default function NavItem({
   active,
   setActiveSection,
   onClick,
+  scrolled = false,
 }: NavItemProps) {
   const { t } = useTranslation();
 
@@ -34,10 +36,16 @@ export default function NavItem({
             relative
             px-2
             py-1
-            transition-all
-            duration-300
+            transition-colors
+            duration-500
 
-            ${active ? 'text-[#f3f009]' : 'text-gray-300 hover:text-white'}
+            ${
+              active
+                ? 'text-[#f3f009]'
+                : scrolled
+                  ? 'text-white/95 hover:text-white'
+                  : 'text-gray-300 hover:text-white'
+            }
           `}
         >
           {t(link.label)}

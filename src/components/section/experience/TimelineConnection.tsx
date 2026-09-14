@@ -11,51 +11,27 @@ const TimelineConnection = ({ side }: TimelineConnectionProps) => {
 
   return (
     <motion.div
-      initial={{
-        width: 0,
-        opacity: 0,
-      }}
-      whileInView={{
-        width: '2rem',
-        opacity: 1,
-      }}
-      transition={{
-        delay: 0.75,
-        duration: 1,
-        ease: smoothEase,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.5,
-      }}
+      initial={{ scaleX: 0, opacity: 0 }}
+      whileInView={{ scaleX: 1, opacity: 1 }}
+      transition={{ delay: 0.3, duration: 1.2, ease: smoothEase }}
+      viewport={{ once: true, amount: 0.5 }}
       className={`
         absolute
-        ${isLeft ? '-right-8' : '-left-8'}
+        ${isLeft ? '-right-8 origin-right' : '-left-8 origin-left'}
         top-1/2
         hidden
         h-px
+        w-8
         bg-[#f3f009]
         md:block
       `}
     >
+      {/* Point lumineux */}
       <motion.span
-        initial={{
-          opacity: 0,
-          scale: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          delay: 1.55,
-          duration: 0.8,
-          ease: smoothEase,
-        }}
-        viewport={{
-          once: true,
-          amount: 0.5,
-        }}
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.0, duration: 0.8, ease: smoothEase }}
+        viewport={{ once: true, amount: 0.5 }}
         className={`
           absolute
           top-1/2

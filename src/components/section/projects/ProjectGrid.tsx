@@ -1,8 +1,8 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-
-import ProjectCard, { Project } from '@/components/ui/ProjectCard';
+import ProjectCard from '@/components/section/projects/ProjectCard';
+import { Project } from '@/components/section/projects/types';
 
 interface ProjectGridProps {
   projects: Project[];

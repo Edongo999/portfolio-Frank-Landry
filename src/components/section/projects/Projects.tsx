@@ -11,8 +11,7 @@ import ProjectCounter from './ProjectCounter';
 import ProjectGrid from './ProjectGrid';
 
 import { useProjectsData } from './ProjectsData';
-
-import { Project } from '@/components/ui/ProjectCard';
+import { Project } from '@/components/section/projects/types';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();

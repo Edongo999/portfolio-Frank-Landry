@@ -37,7 +37,7 @@ const BackToTop = () => {
         fixed
         bottom-6
         right-5
-        z-50
+        z-40
         flex
         h-11
         w-11

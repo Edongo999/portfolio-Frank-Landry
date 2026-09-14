@@ -3,7 +3,11 @@
 import NavLinks from '@/components/layout/common/Navigation/NavLinks';
 import LanguageSelector from '@/components/layout/common/LanguageSelector';
 
-export default function NavbarDesktop() {
+type NavbarDesktopProps = {
+  scrolled: boolean;
+};
+
+export default function NavbarDesktop({ scrolled }: NavbarDesktopProps) {
   return (
     <>
       {/* =====================================================
@@ -20,7 +24,7 @@ export default function NavbarDesktop() {
           ml-18
         "
       >
-        <NavLinks />
+        <NavLinks scrolled={scrolled} />
       </div>
 
       {/* =====================================================

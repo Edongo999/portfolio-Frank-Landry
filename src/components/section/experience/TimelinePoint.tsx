@@ -9,23 +9,14 @@ const smoothEase = [0.22, 1, 0.36, 1] as const;
 const TimelinePoint = ({ index }: TimelinePointProps) => {
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0.65,
-      }}
-      whileInView={{
-        opacity: 1,
-        scale: 1,
-      }}
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{
-        delay: 0.9,
-        duration: 1,
+        delay: 0.4 + index * 0.1,
+        duration: 1.2,
         ease: smoothEase,
       }}
-      viewport={{
-        once: true,
-        amount: 0.5,
-      }}
+      viewport={{ once: true, amount: 0.5 }}
       className="
         absolute
         left-1/2
@@ -39,6 +30,26 @@ const TimelinePoint = ({ index }: TimelinePointProps) => {
         md:flex
       "
     >
+      {/* Cercle qui se dessine */}
+      <motion.span
+        initial={{ scale: 0, borderWidth: 0 }}
+        whileInView={{ scale: 1, borderWidth: 4 }}
+        transition={{
+          delay: 0.6 + index * 0.1,
+          duration: 1.4,
+          ease: smoothEase,
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="
+          h-full
+          w-full
+          rounded-full
+          border-gray-900
+          bg-[#f3f009]
+        "
+      />
+
+      {/* Effet lumineux pulsé */}
       <motion.span
         animate={{
           boxShadow: [
@@ -57,12 +68,11 @@ const TimelinePoint = ({ index }: TimelinePointProps) => {
           repeatDelay: 2.5,
         }}
         className="
+          absolute
           h-full
           w-full
           rounded-full
-          border-4
-          border-gray-900
-          bg-[#f3f009]
+          bg-transparent
         "
       />
     </motion.div>

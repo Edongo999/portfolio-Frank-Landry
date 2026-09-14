@@ -137,161 +137,113 @@
     "siteVirtuel": {
       "title": "Projet E-Technology – Site vitrine",
       "description": "Maquette et site vitrine réalisés dans le cadre de mon entreprise en Ligne E-Technology.",
-      "descriptionLong": "Conception et développement d’un site vitrine moderne destiné à présenter les services et l’identité de mon entreprise virtuelle E-Technology. Le projet a été conçu comme une vitrine professionnelle avec une attention particulière portée à l’interface, à la navigation et à l’expérience utilisateur.",
-      "role": "Développeur Web & Designer",
       "results": "Une vitrine professionnelle moderne permettant de présenter l’activité et les services de l’entreprise.",
-      "impact": "Renforcement de mes compétences en conception d’interfaces, développement React et intégration de solutions modernes.",
       "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
     },
     "111Studio": {
     "title": "111Studio – Site vitrine",
     "description": "Site vitrine moderne pour une entreprise de photographie spécialisée dans les mariages et la création de contenu.",
-    "descriptionLong": "Développement d’un site web premium destiné à mettre en valeur les services de 111Studio, une entreprise créative spécialisée dans la photographie de mariage, les grands événements et la production de contenu visuel.",
-    "role": "Développeur Full‑Stack",
     "results": "Site vitrine moderne et responsive déployé pour renforcer l’image de la marque.",
-    "impact": "Illustration de ma capacité à transformer l’identité d’une entreprise en une expérience web moderne et interactive.",
     "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
      },
 
     "portfolioMarketing": {
       "title": "Portfolio marketing digital",
       "description": "Portfolio moderne conçu pour présenter les services d’une professionnelle du marketing digital.",
-      "descriptionLong": "Conception et développement d’un portfolio moderne destiné à présenter les compétences, services et réalisations d’une professionnelle du marketing digital.",
-      "role": "Développeur Frontend",
       "results": "Un portfolio professionnel moderne développé et déployé pour présenter efficacement son activité.",
-      "impact": "Démonstration de ma capacité à transformer une identité professionnelle en une expérience web moderne et interactive.",
       "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
     },
 
     "imageCompression": {
       "title": "Application compression images",
       "description": "Application web moderne permettant de compresser et convertir facilement les fichiers multimédias.",
-      "descriptionLong": "Développement d’une application web moderne destinée à faciliter l’optimisation des fichiers multimédias. L’application permet de compresser et convertir les fichiers à travers une interface simple et intuitive.",
-      "role": "Développeur Frontend",
       "results": "Une application fonctionnelle permettant d’optimiser facilement les fichiers avec une interface responsive.",
-      "impact": "Démonstration de mes compétences dans la conception d’outils web pratiques et orientés utilisateur.",
       "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
     },
     "photographerPortfolio": {
       "title": "Portfolio pour photographes",
       "description": "Portfolio moderne conçu pour mettre en avant les travaux et réalisations des photographes en ligne.",
-      "descriptionLong": "Conception et développement d’un portfolio destiné aux photographes souhaitant présenter leurs créations de manière professionnelle. L’interface valorise les contenus visuels, propose une navigation fluide et s’adapte à tous les écrans pour une expérience optimale.",
-      "role": "Développeur Frontend",
       "results": "Un portfolio moderne et responsive permettant de présenter efficacement les travaux photographiques et renforcer l’image pro.",
-      "impact": "Illustration de ma capacité à concevoir des interfaces adaptées aux métiers créatifs, centrées sur le contenu visuel et l’expérience utilisateur.",
       "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
     },
 
       "adminDashboard": {
         "title": "Tableau de bord administrateur",
         "description": "Dashboard moderne et responsive réalisé lors d’un test technique pour afficher des statistiques.",
-        "descriptionLong": "Développement d’un tableau de bord administrateur moderne permettant de visualiser des statistiques, des indicateurs de sécurité et des informations liées à la gestion des utilisateurs.",
-        "role": "Développeur Frontend",
         "results": "Dashboard fonctionnel offrant une interface claire, des statistiques détaillées et des indicateurs utiles pour la gestion.",
-        "impact": "Illustration de ma capacité à concevoir des interfaces d’administration modernes et structurées.",
         "tools": "React.js, Tailwind CSS, Recharts, Lucide React"
       },
       "fecacfop": {
         "title": "Stage – Plateforme web FECACFOP",
-        "description": "Plateforme web développée lors de mon stage pour centraliser les formations et les offres d’emploi.",
-        "descriptionLong": "Développement d’une plateforme web destinée à regrouper les informations sur les formations professionnelles et à faciliter la diffusion des offres d’emploi de la FECACFOP. Le projet a été interrompu suite à une décision de la direction.",
-        "role": "Développeur Web Stagiaire",
+        "description": "Développement d’une plateforme web destinée à centraliser les formations professionnelles et à faciliter la diffusion des offres d’emploi de la FECACFOP.",
         "results": "Première version fonctionnelle de la plateforme réalisée avant la mise en pause du projet.",
-        "impact": "Renforcement de mes compétences en développement web avec PHP, MySQL, HTML et CSS dans un contexte professionnel.",
         "tools": "PHP, MySQL, HTML, CSS"
       },
 
     "javaDesktop": {
       "title": "Stage – Application desktop Java",
       "description": "Application desktop développée en Java pour faciliter la gestion des informations des stagiaires.",
-      "descriptionLong": "Développement d’une application desktop destinée à faciliter la gestion, le suivi et l’organisation des informations relatives aux stagiaires.",
-      "role": "Développeur Java Stagiaire",
       "results": "Une application desktop opérationnelle permettant une gestion structurée des informations des stagiaires.",
-      "impact": "Renforcement de mes compétences en Java, interfaces desktop et gestion de bases de données.",
       "tools": "Java, NetBeans, MySQL"
     },
 
     "salons": {
       "title": "Campagnes visuelles – Salons & couturière",
       "description": "Création de flyers modernes pour promouvoir les services des salons et d’une couturière.",
-      "descriptionLong": "Conception de plusieurs supports visuels destinés à promouvoir les services de salons de coiffure et d’une couturière.",
-      "role": "Designer Graphique",
       "results": "Plusieurs supports visuels créés pour renforcer la communication professionnelle.",
-      "impact": "Renforcement de la visibilité et de la communication visuelle des activités.",
       "tools": "Photoshop, Illustrator"
     },
 
     "visualEtechnology": {
       "title": "Identité visuelle – E-Technology",
       "description": "Création d’une identité visuelle composée d’un logo et supports promotionnels professionnels.",
-      "descriptionLong": "Conception de l’identité visuelle de mon entreprise virtuelle E-Technology à travers la création du logo et de plusieurs supports graphiques promotionnels.",
-      "role": "Designer Graphique",
       "results": "Une identité visuelle professionnelle composée d’un logo et supports graphiques cohérents.",
-      "impact": "Développement de mes compétences en identité visuelle, conception graphique et communication.",
       "tools": "Illustrator, Photoshop"
     },
 
     "wedding": {
       "title": "Invitations & affiches de mariage",
       "description": "Création d’invitations et affiches personnalisées pour accompagner différentes cérémonies de mariage.",
-      "descriptionLong": "Conception de billets d’invitation et d’affiches personnalisées pour plusieurs couples, avec un style élégant et raffiné.",
-      "role": "Designer Graphique",
       "results": "Plusieurs supports personnalisés créés pour accompagner élégamment les différentes cérémonies.",
-      "impact": "Valorisation des événements grâce à une communication visuelle élégante.",
       "tools": "Photoshop"
     },
 
     "motorcycle": {
       "title": "Logo & affiche – Location motos",
       "description": "Création d’un logo moderne et d’une affiche promotionnelle pour une entreprise spécialisée.",
-      "descriptionLong": "Conception d’une identité visuelle comprenant un logo et une affiche promotionnelle pour une entreprise spécialisée dans la location de motos.",
-      "role": "Designer Graphique",
       "results": "Une identité visuelle professionnelle réalisée avec un logo et support promotionnel cohérent.",
-      "impact": "Renforcement de l’image professionnelle de l’entreprise.",
       "tools": "Illustrator, Photoshop"
     },
 
     "trainingCenters": {
       "title": "Flyers – Centres de formation",
       "description": "Création de flyers pour promouvoir les activités des centres de répétition et formation informatique.",
-      "descriptionLong": "Conception de plusieurs flyers destinés à promouvoir les services de centres de répétition et de formation en informatique.",
-      "role": "Designer Graphique",
       "results": "Plusieurs supports de communication créés pour présenter efficacement les activités des centres.",
-      "impact": "Amélioration de la présentation des services et de leur communication visuelle.",
       "tools": "Photoshop, Illustrator"
     },
 
     "businessCards": {
       "title": "Cartes de visite & logos",
       "description": "Création de cartes de visite modernes et logos professionnels pour différents clients.",
-      "descriptionLong": "Conception de plusieurs cartes de visite et logos destinés à différents professionnels et activités.",
-      "role": "Designer Graphique",
       "results": "Plusieurs identités et supports professionnels créés pour répondre aux besoins des différents clients.",
-      "impact": "Renforcement de l’image professionnelle des clients.",
       "tools": "Photoshop, Illustrator"
     },
 
     "twoJM": {
       "title": "Affiches – Entreprise 2JM",
       "description": "Conception de trois affiches promotionnelles pour une entreprise spécialisée en psychologie.",
-      "descriptionLong": "Création de trois affiches promotionnelles destinées à présenter les services d’une entreprise spécialisée dans le domaine de la psychologie.",
-      "role": "Designer Graphique",
       "results": "Trois affiches professionnelles réalisées pour présenter clairement les services proposés par l’entreprise.",
-      "impact": "Amélioration de la présentation et de la communication visuelle de l’entreprise.",
       "tools": "Photoshop"
     },
-"churches": {
-  "title": "Flyers – Églises & prêtre",
-  "description": "Conception de flyers personnalisés pour présenter les activités et événements religieux.",
-  "descriptionLong": "Création de plusieurs supports graphiques destinés à promouvoir les activités et événements d’églises ainsi que les initiatives d’un prêtre. Les visuels ont été pensés pour refléter l’identité religieuse, renforcer la communication auprès des fidèles et offrir une présentation claire, esthétique et professionnelle.",
-  "role": "Designer Graphique",
-  "results": "Réalisation de flyers uniques et adaptés, permettant une meilleure visibilité des événements religieux et une diffusion plus efficace",
-  "impact": "Amélioration de la diffusion des informations auprès du public et valorisation des activités religieuses.",
-  "tools": "Photoshop"
-}
+    "churches": {
+      "title": "Flyers – Églises & prêtre",
+      "description": "Conception de flyers personnalisés pour présenter les activités et événements religieux.",
+      "results": "Réalisation de flyers uniques et adaptés, permettant une meilleure visibilité des événements religieux et une diffusion plus efficace",
+      "tools": "Photoshop"
+    }
 
-  }
-},
+      }
+    },
 
   "media": {
   "pause": "Pause",

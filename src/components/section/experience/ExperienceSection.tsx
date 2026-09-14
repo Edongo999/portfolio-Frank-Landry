@@ -1,3 +1,4 @@
+// src/components/section/experience/ExperienceSection.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -7,6 +8,7 @@ import { experiences, type Experience } from '@/components/data/experiences';
 import ExperienceCard from '@/components/section/experience/ExperienceCard';
 import TimelinePoint from '@/components/section/experience/TimelinePoint';
 import TimelineConnection from '@/components/section/experience/TimelineConnection';
+import TimelineCentralLine from '@/components/section/experience/TimelineCentralLine';
 
 /* =========================================================
    ANIMATIONS
@@ -58,10 +60,7 @@ const ExperienceSection = () => {
         md:py-10
       "
     >
-      {/* =====================================================
-          LUMIÈRE DÉCORATIVE
-      ===================================================== */}
-
+      {/* LUMIÈRE DÉCORATIVE */}
       <div
         className="
           pointer-events-none
@@ -77,10 +76,7 @@ const ExperienceSection = () => {
         "
       />
 
-      {/* =====================================================
-          CONTENEUR
-      ===================================================== */}
-
+      {/* CONTENEUR */}
       <div
         className="
           relative
@@ -92,29 +88,13 @@ const ExperienceSection = () => {
           lg:px-8
         "
       >
-        {/* =====================================================
-            EN-TÊTE
-        ===================================================== */}
-
+        {/* EN-TÊTE */}
         <div className="mb-12 text-center">
-          {/* BADGE */}
-
           <motion.div
-            initial={{
-              opacity: 0,
-              x: -20,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.3,
-            }}
-            transition={{
-              duration: 0.6,
-            }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
           >
             <span
               className="
@@ -144,30 +124,15 @@ const ExperienceSection = () => {
                   shadow-[0_0_8px_rgba(243,240,9,0.7)]
                 "
               />
-
               {t('experience.badge')}
             </span>
           </motion.div>
 
-          {/* TITRE */}
-
           <motion.h2
-            initial={{
-              opacity: 0,
-              x: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.3,
-            }}
-            transition={{
-              duration: 0.6,
-              delay: 0.1,
-            }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="
               mx-auto
               mt-4
@@ -186,26 +151,11 @@ const ExperienceSection = () => {
             </span>
           </motion.h2>
 
-          {/* TRAIT */}
-
           <motion.div
-            initial={{
-              opacity: 0,
-              scaleX: 0,
-            }}
-            whileInView={{
-              opacity: 1,
-              scaleX: 1,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.5,
-            }}
-            transition={{
-              duration: 1.2,
-              ease: 'easeOut',
-              delay: 0.2,
-            }}
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1.2, ease: 'easeOut', delay: 0.2 }}
             className="
               mx-auto
               mt-6
@@ -218,27 +168,11 @@ const ExperienceSection = () => {
             "
           />
 
-          {/* =================================================
-              DESCRIPTION
-          ================================================= */}
-
           <motion.p
-            initial={{
-              opacity: 0,
-              y: 15,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.3,
-            }}
-            transition={{
-              duration: 0.6,
-              delay: 0.25,
-            }}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
             className="
               mx-auto
               mt-6
@@ -249,11 +183,9 @@ const ExperienceSection = () => {
               text-gray-100
               hyphens-auto
               [overflow-wrap:break-word]
-
               sm:max-w-5xl
               sm:text-lg
               sm:leading-8
-
               md:max-w-6xl
               md:text-xl
               md:leading-9
@@ -263,86 +195,22 @@ const ExperienceSection = () => {
           </motion.p>
         </div>
 
-        {/* =====================================================
-            TIMELINE
-        ===================================================== */}
-
+        {/* TIMELINE */}
         <div className="relative mx-auto max-w-6xl">
-          {/* ===================================================
-              LIGNE CENTRALE — DESKTOP UNIQUEMENT
-          =================================================== */}
+          {/* Ligne centrale déplacée dans son propre composant */}
+          <TimelineCentralLine />
 
-          <div
-            className="
-              absolute
-              left-1/2
-              top-0
-              hidden
-              h-full
-              w-px
-              -translate-x-1/2
-              overflow-hidden
-              bg-gray-700
-              md:block
-            "
-          >
-            <motion.div
-              initial={{
-                height: 0,
-                opacity: 0,
-              }}
-              whileInView={{
-                height: '100%',
-                opacity: 1,
-              }}
-              transition={{
-                duration: 3.5,
-                ease: smoothEase,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.05,
-              }}
-              className="
-                h-full
-                w-full
-                bg-gradient-to-b
-                from-[#f3f009]
-                via-[#f3f009]/70
-                to-transparent
-              "
-            />
-          </div>
-
-          {/* ===================================================
-              CARTES
-          =================================================== */}
-
-          <div
-            className="
-              relative
-              z-10
-              space-y-0
-              md:space-y-16
-            "
-          >
+          {/* CARTES */}
+          <div className="relative z-10 space-y-0 md:space-y-16">
             {experiences.map((exp: Experience, index: number) => {
               const isLeft = index % 2 === 0;
 
               return (
                 <React.Fragment key={`${exp.titleKey}-${index}`}>
-                  <div
-                    className="
-                      relative
-                      grid
-                      md:grid-cols-2
-                      md:gap-16
-                    "
-                  >
+                  <div className="relative grid md:grid-cols-2 md:gap-16">
                     <TimelinePoint index={index} />
 
                     {/* CARTE GAUCHE */}
-
                     {isLeft ? (
                       <motion.div
                         variants={fadeLeft}
@@ -358,13 +226,9 @@ const ExperienceSection = () => {
                           amount: 0.2,
                           margin: '-80px',
                         }}
-                        className="
-                          relative
-                          md:pr-8
-                        "
+                        className="relative md:pr-8"
                       >
                         <ExperienceCard exp={exp} />
-
                         <TimelineConnection side="left" />
                       </motion.div>
                     ) : (
@@ -372,7 +236,6 @@ const ExperienceSection = () => {
                     )}
 
                     {/* CARTE DROITE */}
-
                     {!isLeft ? (
                       <motion.div
                         variants={fadeRight}
@@ -388,13 +251,9 @@ const ExperienceSection = () => {
                           amount: 0.2,
                           margin: '-80px',
                         }}
-                        className="
-                          relative
-                          md:pl-8
-                        "
+                        className="relative md:pl-8"
                       >
                         <ExperienceCard exp={exp} />
-
                         <TimelineConnection side="right" />
                       </motion.div>
                     ) : (
@@ -403,26 +262,16 @@ const ExperienceSection = () => {
                   </div>
 
                   {/* TRAIT MOBILE */}
-
                   {index < experiences.length - 1 && (
                     <motion.div
-                      initial={{
-                        scaleY: 0,
-                        opacity: 0,
-                      }}
-                      whileInView={{
-                        scaleY: 1,
-                        opacity: 1,
-                      }}
+                      initial={{ scaleY: 0, opacity: 0 }}
+                      whileInView={{ scaleY: 1, opacity: 1 }}
                       transition={{
                         duration: 0.7,
                         delay: 0.25,
                         ease: smoothEase,
                       }}
-                      viewport={{
-                        once: true,
-                        amount: 0.8,
-                      }}
+                      viewport={{ once: true, amount: 0.8 }}
                       className="
                         relative
                         mx-auto

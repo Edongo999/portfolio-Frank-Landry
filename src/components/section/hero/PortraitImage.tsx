@@ -16,7 +16,7 @@ const PortraitImage: React.FC<PortraitImageProps> = ({ visible, alt }) => {
         className="
           absolute
           z-0
-          -translate-x-7
+          -translate-x-1
           sm:translate-x-0
           md:translate-x-0
         "
@@ -71,7 +71,7 @@ const PortraitImage: React.FC<PortraitImageProps> = ({ visible, alt }) => {
         className="
           absolute
           z-0
-          -translate-x-7
+          -translate-x-1
           sm:translate-x-0
           md:translate-x-0
         "
@@ -110,7 +110,7 @@ const PortraitImage: React.FC<PortraitImageProps> = ({ visible, alt }) => {
         className="
           absolute
           z-20
-          -translate-x-7
+          -translate-x-1
           sm:translate-x-0
           md:translate-x-0
         "

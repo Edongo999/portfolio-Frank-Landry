@@ -14,6 +14,7 @@ import {
 const Hero: React.FC = () => {
   const { t } = useTranslation();
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const names = useMemo(() => [t('hero.name1'), t('hero.name2')], [t]);
 
   const roles = useMemo(
@@ -51,28 +52,29 @@ const Hero: React.FC = () => {
         "
       >
         {/* SALUTATION + NOM */}
+        {/* SALUTATION + NOM */}
         <HeroFadeIn delay={0}>
           <h1
             className="
-              relative
-              mb-0
-              sm:mb-6
-              w-full
-              h-[4.2rem]
-              sm:h-auto
-              text-[clamp(1.6rem,5vw,2.2rem)]
-              sm:text-[clamp(1.2rem,3vw,1.8rem)]
-              font-bold
-              text-white
-              text-center
-              sm:text-left
-            "
+      mb-0
+      sm:mb-6
+      w-full
+      text-[clamp(1.6rem,5vw,2.2rem)]
+      sm:text-[clamp(1.2rem,3vw,1.8rem)]
+      font-bold
+      text-white
+      text-center
+      sm:text-left
+      flex flex-col sm:flex-row sm:items-baseline sm:gap-4
+    "
           >
-            <span className="block sm:inline whitespace-nowrap">
-              {t('hero.greeting')}
-            </span>
+            {/* Bonjour */}
+            <span className="whitespace-nowrap">{t('hero.greeting')}</span>
 
-            <TypewriterName names={names} />
+            {/* Nom animé qui alterne entre name1 et name2 */}
+            <span className="text-[#f3f009] mt-2 sm:mt-0">
+              <TypewriterName names={[t('hero.name1'), t('hero.name2')]} />
+            </span>
           </h1>
         </HeroFadeIn>
 

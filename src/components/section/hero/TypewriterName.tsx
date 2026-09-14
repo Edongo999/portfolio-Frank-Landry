@@ -1,69 +1,63 @@
 import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-interface TypewriterNameProps {
+interface Props {
   names: string[];
 }
 
-const TypewriterName = React.memo(({ names }: TypewriterNameProps) => {
-  const [displayedName, setDisplayedName] = useState('');
-  const [nameIndex, setNameIndex] = useState(0);
-  const [nameChar, setNameChar] = useState(0);
+const TypewriterName: React.FC<Props> = ({ names }) => {
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const currentName = names[nameIndex] || '';
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % names.length);
+    }, 6000); // passe à 6 secondes au lieu de 4
+    return () => clearInterval(interval);
+  }, [names.length]);
 
-    if (nameChar < currentName.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedName(currentName.slice(0, nameChar + 1));
-        setNameChar((c) => c + 1);
-      }, 150);
-
-      return () => clearTimeout(timeout);
-    }
-
-    const resetTimeout = setTimeout(() => {
-      setNameIndex((nameIndex + 1) % names.length);
-      setNameChar(0);
-      setDisplayedName('');
-    }, 1500);
-
-    return () => clearTimeout(resetTimeout);
-  }, [nameChar, nameIndex, names]);
+  const letters = names[index].split('');
 
   return (
-    <span
-      className="
-        relative
-        block
-        h-[1.4em]
-        w-full
-        sm:inline-block
-        sm:h-[1.4em]
-        sm:w-75
-        
-        ml-0
-        sm:ml-1
-        overflow-hidden
-        align-bottom
-        text-[#f3f009]
-      "
-    >
-      <span
-        className="
-          absolute
-          left-1/2
-          top-0
-          -translate-x-1/2
-          whitespace-nowrap
-          sm:left-0
-          sm:translate-x-0
-        "
+    <AnimatePresence mode="wait">
+      <motion.span
+        key={names[index]}
+        className="text-[#f3f009] whitespace-nowrap inline-block"
       >
-        {displayedName}
-        <span className="ml-1 animate-pulse">|</span>
-      </span>
-    </span>
+        {letters.map((letter, i) => (
+          <motion.span
+            key={i}
+            initial={{
+              opacity: 0,
+              scale: 3,
+              rotateY: 180,
+              filter: 'blur(12px)',
+              y: -40,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              rotateY: 0,
+              filter: 'blur(0px)',
+              y: 0,
+            }}
+            exit={{
+              opacity: 0,
+              y: 30,
+              filter: 'blur(8px)',
+            }}
+            transition={{
+              duration: 1.2, //  animation plus longue (0.7 → 1.2)
+              delay: i * 0.18, // délai plus espacé entre lettres (0.12 → 0.18)
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className={`inline-block ${letter === ' ' ? 'w-3' : ''}`}
+          >
+            {letter}
+          </motion.span>
+        ))}
+      </motion.span>
+    </AnimatePresence>
   );
-});
+};
 
-export default TypewriterName;
+export default React.memo(TypewriterName);

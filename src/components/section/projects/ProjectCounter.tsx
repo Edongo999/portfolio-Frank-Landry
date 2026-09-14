@@ -68,7 +68,18 @@ const ProjectCounter: React.FC<ProjectCounterProps> = ({ count }) => {
       </div>
 
       {/* LIGNE */}
-      <div className="ml-4 h-px flex-1 bg-gray-800" />
+
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+          duration: 1.5,
+          ease: 'easeOut',
+          times: [0, 0.3, 0.6, 1], // étapes du remplissage
+        }}
+        className="ml-4 h-px flex-1 bg-gray-700 origin-left"
+      />
     </motion.div>
   );
 };

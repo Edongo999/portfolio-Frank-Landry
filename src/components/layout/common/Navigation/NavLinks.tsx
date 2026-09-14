@@ -1,5 +1,3 @@
-// src/components/Navigation/NavLinks.tsx
-
 import NavItem from '@/components/layout/common/Navigation/NavItem';
 import { navLinks } from '@/components/layout/common/Navigation/navLinks.data';
 import { useActiveSection } from '@/components/layout/common/Navigation/useActiveSection';
@@ -7,9 +5,14 @@ import { useActiveSection } from '@/components/layout/common/Navigation/useActiv
 type NavLinksProps = {
   vertical?: boolean;
   onClick?: () => void;
+  scrolled?: boolean;
 };
 
-export default function NavLinks({ vertical = false, onClick }: NavLinksProps) {
+export default function NavLinks({
+  vertical = false,
+  onClick,
+  scrolled = false,
+}: NavLinksProps) {
   const { activeSection, setActiveSection } = useActiveSection();
 
   return (
@@ -18,9 +21,7 @@ export default function NavLinks({ vertical = false, onClick }: NavLinksProps) {
         flex
         items-center
         justify-center
-
         ${vertical ? 'flex-col gap-6' : 'gap-7'}
-
         text-sm
         md:text-base
         font-medium
@@ -33,6 +34,7 @@ export default function NavLinks({ vertical = false, onClick }: NavLinksProps) {
           active={activeSection === link.key}
           setActiveSection={setActiveSection}
           onClick={onClick}
+          scrolled={scrolled}
         />
       ))}
     </ul>

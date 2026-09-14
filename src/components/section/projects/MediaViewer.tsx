@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 type Media = { type: 'video' | 'image'; src: string };
 type Project = {
   title: string;
-  medias?: Media[]; // ✅ medias devient optionnel
+  medias?: Media[];
   link?: string;
   category?: 'Développement Web' | 'Design' | 'desktop';
 };
@@ -29,13 +29,11 @@ export default function MediaViewer({
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  // ✅ sécurisation : si pas de medias, media = null
   const media =
     project.medias && project.medias.length > 0
       ? project.medias[currentIndex]
       : null;
 
-  // Gestion vidéo
   useEffect(() => {
     if (!media || media.type !== 'video') return;
     const v = videoRef.current;
@@ -45,7 +43,6 @@ export default function MediaViewer({
     v.play().catch(() => {});
   }, [currentIndex, isMuted, media]);
 
-  // Diaporama automatique
   useEffect(() => {
     if (!slideshow || !project.medias || project.medias.length <= 1) return;
     const timer = setInterval(() => {
@@ -161,32 +158,41 @@ export default function MediaViewer({
         </div>
       )}
 
-      {/* Bouton slideshow */}
-      {project.medias && project.medias.length > 1 && (
-        <div className="mt-4 flex justify-center">
-          <button
-            onClick={toggleSlideshow}
-            className="px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-600 transition"
-          >
-            {slideshow ? t('media.pause') : t('media.play')}
-          </button>
-        </div>
-      )}
+      {/* Boutons slideshow + consulter site/app */}
+      {project.category === 'Développement Web' && project.link ? (
+        <div className="mt-4 flex justify-center gap-4">
+          {project.medias && project.medias.length > 1 && (
+            <button
+              onClick={toggleSlideshow}
+              className="px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-600 transition"
+            >
+              {slideshow ? t('media.pause') : t('media.play')}
+            </button>
+          )}
 
-      {/* Bouton consulter le site/app */}
-      {project.category === 'Développement Web' && project.link && (
-        <div className="mt-6 flex justify-center">
           <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
             {project.title.toLowerCase().includes('app')
               ? "Consulter l'application"
               : 'Consulter le site'}
           </a>
         </div>
+      ) : (
+        project.medias &&
+        project.medias.length > 1 && (
+          <div className="mt-4 flex justify-center">
+            <button
+              onClick={toggleSlideshow}
+              className="px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-600 transition"
+            >
+              {slideshow ? t('media.pause') : t('media.play')}
+            </button>
+          </div>
+        )
       )}
     </div>
   );

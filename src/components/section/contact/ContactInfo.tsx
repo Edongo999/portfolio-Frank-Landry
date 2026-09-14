@@ -1,11 +1,7 @@
 import React from 'react';
-
-import { motion } from 'framer-motion';
-
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
-
 import {
   leftVariants,
   mobileItemVariants,
@@ -18,7 +14,11 @@ interface ContactInfoProps {
 }
 
 const ContactInfo = ({ isMobile }: ContactInfoProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // Select image according to active language
+  const imageSrc =
+    i18n.language === 'en' ? '/images/contact2-en.png' : '/images/contact2.png';
 
   const mobileAnimation = (index: number) =>
     isMobile
@@ -27,7 +27,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
           custom: index,
           initial: 'hidden' as const,
           whileInView: 'visible' as const,
-
           viewport: {
             once: true,
             amount: 0.2,
@@ -43,7 +42,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
             initial: 'hidden',
             whileInView: 'visible',
             exit: 'exit',
-
             viewport: {
               once: false,
               amount: 0.2,
@@ -67,7 +65,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
               variants: mobileImageVariants,
               initial: 'hidden',
               whileInView: 'visible',
-
               viewport: {
                 once: true,
                 amount: 0.2,
@@ -78,7 +75,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
               initial: 'hidden',
               whileInView: 'visible',
               exit: 'exit',
-
               viewport: {
                 once: false,
                 amount: 0.2,
@@ -91,25 +87,32 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
           justify-center
         "
       >
-        <img
-          src="/images/contact2.png"
-          alt={t('contact.imageAlt')}
-          className="
-            mx-auto
-            h-[600px]
-            w-full
-            max-w-2xl
-            -translate-y-10
-            rounded-lg
-            object-contain
-            shadow-lg
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={imageSrc}
+            src={imageSrc}
+            alt={t('contact.imageAlt')}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="
+              mx-auto
+              h-[600px]
+              w-full
+              max-w-2xl
+              -translate-y-10
+              rounded-lg
+              object-contain
+              shadow-lg
 
-            max-md:h-[800px]
-            max-md:-translate-y-26
-            max-md:w-[115%]
-            max-md:max-w-none
-          "
-        />
+              max-md:h-[800px]
+              max-md:-translate-y-26
+              max-md:w-[115%]
+              max-md:max-w-none
+            "
+          />
+        </AnimatePresence>
 
         {/* TRAIT GAUCHE */}
 
@@ -120,7 +123,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
                 custom: 0,
                 initial: 'hidden',
                 whileInView: 'visible',
-
                 viewport: {
                   once: true,
                   amount: 0.2,
@@ -131,7 +133,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
                 initial: 'hidden',
                 whileInView: 'visible',
                 exit: 'exit',
-
                 viewport: {
                   once: false,
                   amount: 0.2,
@@ -158,7 +159,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
                 custom: 1,
                 initial: 'hidden',
                 whileInView: 'visible',
-
                 viewport: {
                   once: true,
                   amount: 0.2,
@@ -169,7 +169,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
                 initial: 'hidden',
                 whileInView: 'visible',
                 exit: 'exit',
-
                 viewport: {
                   once: false,
                   amount: 0.2,
@@ -198,7 +197,6 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
               initial: 'hidden',
               whileInView: 'visible',
               exit: 'exit',
-
               viewport: {
                 once: false,
                 amount: 0.2,
