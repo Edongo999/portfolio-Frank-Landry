@@ -1,12 +1,11 @@
 import React from 'react';
-
 import { motion } from 'framer-motion';
-
 import { useTranslation } from 'react-i18next';
-
 import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/solid';
 
 import { rightVariants, mobileItemVariants } from './contactAnimations';
+
+import SuccessConfetti from './SuccessConfetti';
 
 interface ContactFormProps {
   form: React.RefObject<HTMLFormElement | null>;
@@ -16,13 +15,13 @@ interface ContactFormProps {
   isMobile: boolean;
 }
 
-const ContactForm = ({
+const ContactForm: React.FC<ContactFormProps> = ({
   form,
   sendEmail,
   loading,
   status,
   isMobile,
-}: ContactFormProps) => {
+}) => {
   const { t } = useTranslation();
 
   const mobileAnimation = (index: number) =>
@@ -32,7 +31,6 @@ const ContactForm = ({
           custom: index,
           initial: 'hidden' as const,
           whileInView: 'visible' as const,
-
           viewport: {
             once: true,
             amount: 0.2,
@@ -51,7 +49,6 @@ const ContactForm = ({
             initial: 'hidden',
             whileInView: 'visible',
             exit: 'exit',
-
             viewport: {
               once: false,
               amount: 0.2,
@@ -69,7 +66,6 @@ const ContactForm = ({
       "
     >
       {/* NOM */}
-
       <motion.input
         {...(isMobile ? mobileAnimation(7) : {})}
         type="text"
@@ -91,7 +87,6 @@ const ContactForm = ({
       />
 
       {/* EMAIL */}
-
       <motion.input
         {...(isMobile ? mobileAnimation(8) : {})}
         type="email"
@@ -112,8 +107,7 @@ const ContactForm = ({
         "
       />
 
-      {/* TELEPHONE */}
-
+      {/* TÉLÉPHONE */}
       <motion.input
         {...(isMobile ? mobileAnimation(9) : {})}
         type="text"
@@ -134,7 +128,6 @@ const ContactForm = ({
       />
 
       {/* SERVICE */}
-
       <motion.input
         {...(isMobile ? mobileAnimation(10) : {})}
         type="text"
@@ -155,8 +148,7 @@ const ContactForm = ({
         "
       />
 
-      {/* DETAILS */}
-
+      {/* DÉTAILS */}
       <motion.textarea
         {...(isMobile ? mobileAnimation(11) : {})}
         name="details"
@@ -178,68 +170,142 @@ const ContactForm = ({
         "
       />
 
-      {/* BOUTON */}
+      {/* BOUTON D'ENVOI */}
+      <div className="relative w-full">
+        {status === 'success' && <SuccessConfetti />}
 
-      <motion.button
-        {...(isMobile ? mobileAnimation(12) : {})}
-        type="submit"
-        disabled={loading}
-        className={`
-          flex
-          w-full
-          items-center
-          justify-center
-          gap-2
-          rounded-md
-          py-3
-          font-semibold
-          transition-all
-          duration-500
-          ease-in-out
+        <motion.button
+          {...(isMobile ? mobileAnimation(12) : {})}
+          type="submit"
+          disabled={loading}
+          whileTap={!loading ? { scale: 0.98 } : undefined}
+          className={`
+            relative
+            z-10
+            flex
+            w-full
+            items-center
+            justify-center
+            gap-2
+            overflow-hidden
+            rounded-md
+            py-3
+            font-semibold
+            text-white
+            transition-all
+            duration-300
+            ${
+              loading
+                ? 'cursor-not-allowed bg-indigo-400'
+                : status === 'success'
+                  ? 'bg-green-500'
+                  : status === 'error'
+                    ? 'bg-red-500'
+                    : 'bg-indigo-500 hover:bg-indigo-600'
+            }
+          `}
+        >
+          {/* CHARGEMENT */}
+          {loading && (
+            <motion.span
+              initial={{
+                opacity: 0,
+                scale: 0.7,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              className="
+                h-5
+                w-5
+                animate-spin
+                rounded-full
+                border-2
+                border-white
+                border-t-transparent
+              "
+            />
+          )}
 
-          ${
-            loading
-              ? 'cursor-not-allowed bg-indigo-400'
-              : 'bg-indigo-500 hover:bg-indigo-600'
-          }
+          {/* ÉTAT NORMAL */}
+          {!loading && status === 'idle' && (
+            <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              {t('contact.form.send')}
+            </motion.span>
+          )}
 
-          ${status === 'success' ? 'bg-green-500' : ''}
+          {/* SUCCÈS */}
+          {!loading && status === 'success' && (
+            <motion.span
+              initial={{
+                opacity: 0,
+                scale: 0.7,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.4,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="
+                flex
+                items-center
+                justify-center
+                gap-2
+              "
+            >
+              <motion.span
+                initial={{
+                  scale: 0,
+                  rotate: -45,
+                }}
+                animate={{
+                  scale: 1,
+                  rotate: 0,
+                }}
+                transition={{
+                  duration: 0.45,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <CheckCircleIcon className="h-6 w-6" />
+              </motion.span>
 
-          ${status === 'error' ? 'bg-red-500' : ''}
-        `}
-      >
-        {loading && (
-          <span
-            className="
-              h-5
-              w-5
-              animate-spin
-              rounded-full
-              border-2
-              border-white
-              border-t-transparent
-            "
-          />
-        )}
+              <span>{t('contact.form.success')}</span>
+            </motion.span>
+          )}
 
-        {status === 'idle' && <span>{t('contact.form.send')}</span>}
+          {/* ERREUR */}
+          {!loading && status === 'error' && (
+            <motion.span
+              initial={{
+                opacity: 0,
+                scale: 0.7,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.35,
+              }}
+              className="
+                flex
+                items-center
+                justify-center
+                gap-2
+              "
+            >
+              <XCircleIcon className="h-6 w-6" />
 
-        {status === 'success' && (
-          <span className="flex items-center gap-2">
-            <CheckCircleIcon className="h-6 w-6 text-white" />
-
-            {t('contact.form.success')}
-          </span>
-        )}
-
-        {status === 'error' && (
-          <span className="flex items-center gap-2">
-            <XCircleIcon className="h-6 w-6 text-white" />
-
-            {t('contact.form.error')}
-          </span>
-        )}
-      </motion.button>
+              <span>{t('contact.form.error')}</span>
+            </motion.span>
+          )}
+        </motion.button>
+      </div>
     </motion.form>
   );
 };

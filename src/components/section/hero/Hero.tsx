@@ -52,7 +52,6 @@ const Hero: React.FC = () => {
         "
       >
         {/* SALUTATION + NOM */}
-        {/* SALUTATION + NOM */}
         <HeroFadeIn delay={0}>
           <h1
             className="
@@ -65,14 +64,18 @@ const Hero: React.FC = () => {
       text-white
       text-center
       sm:text-left
-      flex flex-col sm:flex-row sm:items-baseline sm:gap-4
+      flex
+      flex-col
+      sm:flex-row
+      sm:items-baseline
+      sm:gap-4
     "
           >
             {/* Bonjour */}
             <span className="whitespace-nowrap">{t('hero.greeting')}</span>
 
-            {/* Nom animé qui alterne entre name1 et name2 */}
-            <span className="text-[#f3f009] mt-2 sm:mt-0">
+            {/* Nom animé */}
+            <span className="mt-3 sm:mt-0 inline-flex justify-center sm:justify-start">
               <TypewriterName names={[t('hero.name1'), t('hero.name2')]} />
             </span>
           </h1>

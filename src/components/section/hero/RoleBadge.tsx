@@ -34,10 +34,10 @@ const RoleBadge: React.FC<RoleBadgeProps> = ({
       max-md:top-45
     `,
     bottom: `
-      bottom-[-10px]
-      right-[-25px]
+      bottom-[-9px]
+      right-[-10px]
       max-md:-right-[22px]
-      max-md:bottom-[20px]
+      max-md:bottom-[25px]
     `,
   }[position];
 

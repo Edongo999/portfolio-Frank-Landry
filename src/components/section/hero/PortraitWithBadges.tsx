@@ -16,6 +16,9 @@ const PortraitWithBadges: React.FC<PortraitWithBadgesProps> = ({ t }) => {
   const [step, setStep] = useState(0);
   const [activeBadge, setActiveBadge] = useState(0);
 
+  const [roleIndex2, setRoleIndex2] = useState(0);
+  const [roleIndex3, setRoleIndex3] = useState(0);
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   // ----------------------------------------------------------
@@ -66,62 +69,68 @@ const PortraitWithBadges: React.FC<PortraitWithBadgesProps> = ({ t }) => {
   }, [shouldAnimate]);
 
   // ----------------------------------------------------------
-  // RÔLES
-  // ----------------------------------------------------------
-
-  const rotatingRoles = useMemo(
-    () => [t('hero.role2'), t('hero.role3'), t('hero.role4'), t('hero.role5')],
-    [t]
-  );
-
-  // ----------------------------------------------------------
-  // INDEX DES RÔLES DE CHAQUE BADGE
+  // RÔLES DU BADGE 2
   //
-  // IMPORTANT :
-  // Le rôle ne change QUE lorsque la lumière arrive
-  // sur le badge correspondant.
+  // UNIQUEMENT :
+  // role2 ↔ role4
   // ----------------------------------------------------------
 
-  const [roleIndex1, setRoleIndex1] = useState(0);
-  const [roleIndex2, setRoleIndex2] = useState(1);
+  const badge2Roles = useMemo(() => [t('hero.role2'), t('hero.role4')], [t]);
 
   // ----------------------------------------------------------
-  // LUMIÈRE
+  // RÔLES DU BADGE 3
+  //
+  // UNIQUEMENT :
+  // role3 ↔ role5
+  // ----------------------------------------------------------
+
+  const badge3Roles = useMemo(() => [t('hero.role3'), t('hero.role5')], [t]);
+
+  // ----------------------------------------------------------
+  // CIRCULATION DE LA LUMIÈRE
+  //
+  // Badge 1 → Badge 2 → Badge 3 → Badge 1...
   // ----------------------------------------------------------
 
   useEffect(() => {
     if (!shouldAnimate) return;
 
     const interval = setInterval(() => {
-      setActiveBadge((prev) => {
-        const next = (prev + 1) % 3;
-
-        // ================================================
-        // LA LUMIÈRE ARRIVE SUR LE BADGE 2
-        // ================================================
-
-        if (next === 1) {
-          setRoleIndex1((prevRole) => {
-            return (prevRole + 1) % rotatingRoles.length;
-          });
-        }
-
-        // ================================================
-        // LA LUMIÈRE ARRIVE SUR LE BADGE 3
-        // ================================================
-
-        if (next === 2) {
-          setRoleIndex2((prevRole) => {
-            return (prevRole + 1) % rotatingRoles.length;
-          });
-        }
-
-        return next;
-      });
+      setActiveBadge((prev) => (prev + 1) % 3);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [shouldAnimate, rotatingRoles.length]);
+  }, [shouldAnimate]);
+
+  // ----------------------------------------------------------
+  // CHANGEMENT DU RÔLE DU BADGE 2
+  //
+  // La lumière vient d'arriver sur le Badge 2.
+  //
+  // role2 → role4 → role2 → role4...
+  // ----------------------------------------------------------
+
+  useEffect(() => {
+    if (activeBadge !== 1) return;
+
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setRoleIndex2((prev) => (prev + 1) % 2);
+  }, [activeBadge]);
+
+  // ----------------------------------------------------------
+  // CHANGEMENT DU RÔLE DU BADGE 3
+  //
+  // La lumière vient d'arriver sur le Badge 3.
+  //
+  // role3 → role5 → role3 → role5...
+  // ----------------------------------------------------------
+
+  useEffect(() => {
+    if (activeBadge !== 2) return;
+
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setRoleIndex3((prev) => (prev + 1) % 2);
+  }, [activeBadge]);
 
   // ----------------------------------------------------------
   // PARTICULES
@@ -145,14 +154,14 @@ const PortraitWithBadges: React.FC<PortraitWithBadgesProps> = ({ t }) => {
   const badgeColors = ['#f3f009', '#22c55e', '#3b82f6'];
 
   // ----------------------------------------------------------
-  // RÔLES
+  // RÔLES FINAUX
   // ----------------------------------------------------------
 
   const developerRole = t('hero.role1');
 
-  const rotatingRole1 = rotatingRoles[roleIndex1];
+  const rotatingRole2 = badge2Roles[roleIndex2];
 
-  const rotatingRole2 = rotatingRoles[roleIndex2];
+  const rotatingRole3 = badge3Roles[roleIndex3];
 
   // ----------------------------------------------------------
   // RENDER
@@ -181,7 +190,7 @@ const PortraitWithBadges: React.FC<PortraitWithBadgesProps> = ({ t }) => {
 
       {/* =====================================================
           BADGE 1
-          FIXE : DÉVELOPPEUR FULL STACK
+          FIXE
           ===================================================== */}
 
       <RoleBadge
@@ -195,11 +204,11 @@ const PortraitWithBadges: React.FC<PortraitWithBadgesProps> = ({ t }) => {
 
       {/* =====================================================
           BADGE 2
-          CHANGE UNIQUEMENT QUAND SA LUMIÈRE ARRIVE
+          ROLE 2 ↔ ROLE 4
           ===================================================== */}
 
       <RoleBadge
-        role={rotatingRole1}
+        role={rotatingRole2}
         color={badgeColors[1]}
         active={activeBadge === 1}
         visible={step >= 3}
@@ -209,11 +218,11 @@ const PortraitWithBadges: React.FC<PortraitWithBadgesProps> = ({ t }) => {
 
       {/* =====================================================
           BADGE 3
-          CHANGE UNIQUEMENT QUAND SA LUMIÈRE ARRIVE
+          ROLE 3 ↔ ROLE 5
           ===================================================== */}
 
       <RoleBadge
-        role={rotatingRole2}
+        role={rotatingRole3}
         color={badgeColors[2]}
         active={activeBadge === 2}
         visible={step >= 4}

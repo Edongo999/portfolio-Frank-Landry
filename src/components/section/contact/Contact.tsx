@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react';
 
-import Confetti from 'react-confetti';
-
 import { motion } from 'framer-motion';
 
 import ContactHeader from './ContactHeader';
@@ -21,8 +19,6 @@ const Contact = () => {
 
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const [showConfetti, setShowConfetti] = useState(false);
-
   const isMobile = useIsMobile();
 
   const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -31,7 +27,13 @@ const Contact = () => {
     setLoading(true);
     setStatus('idle');
 
-    if (!form.current) return;
+    if (!form.current) {
+      setLoading(false);
+      return;
+    }
+
+    // On mémorise le moment où l'envoi commence
+    const startTime = Date.now();
 
     try {
       const response = await fetch(import.meta.env.VITE_FORMSPREE_URL, {
@@ -43,16 +45,25 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        // Temps minimum pendant lequel le loader reste visible
+        const minimumLoadingTime = 1500;
+
+        const elapsedTime = Date.now() - startTime;
+
+        const remainingTime = Math.max(0, minimumLoadingTime - elapsedTime);
+
+        // Même si Formspree répond très vite,
+        // le loader reste visible au moins 1,5 seconde.
+        await new Promise<void>((resolve) => {
+          setTimeout(resolve, remainingTime);
+        });
+
         setLoading(false);
         setStatus('success');
-        setShowConfetti(true);
 
         form.current.reset();
 
-        setTimeout(() => {
-          setShowConfetti(false);
-        }, 5000);
-
+        // Le message de succès reste visible
         setTimeout(() => {
           setStatus('idle');
         }, 4000);
@@ -86,15 +97,6 @@ const Contact = () => {
         sm:pb-0
       "
     >
-      {showConfetti && (
-        <Confetti
-          recycle={false}
-          numberOfPieces={600}
-          gravity={0.2}
-          wind={0.01}
-        />
-      )}
-
       <div
         ref={contactRef}
         className="

@@ -9,9 +9,11 @@
     "bloc": "Block",
     "close": "Close"
   },
-  "blogModal": {
-  "message": "You are about to enter Franck Landry's blog. Click Continue to discover my articles.",
-  "continue": "Continue"
+ 
+"blogModal": {
+  "message": "Welcome to Frank Landry's blog. Discover my articles, tips and insights about the digital world.",
+  "continue": "Go to blog",
+  "subtitle": "Tips, insights and discoveries about the digital world."
 },
 "pageLoader": {
   "message": "Please wait..."
@@ -41,11 +43,8 @@
     "me": "Me",
     "badge": "My profile",
     "who": "Who am I?",
-
-    "description": "I am a full-stack web developer and graphic designer, passionate about creating modern, high-performance applications and websites tailored to users' needs. I design interactive interfaces, develop backend solutions and databases, and also create professional visual materials. My background in software engineering has allowed me to develop an approach that is both technical and creative, with a strong focus on user experience.",
-
+    "description": "I am a Full Stack Web Developer passionate about creating modern, high-performing websites and applications tailored to users’ needs. I design interactive interfaces and develop complete web solutions, from the user interface to the backend and databases. In addition to web development, I have skills in graphic design and IT maintenance. My background in software engineering has helped me develop a technical and creative approach focused on delivering practical and effective solutions.",
     "valuesTitle": "My values",
-
     "values": {
       "cleanCode": "Clean Code",
       "ux": "User Experience",
@@ -134,164 +133,115 @@
     "multiple": "projects"
   },
 
-    "items": {
-      "siteVirtuel": {
-        "title": "E-Technology Project – Business Website",
-        "description": "Mockup and business website created as part of my online company, E-Technology.",
-        "descriptionLong": "Design and development of a modern business website created to showcase the services and identity of my virtual company, E-Technology. The project was designed as a professional showcase, with particular attention to the interface, navigation and user experience.",
-        "role": "Web Developer & Designer",
-        "results": "A modern professional showcase website presenting the company's activities and services.",
-        "impact": "Strengthened my skills in interface design, React development and integration of modern solutions.",
-        "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
-      },
-
-      "111Studio": {
-        "title": "111Studio – Business Website",
-        "description": "Modern business website for a photography company specializing in weddings and content creation.",
-        "descriptionLong": "Development of a premium website designed to showcase the services of 111Studio, a creative company specializing in wedding photography, major events and visual content production.",
-        "role": "Full-Stack Developer",
-        "results": "A modern and responsive business website deployed to strengthen the brand's image.",
-        "impact": "Demonstrated my ability to transform a company's identity into a modern and interactive web experience.",
-        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-      },
-
+          "items": {
+              "siteVirtuel": {
+          "title": "E-Technology – Showcase Website",
+          "description": "Ongoing design and development of a modern showcase website as part of a personal project.",
+          "results": "A modern professional showcase website designed to clearly present the project’s activity, services, and identity.",
+          "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
+        },
+              
+        "111Studio": {
+          "title": "111Studio – Showcase Website",
+          "description": "Modern showcase website developed for a photography company specializing in weddings.",
+          "results": "Modern and responsive showcase website, fully functional and deployed, currently on hold pending the finalization of discussions with the client.",
+          "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+        },
       "portfolioMarketing": {
         "title": "Digital Marketing Portfolio",
         "description": "Modern portfolio designed to showcase the services of a digital marketing professional.",
-        "descriptionLong": "Design and development of a modern portfolio created to showcase the skills, services and work of a digital marketing professional.",
-        "role": "Frontend Developer",
         "results": "A modern professional portfolio developed and deployed to effectively showcase the client's business.",
-        "impact": "Demonstrated my ability to transform a professional identity into a modern and interactive web experience.",
         "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
       },
 
       "imageCompression": {
         "title": "Image Compression Application",
         "description": "Modern web application for easily compressing and converting multimedia files.",
-        "descriptionLong": "Development of a modern web application designed to simplify multimedia file optimization. The application allows users to compress and convert files through a simple and intuitive interface.",
-        "role": "Frontend Developer",
         "results": "A functional application allowing users to easily optimize files through a responsive interface.",
-        "impact": "Demonstrated my skills in designing practical, user-focused web tools.",
         "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
       },
 
       "photographerPortfolio": {
         "title": "Portfolio for Photographers",
         "description": "Modern portfolio designed to showcase photographers' work and projects online.",
-        "descriptionLong": "Design and development of a portfolio for photographers who want to present their work professionally. The interface highlights visual content, provides smooth navigation and adapts to all screen sizes for an optimal experience.",
-        "role": "Frontend Developer",
         "results": "A modern and responsive portfolio designed to effectively showcase photographic work and strengthen the professional image.",
-        "impact": "Demonstrated my ability to design interfaces tailored to creative professions, focused on visual content and user experience.",
         "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
       },
 
       "adminDashboard": {
         "title": "Admin Dashboard",
         "description": "Modern and responsive dashboard created during a technical assessment to display statistics.",
-        "descriptionLong": "Development of a modern admin dashboard for visualizing statistics, security indicators and user management information.",
-        "role": "Frontend Developer",
         "results": "A functional dashboard providing a clear interface, detailed statistics and useful management indicators.",
-        "impact": "Demonstrated my ability to design modern and well-structured administration interfaces.",
         "tools": "React.js, Tailwind CSS, Recharts, Lucide React"
       },
 
       "fecacfop": {
         "title": "Internship – FECACFOP Web Platform",
         "description": "Web platform developed during my internship to centralize training programs and job opportunities.",
-        "descriptionLong": "Development of a web platform designed to centralize information about professional training programs and facilitate the publication of job opportunities for FECACFOP. The project was interrupted following a management decision.",
-        "role": "Web Developer Intern",
         "results": "A first functional version of the platform completed before the project was put on hold.",
-        "impact": "Strengthened my web development skills with PHP, MySQL, HTML and CSS in a professional environment.",
         "tools": "PHP, MySQL, HTML, CSS"
       },
 
       "javaDesktop": {
         "title": "Internship – Java Desktop Application",
         "description": "Desktop application developed in Java to facilitate the management of trainee information.",
-        "descriptionLong": "Development of a desktop application designed to facilitate the management, tracking and organization of information related to trainees.",
-        "role": "Java Developer Intern",
         "results": "An operational desktop application providing structured management of trainee information.",
-        "impact": "Strengthened my skills in Java, desktop interfaces and database management.",
         "tools": "Java, NetBeans, MySQL"
       },
 
       "salons": {
         "title": "Visual Campaigns – Salons & Dressmaker",
         "description": "Creation of modern flyers to promote the services of hair salons and a dressmaker.",
-        "descriptionLong": "Design of several visual materials intended to promote the services of hair salons and a dressmaker.",
-        "role": "Graphic Designer",
         "results": "Several visual materials created to strengthen professional communication.",
-        "impact": "Improved the visibility and visual communication of the businesses.",
         "tools": "Photoshop, Illustrator"
       },
 
       "visualEtechnology": {
         "title": "Visual Identity – E-Technology",
         "description": "Creation of a visual identity including a professional logo and promotional materials.",
-        "descriptionLong": "Design of the visual identity of my virtual company, E-Technology, through the creation of a logo and several promotional graphic materials.",
-        "role": "Graphic Designer",
         "results": "A professional visual identity consisting of a logo and consistent graphic materials.",
-        "impact": "Developed my skills in visual identity, graphic design and communication.",
         "tools": "Illustrator, Photoshop"
       },
 
       "wedding": {
         "title": "Wedding Invitations & Posters",
         "description": "Creation of personalized invitations and posters for different wedding ceremonies.",
-        "descriptionLong": "Design of personalized invitation cards and posters for several couples, with an elegant and refined style.",
-        "role": "Graphic Designer",
         "results": "Several personalized materials created to elegantly support different wedding ceremonies.",
-        "impact": "Enhanced events through elegant visual communication.",
         "tools": "Photoshop"
       },
 
       "motorcycle": {
         "title": "Logo & Poster – Motorcycle Rental",
         "description": "Creation of a modern logo and promotional poster for a specialized business.",
-        "descriptionLong": "Design of a visual identity including a logo and promotional poster for a company specializing in motorcycle rental.",
-        "role": "Graphic Designer",
         "results": "A professional visual identity consisting of a logo and a consistent promotional material.",
-        "impact": "Strengthened the company's professional image.",
         "tools": "Illustrator, Photoshop"
       },
 
       "trainingCenters": {
         "title": "Flyers – Training Centers",
         "description": "Creation of flyers to promote the activities of tutoring and computer training centers.",
-        "descriptionLong": "Design of several flyers intended to promote the services of tutoring and computer training centers.",
-        "role": "Graphic Designer",
         "results": "Several communication materials created to effectively present the centers' activities.",
-        "impact": "Improved the presentation and visual communication of the services.",
         "tools": "Photoshop, Illustrator"
       },
 
       "businessCards": {
         "title": "Business Cards & Logos",
         "description": "Creation of modern business cards and professional logos for different clients.",
-        "descriptionLong": "Design of several business cards and logos for various professionals and businesses.",
-        "role": "Graphic Designer",
         "results": "Several professional identities and materials created to meet different clients' needs.",
-        "impact": "Strengthened the professional image of the clients.",
         "tools": "Photoshop, Illustrator"
       },
 
       "twoJM": {
         "title": "Posters – 2JM Company",
         "description": "Design of three promotional posters for a company specializing in psychology.",
-        "descriptionLong": "Creation of three promotional posters designed to present the services of a company specializing in psychology.",
-        "role": "Graphic Designer",
         "results": "Three professional posters created to clearly present the company's services.",
-        "impact": "Improved the company's presentation and visual communication.",
         "tools": "Photoshop"
       },
 
       "churches": {
         "title": "Flyers – Churches & Priest",
         "description": "Design of personalized flyers to present religious activities and events.",
-        "descriptionLong": "Creation of several graphic materials designed to promote church activities and events, as well as a priest's initiatives. The visuals were designed to reflect the religious identity, strengthen communication with the congregation and provide a clear, aesthetic and professional presentation.",
-        "role": "Graphic Designer",
         "results": "Creation of unique and customized flyers providing better visibility for religious events and more effective communication.",
-        "impact": "Improved the distribution of information to the public and enhanced the presentation of religious activities.",
         "tools": "Photoshop"
       }
     }

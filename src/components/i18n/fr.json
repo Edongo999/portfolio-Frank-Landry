@@ -10,8 +10,9 @@
     "close": "Fermer"
   },
   "blogModal": {
-  "message": "Vous êtes sur le point d’entrer dans le bloc de Franck Landry. Cliquez sur Continuer pour découvrir mes articles.",
-  "continue": "Continuer"
+  "message": "Bienvenue sur le blog de Frank Landry. Découvrez mes articles, conseils et astuces autour du numérique.",
+  "continue": "Accéder au blog",
+  "subtitle": "Conseils, astuces et découvertes autour du numérique."
 },
 "pageLoader": {
   "message": "Veuillez patienter..."
@@ -42,16 +43,14 @@
 
   "who": "Qui suis-je ?",
 
- "description": "Je suis un développeur web fullstack et designer graphique, passionné par la création d’applications et de sites web modernes, performants et adaptés aux besoins des utilisateurs. Je conçois des interfaces interactives, développe des solutions backend et bases de données, et crée également des supports visuels professionnels. Mon parcours en génie logiciel m’a permis de développer une approche à la fois technique, créative et orientée expérience utilisateur.",
+"description": "Je suis un développeur web Full Stack, passionné par la création de sites et d’applications modernes, performants et adaptés aux besoins des utilisateurs. Je conçois des interfaces interactives et développe des solutions web complètes, de l’interface utilisateur au backend et aux bases de données. En complément du développement web, je possède des compétences en design graphique, en maintenance informatique. Mon parcours en génie logiciel m’a permis de développer une approche à la fois technique, créative et orientée vers des solutions concrètes.",
   "valuesTitle": "Mes valeurs",
-
   "values": {
     "cleanCode": "Code propre",
     "ux": "Expérience utilisateur",
     "accessibility": "Accessibilité",
     "learning": "Apprentissage continu"
   },
-
   "downloadCV": "Télécharger mon CV"
 },
   "cvModal": {
@@ -63,9 +62,6 @@
     "btnMessage": "Laisser un message",
     "btnCancel": "Annuler"
   },
-
-
- 
  "skills": {
   "badge": "Mes compétences",
   "title": "Ce que je",
@@ -134,18 +130,20 @@
 
   "items": {
 
-    "siteVirtuel": {
-      "title": "Projet E-Technology – Site vitrine",
-      "description": "Maquette et site vitrine réalisés dans le cadre de mon entreprise en Ligne E-Technology.",
-      "results": "Une vitrine professionnelle moderne permettant de présenter l’activité et les services de l’entreprise.",
-      "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
-    },
+"siteVirtuel": {
+  "title": "E-Technology – Site vitrine",
+  "description": "Conception et développement en cours d’un site vitrine moderne dans le cadre d’un projet personnel.",
+  "results": "Une vitrine professionnelle moderne destinée à présenter clairement l’activité, les services proposés et l’identité du projet.",
+  "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
+},
+
+ 
     "111Studio": {
-    "title": "111Studio – Site vitrine",
-    "description": "Site vitrine moderne pour une entreprise de photographie spécialisée dans les mariages et la création de contenu.",
-    "results": "Site vitrine moderne et responsive déployé pour renforcer l’image de la marque.",
-    "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-     },
+  "title": "111Studio – Site vitrine",
+  "description": "Site vitrine moderne développé pour une entreprise de photographie spécialisée dans les mariages.",
+  "results": "Site vitrine moderne et responsive, fonctionnel et déployé, actuellement en pause dans l’attente de la finalisation des échanges avec le client.",
+  "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+},
 
     "portfolioMarketing": {
       "title": "Portfolio marketing digital",
