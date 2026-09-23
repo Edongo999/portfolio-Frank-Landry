@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from '@/components/layout/Layout';
 import Home from '@/components/pages/HomePages';
-import BlogPage from '@/components/pages/BlogSection';
 import WhatsAppFloatingButton from '@/components/ui/WhatsAppFloatingButton';
 import ScrollToTop from './components/pages/ScrollToTop';
 import CustomCursor from './components/layout/common/CustomCursor';
@@ -27,7 +26,6 @@ function AppContent() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<BlogPage />} />
         </Routes>
 
         <WhatsAppFloatingButton />
