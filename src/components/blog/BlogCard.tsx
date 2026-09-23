@@ -123,7 +123,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <img
           src={
             post.image
-              ? `http://localhost:8000/storage/${post.image}`
+              ? `https://laravel-backend-portfolio.onrender.com/storage/${post.image}`
               : '/images/fallback.jpg'
           }
           alt={post.title}
