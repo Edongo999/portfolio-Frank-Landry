@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import { BlogPost } from '@/types/blog';
-import axiosInstance from '@/utils/axiosInstance'; // ✅ celui que tu viens de montrer
+import axiosInstance from '@/utils/axiosInstance'; // ✅ ton instance axios
 
 interface ArticlesResponse {
   data: BlogPost[];
@@ -11,7 +11,7 @@ export async function fetchPosts(): Promise<BlogPost[]> {
     const language = i18n.language === 'en' ? 'en' : 'fr';
 
     const response = await axiosInstance.get<ArticlesResponse>(
-      `/publicIndex?lang=${language}` // ✅ route publique correcte
+      `/articles/public?lang=${language}` // ✅ route correcte
     );
 
     console.log('📚 Articles reçus :', response.data);
