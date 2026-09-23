@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-const baseURL =
-  import.meta.env.VITE_API_URL ||
-  'https://laravel-backend-portfolio.onrender.com/api';
+const baseURL = import.meta.env.VITE_API_URL;
 
-console.log('✅ API utilisée :', baseURL);
+console.log('🔥🔥🔥 NOUVEL AXIOS PORTFOLIO 🔥🔥🔥');
+console.log('🔥 API URL =', baseURL);
 
 const axiosInstance = axios.create({
   baseURL,
