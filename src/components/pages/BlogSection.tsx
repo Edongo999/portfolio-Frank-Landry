@@ -32,7 +32,12 @@ const BlogSection: React.FC = () => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
     fetchPosts()
-      .then(setPosts)
+      .then((data) => {
+        setPosts(data);
+      })
+      .catch((err) => {
+        console.error('Erreur fetchPosts:', err);
+      })
       .finally(() => setLoading(false));
   }, [i18n.language]);
 
