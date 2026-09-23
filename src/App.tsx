@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from '@/components/layout/Layout';
 import Home from '@/components/pages/HomePages';
+import BlogSection from '@/components/pages/BlogSection';
+
 import WhatsAppFloatingButton from '@/components/ui/WhatsAppFloatingButton';
 import ScrollToTop from './components/pages/ScrollToTop';
 import CustomCursor from './components/layout/common/CustomCursor';
@@ -25,7 +27,11 @@ function AppContent() {
 
       <Layout>
         <Routes>
+          {/* Page principale avec toutes les sections */}
           <Route path="/" element={<Home />} />
+
+          {/* Route dédiée au Blog */}
+          <Route path="/blog" element={<BlogSection />} />
         </Routes>
 
         <WhatsAppFloatingButton />
