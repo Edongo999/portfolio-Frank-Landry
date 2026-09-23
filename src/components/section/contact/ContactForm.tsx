@@ -295,8 +295,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               className="
                 flex
                 items-center
-                justify-center
-                gap-2
+                justify-center                                                                                                                                               
               "
             >
               <XCircleIcon className="h-6 w-6" />

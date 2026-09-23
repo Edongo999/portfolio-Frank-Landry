@@ -19,7 +19,7 @@ const HeroSocials: React.FC = () => {
           onBlur={() => setShowTooltip(null)}
         >
           <a
-            href="https://www.linkedin.com/in/photographe-exemple"
+            href="https://www.linkedin.com/in/frank-landry-edongo/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label={t('hero.linkedinTooltip')}

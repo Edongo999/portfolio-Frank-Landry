@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import BlogHeader from '../blog/BlogHeader';
-import BlogCard from '../blog/BlogCard';
-import BlogFooter from '../blog/BlogFooter';
-import BlogImageViewer from '../blog/BlogImageViewer';
+import BlogHeader from '@/components/blog/BlogHeader';
+import BlogCard from '@/components/blog/BlogCard';
+import BlogFooter from '@/components/blog/BlogFooter';
+import BlogImageViewer from '@/components/blog/BlogImageViewer';
 import Modal from '@/components/Modal';
 
 import { BlogPost } from '@/types/blog';
-import { fetchPosts } from '@/components/data/blogData';
+import { fetchPosts } from '@/components/data/blogData'; // ✅ utilise axiosInstance
 
 const BlogSection: React.FC = () => {
   /* =========================
@@ -20,6 +20,7 @@ const BlogSection: React.FC = () => {
      ARTICLES DU BACKEND
   ========================= */
   const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState<boolean>(true); // ✅ spinner
   const [openPost, setOpenPost] = useState<number | null>(null);
   const [openImage, setOpenImage] = useState<string | null>(null);
 
@@ -28,7 +29,11 @@ const BlogSection: React.FC = () => {
      Se relance quand la langue change
   ========================= */
   useEffect(() => {
-    fetchPosts().then(setPosts);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setLoading(true);
+    fetchPosts()
+      .then(setPosts)
+      .finally(() => setLoading(false));
   }, [i18n.language]);
 
   /* =========================
@@ -45,7 +50,7 @@ const BlogSection: React.FC = () => {
     const imageUrl =
       image.startsWith('http://') || image.startsWith('https://')
         ? image
-        : `http://localhost:8000/storage/${image}`;
+        : `https://laravel-backend-portfolio.onrender.com/storage/${image}`; // ✅ correction Render
 
     setOpenImage(imageUrl);
   };
@@ -84,7 +89,6 @@ const BlogSection: React.FC = () => {
             blur-[130px]
           "
         />
-
         <div
           className="
             absolute
@@ -119,15 +123,28 @@ const BlogSection: React.FC = () => {
             PUBLICATIONS
         ================================================= */}
         <div className="space-y-6">
-          {posts.map((post, index) => (
-            <BlogCard
-              key={post.id}
-              post={post}
-              index={index}
-              onRead={() => setOpenPost(post.id)}
-              onImageClick={() => handleOpenImage(post.image ?? '')}
-            />
-          ))}
+          {loading ? (
+            <div className="flex justify-center items-center py-10">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-green-400"></div>
+              <span className="ml-3 text-green-400">
+                Chargement des articles...
+              </span>
+            </div>
+          ) : posts.length > 0 ? (
+            posts.map((post, index) => (
+              <BlogCard
+                key={post.id}
+                post={post}
+                index={index}
+                onRead={() => setOpenPost(post.id)}
+                onImageClick={() => handleOpenImage(post.image ?? '')}
+              />
+            ))
+          ) : (
+            <p className="text-center text-gray-400">
+              Aucun article disponible.
+            </p>
+          )}
         </div>
 
         <BlogFooter />
