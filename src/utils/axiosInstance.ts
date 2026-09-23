@@ -1,23 +1,17 @@
 import axios from 'axios';
 
+const baseURL =
+  import.meta.env.VITE_API_URL ||
+  'https://laravel-backend-portfolio.onrender.com/api';
+
+console.log('✅ API utilisée :', baseURL);
+
 const axiosInstance = axios.create({
-  baseURL: 'https://laravel-backend-portfolio.onrender.com/api',
+  baseURL,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
   },
 });
-
-// Ajout automatique du token si présent
-axiosInstance.interceptors.request.use(
-  (config) => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
 
 export default axiosInstance;
