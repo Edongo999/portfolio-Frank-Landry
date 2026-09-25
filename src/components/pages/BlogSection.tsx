@@ -9,6 +9,7 @@ import Modal from '@/components/Modal';
 
 import { BlogPost } from '@/types/blog';
 import { fetchPosts } from '@/components/data/blogData'; // ✅ utilise axiosInstance
+import { getPublicUrl } from '@/utils/supabase';
 
 const BlogSection: React.FC = () => {
   /* =========================
@@ -55,7 +56,7 @@ const BlogSection: React.FC = () => {
     const imageUrl =
       image.startsWith('http://') || image.startsWith('https://')
         ? image
-        : `https://laravel-backend-portfolio.onrender.com/storage/${image}`; // ✅ correction Render
+        : getPublicUrl(image);
 
     setOpenImage(imageUrl);
   };
