@@ -52,13 +52,7 @@ const BlogSection: React.FC = () => {
   ========================= */
   const handleOpenImage = (image: string) => {
     if (!image) return;
-
-    const imageUrl =
-      image.startsWith('http://') || image.startsWith('https://')
-        ? image
-        : getPublicUrl(image);
-
-    setOpenImage(imageUrl);
+    setOpenImage(getPublicUrl(image));
   };
 
   const handleCloseImage = () => {
