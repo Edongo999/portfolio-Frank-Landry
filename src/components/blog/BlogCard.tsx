@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import ShareMenu from '../icones/ShareMenu';
 
 import { BlogPost } from '@/types/blog';
+import { getPublicUrl } from '@/utils/supabase';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -123,20 +124,20 @@ const BlogCard: React.FC<BlogCardProps> = ({
         <img
           src={
             post.image
-              ? `https://laravel-backend-portfolio.onrender.com/storage/${post.image}`
+              ? getPublicUrl(post.image) // ✅ construit l’URL Supabase publique
               : '/images/fallback.jpg'
           }
           alt={post.title}
           className="
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-            transition-transform
-            duration-700
-            group-hover:scale-105
-          "
+    absolute
+    inset-0
+    h-full
+    w-full
+    object-cover
+    transition-transform
+    duration-700
+    group-hover:scale-105
+  "
         />
 
         {/* OVERLAY */}
