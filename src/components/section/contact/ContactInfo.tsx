@@ -236,7 +236,7 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
           />
 
           <a
-            href="https://wa.me/237652491246"
+            href="https://wa.me/237659322137"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -274,7 +274,7 @@ const ContactInfo = ({ isMobile }: ContactInfoProps) => {
           />
 
           <a
-            href="https://wa.me/237689363034"
+            href="https://wa.me/237676471601"
             target="_blank"
             rel="noopener noreferrer"
             className="

@@ -245,7 +245,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="#experiences"
+              href="#experience"
               className="
                 transition-all
                 duration-300

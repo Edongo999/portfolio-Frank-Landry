@@ -37,7 +37,7 @@ export const useProjectsData = (): Project[] => {
       medias: [
         {
           type: 'video',
-          src: '/videos/miranda_video.mp4',
+          src: 'https://pndvshlhovmciipvzbup.supabase.co/storage/v1/object/public/portfolio-videos/miranda.mp4',
         },
       ],
     },
@@ -52,7 +52,7 @@ export const useProjectsData = (): Project[] => {
       medias: [
         {
           type: 'video',
-          src: '/videos/111Studio.mp4',
+          src: 'https://pndvshlhovmciipvzbup.supabase.co/storage/v1/object/public/portfolio-videos/111Studio.mp4',
         },
       ],
     },
@@ -68,7 +68,7 @@ export const useProjectsData = (): Project[] => {
       medias: [
         {
           type: 'video',
-          src: '/videos/demo.mp4',
+          src: 'https://pndvshlhovmciipvzbup.supabase.co/storage/v1/object/public/portfolio-videos/demo.mp4',
         },
       ],
     },
@@ -84,7 +84,7 @@ export const useProjectsData = (): Project[] => {
       medias: [
         {
           type: 'video',
-          src: '/videos/Porfolio-JORDAN.mp4',
+          src: 'https://pndvshlhovmciipvzbup.supabase.co/storage/v1/object/public/portfolio-videos/porfolio.mp4',
         },
       ],
     },
