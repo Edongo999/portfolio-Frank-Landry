@@ -14,16 +14,16 @@ export async function fetchPosts(): Promise<BlogPost[]> {
       `/articles/public?lang=${language}` // ✅ route correcte
     );
 
-    console.log('📚 Articles reçus :', response.data);
+    console.log('Articles reçus :', response.data);
 
     if (!Array.isArray(response.data.data)) {
-      console.warn('⚠️ La réponse API ne contient pas un tableau data.');
+      console.warn(' La réponse API ne contient pas un tableau data.');
       return [];
     }
 
     return response.data.data;
   } catch (error) {
-    console.error('❌ Erreur lors du chargement des articles :', error);
+    console.error(' Erreur lors du chargement des articles :', error);
     return [];
   }
 }

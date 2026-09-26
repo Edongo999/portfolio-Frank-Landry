@@ -378,7 +378,7 @@
     }
   },
 
-"blog": {
+  "blog": {
   "badge": "News",
 
   "title": {
@@ -388,14 +388,17 @@
 
   "description": "Discover my latest work, thoughts, tips and projects around design and web development.",
 
+  "loading": "Loading articles...",
+  "noArticles": "No articles available.",
+
   "card": {
     "viewImage": "View image",
-    "viewImageArticle": "View the image of the article {{title}}",
+    "viewImageArticle": "View article image {{title}}",
     "readMore": "Read more"
   },
 
   "footer": {
-    "latestPosts": "My latest posts"
+    "latestPosts": "My latest publications"
   },
 
   "imageViewer": {
@@ -403,18 +406,21 @@
     "reset": "Reset",
     "preview": "Preview"
   },
+
   "share": {
     "button": "Share",
     "whatsapp": "Share on WhatsApp",
     "facebook": "Share on Facebook",
     "linkedin": "Share on LinkedIn"
   },
+
   "category": {
-  "Actu": "News",
-  "Design": "Design",
-  "Tech": "Tech"
-}
+    "Actu": "News",
+    "Design": "Design",
+    "Tech": "Tech"
+  }
 },
+
 
   "contact": {
     "badge": "Let's get in touch",

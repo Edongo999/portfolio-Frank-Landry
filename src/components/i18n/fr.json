@@ -376,8 +376,7 @@
     }
   },
 
-
-  "blog": {
+"blog": {
   "badge": "Actualités",
 
   "title": {
@@ -386,6 +385,9 @@
   },
 
   "description": "Découvrez mes dernières réalisations, réflexions, conseils et projets autour du design et du développement web.",
+
+  "loading": "Chargement des articles...",
+  "noArticles": "Aucun article disponible.",
 
   "card": {
     "viewImage": "Voir l'image",
@@ -402,17 +404,19 @@
     "reset": "Réinitialiser",
     "preview": "Aperçu"
   },
+
   "share": {
-  "button": "Partager",
-  "whatsapp": "Partager sur WhatsApp",
-  "facebook": "Partager sur Facebook",
-  "linkedin": "Partager sur LinkedIn"
-},
-"category": {
-  "Actu": "Actu",
-  "Design": "Design",
-  "Tech": "Tech"
-}
+    "button": "Partager",
+    "whatsapp": "Partager sur WhatsApp",
+    "facebook": "Partager sur Facebook",
+    "linkedin": "Partager sur LinkedIn"
+  },
+
+  "category": {
+    "Actu": "Actu",
+    "Design": "Design",
+    "Tech": "Tech"
+  }
 },
 
 

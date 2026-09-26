@@ -8,20 +8,20 @@ import BlogImageViewer from '@/components/blog/BlogImageViewer';
 import Modal from '@/components/Modal';
 
 import { BlogPost } from '@/types/blog';
-import { fetchPosts } from '@/components/data/blogData'; // ✅ utilise axiosInstance
+import { fetchPosts } from '@/components/data/blogData';
 import { getPublicUrl } from '@/utils/supabase';
 
 const BlogSection: React.FC = () => {
   /* =========================
      LANGUE ACTUELLE
   ========================= */
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   /* =========================
      ARTICLES DU BACKEND
   ========================= */
   const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState<boolean>(true); // ✅ spinner
+  const [loading, setLoading] = useState<boolean>(true);
   const [openPost, setOpenPost] = useState<number | null>(null);
   const [openImage, setOpenImage] = useState<string | null>(null);
 
@@ -32,6 +32,7 @@ const BlogSection: React.FC = () => {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
+
     fetchPosts()
       .then((data) => {
         setPosts(data);
@@ -89,6 +90,7 @@ const BlogSection: React.FC = () => {
             blur-[130px]
           "
         />
+
         <div
           className="
             absolute
@@ -126,9 +128,8 @@ const BlogSection: React.FC = () => {
           {loading ? (
             <div className="flex justify-center items-center py-10">
               <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-green-400"></div>
-              <span className="ml-3 text-green-400">
-                Chargement des articles...
-              </span>
+
+              <span className="ml-3 text-green-400">{t('blog.loading')}</span>
             </div>
           ) : posts.length > 0 ? (
             posts.map((post, index) => (
@@ -141,9 +142,7 @@ const BlogSection: React.FC = () => {
               />
             ))
           ) : (
-            <p className="text-center text-gray-400">
-              Aucun article disponible.
-            </p>
+            <p className="text-center text-gray-400">{t('blog.noArticles')}</p>
           )}
         </div>
 
