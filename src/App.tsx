@@ -14,6 +14,7 @@ import {
   PageTransitionProvider,
   usePageTransition,
 } from './components/hooks/PageTransitionContext';
+import Chatbot from './components/chatbot/chatbot';
 
 function AppContent() {
   const { loading } = usePageTransition();
@@ -35,6 +36,7 @@ function AppContent() {
         </Routes>
 
         <WhatsAppFloatingButton />
+        <Chatbot />
       </Layout>
     </>
   );
