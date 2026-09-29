@@ -41,12 +41,14 @@ const BlogCard: React.FC<BlogCardProps> = ({
   /* =====================================================
      DATE DYNAMIQUE FR / EN
   ===================================================== */
-  const formattedDate = new Date(post.created_at).toLocaleDateString(
+  const formattedDate = new Date(post.created_at).toLocaleString(
     i18n.language === 'en' ? 'en-US' : 'fr-FR',
     {
       day: 'numeric',
       month: 'long',
       year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
     }
   );
 
