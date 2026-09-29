@@ -29,32 +29,84 @@ const BlogCard: React.FC<BlogCardProps> = ({
     switch (post.category) {
       case 'Design':
         return <Shapes size={15} />;
+
       case 'Astuce':
         return <Lightbulb size={15} />;
+
       case 'Web':
         return <Code size={15} />;
+
       default:
         return <Code size={15} />;
     }
   };
 
   /* =====================================================
-     DATE DYNAMIQUE FR / EN
+     DATE DE PUBLICATION — STYLE YOUTUBE
   ===================================================== */
-  const formattedDate = new Date(post.created_at).toLocaleString(
-    i18n.language === 'en' ? 'en-US' : 'fr-FR',
-    {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
+  const formatPublishedDate = (date: string) => {
+    const publishedDate = new Date(date);
+    const now = new Date();
+
+    const diffInSeconds = Math.floor(
+      (now.getTime() - publishedDate.getTime()) / 1000
+    );
+
+    // Publication très récente
+    if (diffInSeconds < 60) {
+      return t('blog.card.publishedJustNow');
     }
-  );
+
+    // Publication en minutes
+    const diffInMinutes = Math.floor(diffInSeconds / 60);
+
+    if (diffInMinutes < 60) {
+      return t('blog.card.publishedMinutesAgo', {
+        count: diffInMinutes,
+      });
+    }
+
+    // Publication en heures
+    const diffInHours = Math.floor(diffInMinutes / 60);
+
+    if (diffInHours < 24) {
+      return t('blog.card.publishedHoursAgo', {
+        count: diffInHours,
+      });
+    }
+
+    // Publication hier
+    const diffInDays = Math.floor(diffInHours / 24);
+
+    if (diffInDays === 1) {
+      return t('blog.card.publishedYesterday');
+    }
+
+    // Publication durant les 7 derniers jours
+    if (diffInDays < 7) {
+      return t('blog.card.publishedDaysAgo', {
+        count: diffInDays,
+      });
+    }
+
+    // Article plus ancien : date complète
+    return t('blog.card.publishedOn', {
+      date: publishedDate.toLocaleDateString(
+        i18n.language === 'en' ? 'en-US' : 'fr-FR',
+        {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        }
+      ),
+    });
+  };
+
+  const formattedDate = formatPublishedDate(post.created_at);
 
   /* =====================================================
-   IMAGE URL (corrigée)
-===================================================== */
+     IMAGE URL
+  ===================================================== */
   const imageUrl = post.image
     ? getPublicUrl(post.image)
     : '/images/fallback.jpg';
@@ -82,7 +134,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
         onClick={onImageClick}
         role="button"
         tabIndex={0}
-        aria-label={t('blog.card.viewImageArticle', { title: post.title })}
+        aria-label={t('blog.card.viewImageArticle', {
+          title: post.title,
+        })}
         onKeyDown={(event) => {
           if (event.key === 'Enter' || event.key === ' ') {
             event.preventDefault();
@@ -98,6 +152,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             transition-transform duration-700 group-hover:scale-105
           "
         />
+
         <div
           className="
             absolute inset-0 bg-gradient-to-t
@@ -105,6 +160,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           "
         />
 
+        {/* CATÉGORIE */}
         <span
           className="
             absolute left-4 top-4 inline-flex items-center gap-2 rounded-full
@@ -117,6 +173,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           {t(`blog.category.${post.category}`, post.category)}
         </span>
 
+        {/* VOIR IMAGE */}
         <div
           className="
             absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full
@@ -127,9 +184,14 @@ const BlogCard: React.FC<BlogCardProps> = ({
           "
         >
           <span>{t('blog.card.viewImage')}</span>
+
           <ArrowUpRight
             size={14}
-            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            className="
+              transition-transform duration-300
+              group-hover:translate-x-0.5
+              group-hover:-translate-y-0.5
+            "
           />
         </div>
       </div>
@@ -142,22 +204,33 @@ const BlogCard: React.FC<BlogCardProps> = ({
         `}
       >
         <div>
+          {/* DATE */}
           <div className="mb-3 flex items-center gap-3">
             <span className="h-px w-7 bg-[#f3f009]/60" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-500">
+
+            <span
+              className="
+                text-[10px] font-semibold uppercase
+                tracking-[0.16em] text-gray-500
+              "
+            >
               {formattedDate}
             </span>
           </div>
 
+          {/* TITRE */}
           <h3
             className="
               max-w-xl text-xl font-bold leading-tight text-white
-              transition-colors duration-300 group-hover:text-[#f3f009] sm:text-2xl
+              transition-colors duration-300
+              group-hover:text-[#f3f009]
+              sm:text-2xl
             "
           >
             {post.title}
           </h3>
 
+          {/* CONTENU */}
           <p
             className="
               mt-3 line-clamp-3 max-w-xl overflow-hidden break-words
@@ -168,27 +241,36 @@ const BlogCard: React.FC<BlogCardProps> = ({
           </p>
         </div>
 
+        {/* FOOTER */}
         <div
           className="
-            mt-5 flex items-center justify-between gap-4 border-t
-            border-gray-800 pt-4
+            mt-5 flex items-center justify-between gap-4
+            border-t border-gray-800 pt-4
           "
         >
+          {/* LIRE */}
           <button
             type="button"
             onClick={onRead}
             className="
-              group/read inline-flex items-center gap-2 text-sm font-semibold
-              text-[#f3f009] transition-colors duration-300 hover:text-white
+              group/read inline-flex items-center gap-2
+              text-sm font-semibold text-[#f3f009]
+              transition-colors duration-300 hover:text-white
             "
           >
             <span>{t('blog.card.readMore')}</span>
+
             <ArrowUpRight
               size={15}
-              className="transition-transform duration-300 group-hover/read:translate-x-0.5 group-hover/read:-translate-y-0.5"
+              className="
+                transition-transform duration-300
+                group-hover/read:translate-x-0.5
+                group-hover/read:-translate-y-0.5
+              "
             />
           </button>
 
+          {/* PARTAGE */}
           <div className="relative">
             <ShareMenu url={`${window.location.origin}/blog/${post.id}`} />
           </div>

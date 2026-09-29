@@ -394,11 +394,18 @@
   "card": {
     "viewImage": "View image",
     "viewImageArticle": "View article image {{title}}",
-    "readMore": "Read more"
+    "readMore": "Read more",
+
+    "publishedJustNow": "Published just now",
+    "publishedMinutesAgo": "Published {{count}} min ago",
+    "publishedHoursAgo": "Published {{count}} h ago",
+    "publishedYesterday": "Published yesterday",
+    "publishedDaysAgo": "Published {{count}} days ago",
+    "publishedOn": "Published on {{date}}"
   },
 
   "footer": {
-    "latestPosts": "My latest publications"
+    "latestPosts": "My latest posts"
   },
 
   "imageViewer": {
@@ -420,7 +427,6 @@
     "Tech": "Tech"
   }
 },
-
 
   "contact": {
     "badge": "Let's get in touch",

@@ -392,7 +392,14 @@
   "card": {
     "viewImage": "Voir l'image",
     "viewImageArticle": "Voir l'image de l'article {{title}}",
-    "readMore": "Lire la suite"
+    "readMore": "Lire la suite",
+
+    "publishedJustNow": "Publié à l’instant",
+    "publishedMinutesAgo": "Publié il y a {{count}} min",
+    "publishedHoursAgo": "Publié il y a {{count}} h",
+    "publishedYesterday": "Publié hier",
+    "publishedDaysAgo": "Publié il y a {{count}} jours",
+    "publishedOn": "Publié le {{date}}"
   },
 
   "footer": {
