@@ -6,6 +6,12 @@ interface Message {
   content: string;
 }
 
+// 👉 Interface pour typer la réponse du backend Laravel
+interface ChatResponse {
+  success: boolean;
+  message: string;
+}
+
 const API_URL = 'https://laravel-backend-portfolio.onrender.com/api/chat';
 
 export default function Chatbot() {
@@ -30,7 +36,10 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      const res = await axios.post(API_URL, { message: trimmedMessage });
+      // 👉 Typage explicite de la réponse
+      const res = await axios.post<ChatResponse>(API_URL, {
+        message: trimmedMessage,
+      });
       const data = res.data;
 
       if (!data.success) throw new Error(data.message);
