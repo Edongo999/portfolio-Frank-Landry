@@ -1,0 +1,472 @@
+{
+  "nav": {
+    "hero": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Réalisations",
+    "experience": "Expériences",
+    "contact": "Contact",
+    "bloc": "Bloc",
+    "close": "Fermer"
+  },
+  "blogModal": {
+  "message": "Bienvenue sur le blog de Frank Landry. Découvrez mes articles, conseils et astuces autour du numérique.",
+  "continue": "Accéder au blog",
+  "subtitle": "Conseils, astuces et découvertes autour du numérique."
+},
+"pageLoader": {
+  "message": "Veuillez patienter..."
+},
+
+"hero": {
+  "greeting": "Bonjour, je suis",
+  "name1": "EDONGO AMENGNE",
+  "name2": "FRANK LANDRY",
+  "role1": "Développeur Fullstack",
+  "role2": "UI/UX Designer",
+  "role3": "Maintenance informatique",
+  "role4": "Créateur de contenu",
+  "role5": "Formateur", 
+  "description": "Passionné par le numérique, je conçois des sites web modernes, des sites vitrines, ainsi que des applications web et desktop. Je crée également des visuels professionnels (flyers, affiches, identités visuelles) et j’assure la maintenance informatique, afin d’offrir des solutions complètes et fiables.",
+  "btnProjects": "Decouvrir mes projets",
+  "btnCV": "Contactez-moi",
+  "linkedinTooltip": "Mon profil LinkedIn",
+  "githubTooltip": "Mon GitHub",
+  "imageAlt": "Portrait premium de Landry"
+},
+
+
+"about": {
+  "title": "À propos de",
+  "me": "Moi",
+  "badge": "Mon profil",
+
+  "who": "Qui suis-je ?",
+
+"description": "Je suis un développeur web Full Stack, passionné par la création de sites et d’applications modernes, performants et adaptés aux besoins des utilisateurs. Je conçois des interfaces interactives et développe des solutions web complètes, de l’interface utilisateur au backend et aux bases de données. En complément du développement web, je possède des compétences en design graphique, en maintenance informatique. Mon parcours en génie logiciel m’a permis de développer une approche à la fois technique, créative et orientée vers des solutions concrètes.",
+  "valuesTitle": "Mes valeurs",
+  "values": {
+    "cleanCode": "Code propre",
+    "ux": "Expérience utilisateur",
+    "accessibility": "Accessibilité",
+    "learning": "Apprentissage continu"
+  },
+  "downloadCV": "Télécharger mon CV"
+},
+  "cvModal": {
+    "title": "Demande de CV",
+    "heading": "Vous souhaitez recevoir mon CV ?",
+    "intro": "Vous êtes sur le point de demander le CV de",
+    "name": "Frank Landry",
+    "instructions": "Laissez-moi un message en précisant votre demande. Je vous répondrai dans les meilleurs délais afin de vous transmettre mon CV.",
+    "btnMessage": "Laisser un message",
+    "btnCancel": "Annuler"
+  },
+ "skills": {
+  "badge": "Mes compétences",
+  "title": "Ce que je",
+  "me": "maîtrise",
+  "description": "Je développe des solutions web modernes et performantes, adaptées aux besoins spécifiques de chaque projet. De la conception d’interfaces intuitives au développement et à l’intégration de fonctionnalités avancées, jusqu’au déploiement sécurisé, j’accompagne chaque étape avec rigueur et créativité. Mon objectif est de proposer des expériences digitales fiables, esthétiques et évolutives, capables de valoriser l’image et la réussite de chaque client.",
+  "mastery": "Maîtrise",
+  "count": "compétences disponibles",
+  "footer": "Des compétences que je continue de perfectionner à travers mes projets et mes expériences.",
+
+  "filters": {
+    "all": "Toutes",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Outils",
+    "desktop": "Applications Desktop"
+
+  },
+
+"items": {
+  "html": "Je l’utilise pour structurer mes pages et organiser le contenu des interfaces.",
+  "css": "Je l’utilise pour créer des interfaces modernes et responsives.",
+  "react": "Je l’utilise pour développer des interfaces dynamiques et interactives.",
+  "typescript": "Je l’utilise pour sécuriser mon code et fiabiliser mes applications React.",
+  "tailwind": "Je l’utilise pour concevoir rapidement des interfaces responsives.",
+  "php": "Je l’utilise pour développer la logique backend et les fonctionnalités serveur.",
+  "laravel": "Je l’utilise pour développer le backend et gérer la logique métier.",
+  "mysql": "Je l’utilise pour stocker, organiser et gérer les données de mes applications.",
+  "supabase": "Je l’utilise pour héberger mes bases PostgreSQL en ligne, gérer l’authentification et activer des fonctionnalités temps réel.",
+  "git": "Je l’utilise pour versionner mes projets et suivre les changements.",
+  "postman": "Je l’utilise pour tester mes API et vérifier leurs réponses.",
+  "adobeXd": "Je l’utilise pour concevoir des maquettes et préparer l’expérience utilisateur.",
+  "photoshop": "Je l’utilise pour créer, retoucher et optimiser les visuels de mes projets.",
+  "illustrator": "Je l’utilise pour créer des logos, illustrations et éléments graphiques vectoriels.",
+  "vercel": "Je l’utilise pour déployer mes applications frontend et les rendre accessibles en ligne.",
+  "render": "Je l’utilise pour héberger mes applications backend Laravel et connecter mes bases de données.",
+  "java": "Je l’utilise pour développer des applications desktop robustes et multiplateformes.",
+  "python": "Je l’utilise pour développer des applications desktop et automatiser des tâches complexes."
+
+}
+},
+"projects": {
+  "badge": "Mes Créations",
+  "title": "Mes",
+  "me": "Réalisations",
+
+  "description": "Découvrez une sélection de projets réalisés avec passion et exigence, mêlant développement web, design et création digitale. Chaque réalisation est pensée pour répondre à un besoin précis, avec une attention particulière portée à l’expérience utilisateur, à l’esthétique et aux performances.",
+
+  "view": "Voir le projet",
+   "consultSite": "Consulter le site",
+  "consultApplication": "Consulter l'application",
+  "role": "Rôle",
+  "results": "Résultats",
+  "impact": "Impact",
+  "tools": "Outils",
+
+  "categories": {
+    "all": "Tous",
+    "web": "Développement Web",
+    "design": "Design",
+    "desktop": "Desktop Applications"
+  },
+   "counter": {
+    "single": "réalisation",
+    "multiple": "réalisations"
+  },
+
+  "items": {
+
+"siteVirtuel": {
+  "title": "E-Technology – Site vitrine",
+  "description": "Conception et développement en cours d’un site vitrine moderne dans le cadre d’un projet personnel.",
+  "results": "Une vitrine professionnelle moderne destinée à présenter clairement l’activité, les services proposés et l’identité du projet.",
+  "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
+},
+
+ 
+    "111Studio": {
+  "title": "111Studio – Site vitrine",
+  "description": "Site vitrine moderne développé pour une entreprise de photographie spécialisée dans les mariages.",
+  "results": "Site vitrine moderne et responsive, fonctionnel et déployé, actuellement en pause dans l’attente de la finalisation des échanges avec le client.",
+  "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+},
+
+    "portfolioMarketing": {
+      "title": "Portfolio marketing digital",
+      "description": "Portfolio moderne conçu pour présenter les services d’une professionnelle du marketing digital.",
+      "results": "Un portfolio professionnel moderne développé et déployé pour présenter efficacement son activité.",
+      "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+    },
+
+    "imageCompression": {
+      "title": "Application compression images",
+      "description": "Application web moderne permettant de compresser et convertir facilement les fichiers multimédias.",
+      "results": "Une application fonctionnelle permettant d’optimiser facilement les fichiers avec une interface responsive.",
+      "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+    },
+    "photographerPortfolio": {
+      "title": "Portfolio pour photographes",
+      "description": "Portfolio moderne conçu pour mettre en avant les travaux et réalisations des photographes en ligne.",
+      "results": "Un portfolio moderne et responsive permettant de présenter efficacement les travaux photographiques et renforcer l’image pro.",
+      "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+    },
+
+      "adminDashboard": {
+        "title": "Tableau de bord administrateur",
+        "description": "Dashboard moderne et responsive réalisé lors d’un test technique pour afficher des statistiques.",
+        "results": "Dashboard fonctionnel offrant une interface claire, des statistiques détaillées et des indicateurs utiles pour la gestion.",
+        "tools": "React.js, Tailwind CSS, Recharts, Lucide React"
+      },
+      "fecacfop": {
+        "title": "Stage – Plateforme web FECACFOP",
+        "description": "Développement d’une plateforme web destinée à centraliser les formations professionnelles et à faciliter la diffusion des offres d’emploi de la FECACFOP.",
+        "results": "Première version fonctionnelle de la plateforme réalisée avant la mise en pause du projet.",
+        "tools": "PHP, MySQL, HTML, CSS"
+      },
+
+    "javaDesktop": {
+      "title": "Stage – Application desktop Java",
+      "description": "Application desktop développée en Java pour faciliter la gestion des informations des stagiaires.",
+      "results": "Une application desktop opérationnelle permettant une gestion structurée des informations des stagiaires.",
+      "tools": "Java, NetBeans, MySQL"
+    },
+
+    "salons": {
+      "title": "Campagnes visuelles – Salons & couturière",
+      "description": "Création de flyers modernes pour promouvoir les services des salons et d’une couturière.",
+      "results": "Plusieurs supports visuels créés pour renforcer la communication professionnelle.",
+      "tools": "Photoshop, Illustrator"
+    },
+
+    "visualEtechnology": {
+      "title": "Identité visuelle – E-Technology",
+      "description": "Création d’une identité visuelle composée d’un logo et supports promotionnels professionnels.",
+      "results": "Une identité visuelle professionnelle composée d’un logo et supports graphiques cohérents.",
+      "tools": "Illustrator, Photoshop"
+    },
+
+    "wedding": {
+      "title": "Invitations & affiches de mariage",
+      "description": "Création d’invitations et affiches personnalisées pour accompagner différentes cérémonies de mariage.",
+      "results": "Plusieurs supports personnalisés créés pour accompagner élégamment les différentes cérémonies.",
+      "tools": "Photoshop"
+    },
+
+    "motorcycle": {
+      "title": "Logo & affiche – Location motos",
+      "description": "Création d’un logo moderne et d’une affiche promotionnelle pour une entreprise spécialisée.",
+      "results": "Une identité visuelle professionnelle réalisée avec un logo et support promotionnel cohérent.",
+      "tools": "Illustrator, Photoshop"
+    },
+
+    "trainingCenters": {
+      "title": "Flyers – Centres de formation",
+      "description": "Création de flyers pour promouvoir les activités des centres de répétition et formation informatique.",
+      "results": "Plusieurs supports de communication créés pour présenter efficacement les activités des centres.",
+      "tools": "Photoshop, Illustrator"
+    },
+
+    "businessCards": {
+      "title": "Cartes de visite & logos",
+      "description": "Création de cartes de visite modernes et logos professionnels pour différents clients.",
+      "results": "Plusieurs identités et supports professionnels créés pour répondre aux besoins des différents clients.",
+      "tools": "Photoshop, Illustrator"
+    },
+
+    "twoJM": {
+      "title": "Affiches – Entreprise 2JM",
+      "description": "Conception de trois affiches promotionnelles pour une entreprise spécialisée en psychologie.",
+      "results": "Trois affiches professionnelles réalisées pour présenter clairement les services proposés par l’entreprise.",
+      "tools": "Photoshop"
+    },
+    "churches": {
+      "title": "Flyers – Églises & prêtre",
+      "description": "Conception de flyers personnalisés pour présenter les activités et événements religieux.",
+      "results": "Réalisation de flyers uniques et adaptés, permettant une meilleure visibilité des événements religieux et une diffusion plus efficace",
+      "tools": "Photoshop"
+    }
+
+      }
+    },
+
+  "media": {
+  "pause": "Pause",
+  "play": "Lecture",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "mute": "Couper le son",
+    "unmute": "Activer le son"
+  },
+
+  "modal": {
+    "close": "Fermer"
+  },
+
+
+  "experience": {
+    "badge": "Mes Expériences & Formations",
+
+    "title": {
+      "first": "Mon",
+      "highlight": "Parcours"
+    },
+
+    "description": "Découvrez mon parcours à travers mes expériences professionnelles, mes projets personnels et mes formations. Chaque étape m’a permis de développer progressivement mes compétences en développement web, design graphique, informatique et transmission des connaissances, tout en construisant une approche polyvalente et orientée vers la réalisation de solutions numériques concrètes.",
+
+    "items": {
+      "trainer": {
+        "title": "Formateur en bureautique, design et maintenance",
+        "place": "Centre de formation professionnel Joseph et Julienne – Douala",
+        "date": "Juillet - Septembre 2026",
+        "description": "Encadrement des apprenants dans l’initiation à l’informatique, la bureautique et le design graphique. Formation pratique en maintenance informatique pour développer leur autonomie technique et renforcer leurs compétences numériques."
+      },
+
+      "etechnology": {
+        "title": "Entreprise en ligne E-Technology - Projets personnels",
+        "place": "Projets personnels",
+        "date": "Février - Juin 2026",
+        "description": "Création d’une structure virtuelle pour simuler un environnement professionnel et renforcer mes compétences en développement web et design. Tous les projets sont hébergés sur Vercel."
+      },
+
+      "companyWebsite": {
+        "title": "Site web de l’entreprise en ligne",
+        "place": "Entreprise virtuelle E-Technology",
+        "date": "Février - Juin 2026",
+        "description": "Création de la maquette et développement du site vitrine de la structure virtuelle avec connexion à la base de données via Supabase."
+      },
+
+      "photographerPortfolio": {
+        "title": "Portfolio démonstratif pour photographes",
+        "place": "Entreprise en ligne E-Technology",
+        "date": "Février - Juin 2026",
+        "description": "Conception d’un portfolio de démonstration permettant aux photographes d’exposer leurs galeries en ligne de manière professionnelle. Le portfolio met en avant leurs compétences et offre aux clients la possibilité de les contacter directement via la plateforme."
+      },
+
+      "digitalMarketing": {
+        "title": "Portfolio marketing digital",
+        "place": "Entreprise en ligne E-Technology",
+        "date": "Février - Juin 2026",
+        "description": "Réalisation d’un portfolio pour une cliente en marketing digital. Le projet est actuellement bloqué en ligne suite au non-paiement."
+      },
+
+      "imageCompressor": {
+        "title": "Application frontend de conversion et compression d’images",
+        "place": "Entreprise en ligne",
+        "date": "Février - Juin 2026",
+        "description": "Développement d’une application 100 % frontend permettant de convertir, compresser et optimiser les images directement depuis le navigateur."
+      },
+
+      "fecacfop": {
+        "title": "Développeur Fullstack - Stage Académique",
+        "place": "FECACFOP (Fédération Camerounaise des Centres de Formation Professionnelle)",
+        "date": "Mars 2025 - Juin 2025",
+        "description": "Réalisation d’une plateforme web pour la FECACFOP incluant un back-end en PHP et un front-end en HTML, CSS, JavaScript et Bootstrap."
+      },
+
+      "licence": {
+        "title": "Licence en Génie Logiciel",
+        "place": "Institut Universitaire de Technologie de Douala (IUT)",
+        "date": "2024 - 2025",
+        "description": "Formation approfondie en développement logiciel, conception de systèmes et gestion de projet."
+      },
+
+      "hgoped": {
+        "title": "Développeur Fullstack - Stage Académique",
+        "place": "HGOPED (Hôpital Gynéco-Obstétrique et Pédiatrique de Douala)",
+        "date": "2023 - 2024",
+        "description": "Développement d’une application desktop en Java natif pour la gestion des stagiaires."
+      },
+
+      "dut": {
+        "title": "DUT Génie Logiciel",
+        "place": "Institut Universitaire de Technologie de Douala (IUT)",
+        "date": "2023 - 2024",
+        "description": "Formation de base en informatique couvrant le développement logiciel, les réseaux et les systèmes informatiques."
+      }
+    }
+  },
+
+
+  "temoignages": {
+    "badge": "Témoignages",
+    "title": "Avis de mes ",
+    "highlight": "clients",
+    "description": "Découvrez des témoignages authentiques qui illustrent la qualité, l’impact et la valeur ajoutée de mes réalisations, à travers des expériences variées et inspirantes.",
+    "hint": "Swipe pour naviguer →",
+    "items": {
+      "1": {
+        "nom": "Miranda.",
+        "texte": "Landry a conçu mon portfolio avec une présentation moderne et élégante. Grâce à ce site, j’ai pu impressionner mes recruteurs et décrocher de nouvelles opportunités.",
+        "type": "Portfolio"
+      },
+      "2": {
+        "nom": "Entreprise locale",
+        "texte": "Les affiches créées pour notre centre ont eu un impact immédiat. Elles ont attiré l’attention et donné une image professionnelle à nos activités.",
+        "type": "Affiches"
+      },
+      "3": {
+        "nom": "NDIOMO BOMOKIN.",
+        "texte": "La maintenance effectuée sur mon ordinateur a été rapide et efficace. J’ai pu reprendre mon travail sans interruption.",
+        "type": "Maintenance"
+      },
+      "4": {
+        "nom": "Gladys.",
+        "texte": "Ses conseils m’ont aidée à mieux organiser mon activité digitale. Une vraie valeur ajoutée pour mon entreprise.",
+        "type": "Conseil"
+      },
+      "5": {
+        "nom": "Centre de formation",
+        "texte": "Landry a encadré nos étudiants avec pédagogie et professionnalisme. Ses cours pratiques ont permis aux participants de progresser rapidement et de gagner en autonomie.",
+        "type": "Formation"
+      }
+    }
+  },
+
+"blog": {
+  "badge": "Actualités",
+
+  "title": {
+    "part1": "Mes créations",
+    "part2": "& inspirations"
+  },
+
+  "description": "Découvrez mes dernières réalisations, réflexions, conseils et projets autour du design et du développement web.",
+
+  "loading": "Chargement des articles...",
+  "noArticles": "Aucun article disponible.",
+
+  "card": {
+    "viewImage": "Voir l'image",
+    "viewImageArticle": "Voir l'image de l'article {{title}}",
+    "readMore": "Lire la suite",
+
+    "publishedJustNow": "Publié à l’instant",
+    "publishedMinutesAgo": "Publié il y a {{count}} min",
+    "publishedHoursAgo": "Publié il y a {{count}} h",
+    "publishedYesterday": "Publié hier",
+    "publishedDaysAgo": "Publié il y a {{count}} jours",
+    "publishedOn": "Publié le {{date}}"
+  },
+
+  "footer": {
+    "latestPosts": "Mes dernières publications"
+  },
+
+  "imageViewer": {
+    "close": "Fermer",
+    "reset": "Réinitialiser",
+    "preview": "Aperçu"
+  },
+
+  "share": {
+    "button": "Partager",
+    "whatsapp": "Partager sur WhatsApp",
+    "facebook": "Partager sur Facebook",
+    "linkedin": "Partager sur LinkedIn"
+  },
+
+  "category": {
+    "Actu": "Actu",
+    "Design": "Design",
+    "Tech": "Tech"
+  }
+},
+
+
+"contact": {
+  "badge": "Prenons contact",
+  "title": "Contactez",
+  "me": "Moi",
+  "description": "Besoin d’informations ou envie d’échanger ? Je suis à votre écoute pour répondre à vos questions et vous orienter.",
+  "imageAlt": "Illustration représentant le contact",
+
+  "phone": "+237 659 322 137",
+  "phone1": "+237 676 47 16 01",
+  "email": "landryamengne@gmail.com",
+  "location": "Douala, Cameroun",
+
+  "form": {
+    "name": "Votre nom",
+    "email": "Votre adresse e-mail",
+    "phone": "Votre numéro de téléphone",
+    "service": "Service souhaité",
+    "details": "Décrivez votre projet ou votre besoin...",
+    "send": "Envoyer le message",
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur est survenue. Réessayez."
+  }
+},
+
+"footer": {
+  "company": "Frank Landry",
+  "tagline": "Développeur Web & Designer",
+  "rights": "Tous droits réservés.",
+  "madeWith": "Conçu avec passion pour le web.",
+  "backToTop": "Retour en haut",
+
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Réalisations",
+    "experiences": "Expériences",
+    "contact": "Contact"
+  }
+}
+
+
+
+}
