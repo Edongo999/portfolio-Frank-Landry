@@ -377,6 +377,18 @@
       }
     }
   },
+  
+  "chatbot": {
+    "welcome": "Hello, I am Frank Landry's virtual assistant. How can I help you?",
+    "error": "Sorry, I am currently experiencing a connection issue. Please try again in a few moments.",
+    "thinking": "The assistant is thinking...",
+    "placeholder": "Type your message...",
+    "send": "Send",
+    "title": "Frank Landry Assistant",
+    "subtitle": "Virtual AI Assistant",
+    "open": "Open chatbot",
+    "close": "Close chatbot"
+  },
 
   "blog": {
   "badge": "News",
