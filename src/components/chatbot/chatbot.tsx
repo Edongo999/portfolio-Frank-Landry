@@ -21,7 +21,7 @@ export default function Chatbot() {
     {
       role: 'assistant',
       content:
-        "Bonjour 👋 Je suis l'assistant de Frank Landry. Comment puis-je vous aider ?",
+        "Bonjour  Je suis l'assistant de Frank Landry. Comment puis-je vous aider ?",
     },
   ]);
   const [loading, setLoading] = useState(false);
@@ -55,7 +55,7 @@ export default function Chatbot() {
         {
           role: 'assistant',
           content:
-            '⚠️ Désolé, je rencontre actuellement un problème de connexion. Veuillez réessayer dans quelques instants.',
+            ' Désolé, je rencontre actuellement un problème de connexion. Veuillez réessayer dans quelques instants.',
         },
       ]);
     } finally {

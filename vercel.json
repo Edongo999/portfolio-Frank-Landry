@@ -1,12 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/translations/(.*)",
-      "destination": "/translations/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+  "routes": [
+    { "src": "/translations/(.*)", "dest": "/translations/$1" },
+    { "src": "/images/(.*)", "dest": "/images/$1" },
+    { "src": "/Document/(.*)", "dest": "/Document/$1" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
