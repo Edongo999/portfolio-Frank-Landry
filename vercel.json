@@ -1,8 +1,11 @@
+
+
 {
   "routes": [
     { "src": "/translations/(.*)", "dest": "/translations/$1" },
     { "src": "/images/(.*)", "dest": "/images/$1" },
     { "src": "/Document/(.*)", "dest": "/Document/$1" },
+    { "src": "/static/(.*)", "dest": "/static/$1" }, 
     { "src": "/.*", "dest": "/index.html" }
   ]
 }
