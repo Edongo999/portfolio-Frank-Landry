@@ -1,12 +1,20 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from 'react';
 import axios from 'axios';
+import { HiChatBubbleLeftRight } from 'react-icons/hi2';
+
+import {
+  FaCheckCircle,
+  FaFolderOpen,
+  FaGraduationCap,
+  FaPhoneAlt,
+} from 'react-icons/fa';
 
 interface Message {
   role: 'user' | 'assistant';
   content: string;
 }
 
-// 👉 Interface pour typer la réponse du backend Laravel
 interface ChatResponse {
   success: boolean;
   message: string;
@@ -21,7 +29,7 @@ export default function Chatbot() {
     {
       role: 'assistant',
       content:
-        "Bonjour  Je suis l'assistant de Frank Landry. Comment puis-je vous aider ?",
+        "Bonjour Je suis l'assistant virtuel de Frank Landry. Comment puis-je vous aider ?",
     },
   ]);
   const [loading, setLoading] = useState(false);
@@ -36,7 +44,6 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      // 👉 Typage explicite de la réponse
       const res = await axios.post<ChatResponse>(API_URL, {
         message: trimmedMessage,
       });
@@ -48,14 +55,13 @@ export default function Chatbot() {
         ...prev,
         { role: 'assistant', content: data.message },
       ]);
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setMessages((prev) => [
         ...prev,
         {
           role: 'assistant',
           content:
-            ' Désolé, je rencontre actuellement un problème de connexion. Veuillez réessayer dans quelques instants.',
+            'Désolé, je rencontre actuellement un problème de connexion. Veuillez réessayer dans quelques instants.',
         },
       ]);
     } finally {
@@ -70,16 +76,51 @@ export default function Chatbot() {
     }
   };
 
+  // 👉 Mise en forme spéciale : listes avec icônes
+  const formatMessage = (text: string) => {
+    return text.split('\n').map((line, i) => {
+      let icon = null;
+
+      if (line.trim().startsWith('-')) {
+        if (line.toLowerCase().includes('compétence'))
+          icon = <FaCheckCircle className="inline text-green-400 mr-2" />;
+        else if (line.toLowerCase().includes('projet'))
+          icon = <FaFolderOpen className="inline text-blue-400 mr-2" />;
+        else if (
+          line.toLowerCase().includes('parcours') ||
+          line.toLowerCase().includes('expérience')
+        )
+          icon = <FaGraduationCap className="inline text-purple-400 mr-2" />;
+        else if (
+          line.toLowerCase().includes('email') ||
+          line.toLowerCase().includes('téléphone')
+        )
+          icon = <FaPhoneAlt className="inline text-yellow-400 mr-2" />;
+        else icon = <span className="mr-2">•</span>;
+      }
+
+      return (
+        <p key={i} className="mb-1 flex items-center">
+          {icon}
+          {line.replace('-', '').trim()}
+        </p>
+      );
+    });
+  };
   return (
     <>
-      {/* Bouton flottant */}
+      {/* Bouton flottant avec icône pro */}
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label="Ouvrir le chatbot"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-black shadow-lg transition-transform duration-200 hover:scale-105"
+        className="group fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f009] text-black shadow-lg transition-transform duration-200 hover:scale-105"
       >
-        💬
+        <HiChatBubbleLeftRight className="h-7 w-7" />
+        {/* Tooltip */}
+        <span className="absolute bottom-16 right-0 hidden w-max rounded-md bg-black px-2 py-1 text-xs text-white group-hover:block">
+          Assistant de Frank Landry
+        </span>
       </button>
 
       {/* Fenêtre du chatbot */}
@@ -117,7 +158,7 @@ export default function Chatbot() {
                       : 'chat-bubble-secondary'
                   }`}
                 >
-                  {msg.content}
+                  {formatMessage(msg.content)}
                 </div>
               </div>
             ))}
