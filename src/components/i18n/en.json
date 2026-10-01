@@ -278,18 +278,19 @@
         "description": "Training learners in computer basics, office tools and graphic design. Providing practical IT maintenance training to develop their technical independence and strengthen their digital skills."
       },
 
-      "etechnology": {
-        "title": "E-Technology Online Company – Personal Projects",
-        "place": "Personal Projects",
-        "date": "February - June 2026",
-        "description": "Creation of a virtual structure to simulate a professional environment and strengthen my skills in web development and design. All projects are hosted on Vercel."
-      },
+     "etechnology": {
+          "title": "Online Structure E-Technology - Personal Projects",
+          "place": "Personal Projects",
+          "date": "February - June 2026",
+          "description": "Personal project: creation of an online structure to simulate a professional environment and strengthen my skills in web development and design. All projects are hosted on Vercel."
+        },
 
-      "companyWebsite": {
-        "title": "Online Company Website",
-        "place": "E-Technology Virtual Company",
-        "date": "February - June 2026",
-        "description": "Creation of the mockup and development of the virtual company's business website with database integration through Supabase."
+
+    "companyWebsite": {
+        "title": "Corporate Website Showcase",
+        "place": "E-Technology Online Company",
+        "date": "February 2026 - June 2026 (ongoing)",
+        "description": "Design and development of the corporate showcase website with Supabase database integration. The project is currently in progress, featuring the implementation of a modern, responsive interface."
       },
 
       "photographerPortfolio": {
@@ -301,10 +302,10 @@
 
       "digitalMarketing": {
         "title": "Digital Marketing Portfolio",
-        "place": "E-Technology Online Company",
+        "place": "Online Structure E-Technology",
         "date": "February - June 2026",
-        "description": "Creation of a portfolio for a digital marketing client. The project is currently offline due to non-payment."
-      },
+        "description": "Development of a modern portfolio for a digital marketing client. The project is now live and accessible following payment."
+        },
 
       "imageCompressor": {
         "title": "Frontend Image Conversion & Compression Application",
@@ -381,8 +382,8 @@
   "chatbot": {
     "welcome": "Hello, I am Frank Landry's virtual assistant. How can I help you?",
     "error": "Sorry, I am currently experiencing a connection issue. Please try again in a few moments.",
-    "thinking": "The assistant is thinking...",
-    "placeholder": "Type your message...",
+    "thinking": "The assistant is thinking",
+    "placeholder": "Type your message",
     "send": "Send",
     "title": "Frank Landry Assistant",
     "subtitle": "Virtual AI Assistant",

@@ -276,18 +276,19 @@
       },
 
       "etechnology": {
-        "title": "Entreprise en ligne E-Technology - Projets personnels",
+        "title": "Structure en ligne E-Technology - Projets personnels",
         "place": "Projets personnels",
         "date": "Février - Juin 2026",
-        "description": "Création d’une structure virtuelle pour simuler un environnement professionnel et renforcer mes compétences en développement web et design. Tous les projets sont hébergés sur Vercel."
+        "description": "Projet personnel : création d’une structure en ligne pour simuler un environnement professionnel et renforcer mes compétences en développement web et design. Tous les projets sont hébergés sur Vercel."
       },
 
       "companyWebsite": {
-        "title": "Site web de l’entreprise en ligne",
-        "place": "Entreprise virtuelle E-Technology",
-        "date": "Février - Juin 2026",
-        "description": "Création de la maquette et développement du site vitrine de la structure virtuelle avec connexion à la base de données via Supabase."
+        "title": "Site web vitrine de l’entreprise en ligne",
+        "place": "Entreprise en ligne E-Technology",
+        "date": "Février 2026 - Juin 2026 (en cours)",
+        "description": "Conception de la maquette et développement du site vitrine avec intégration d'une base de données Supabase. Projet en cours de réalisation, incluant la mise en place d'une interface moderne et responsive."
       },
+
 
       "photographerPortfolio": {
         "title": "Portfolio démonstratif pour photographes",
@@ -297,11 +298,12 @@
       },
 
       "digitalMarketing": {
-        "title": "Portfolio marketing digital",
-        "place": "Entreprise en ligne E-Technology",
-        "date": "Février - Juin 2026",
-        "description": "Réalisation d’un portfolio pour une cliente en marketing digital. Le projet est actuellement bloqué en ligne suite au non-paiement."
-      },
+          "title": "Portfolio marketing digital",
+          "place": "Structure en ligne E-Technology",
+          "date": "Février - Juin 2026",
+          "description": "Réalisation d’un portfolio moderne pour une cliente en marketing digital. Le projet est en ligne et accessible suite au règlement effectué."
+        },
+
 
       "imageCompressor": {
         "title": "Application frontend de conversion et compression d’images",
@@ -379,8 +381,8 @@
   "chatbot": {
     "welcome": "Bonjour, je suis l'assistant virtuel de Frank Landry. Comment puis-je vous aider ?",
     "error": "Désolé, je rencontre actuellement un problème de connexion. Veuillez réessayer dans quelques instants.",
-    "thinking": "L'assistant réfléchit...",
-    "placeholder": "Écrivez votre message...",
+    "thinking": "L'assistant réfléchit",
+    "placeholder": "Écrivez votre message",
     "send": "Envoyer",
     "title": "Assistant Frank Landry",
     "subtitle": "Assistant virtuel IA",

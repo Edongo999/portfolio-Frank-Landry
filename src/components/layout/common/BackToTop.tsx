@@ -4,28 +4,26 @@ import { useTranslation } from 'react-i18next';
 
 const BackToTop = () => {
   const { t } = useTranslation();
-
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 500);
+      const y = window.scrollY;
+      // Visible uniquement entre 500px et 1500px
+      setIsVisible(y > 500 && y < 4500);
     };
 
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  if (!isVisible) return null;
 
   return (
     <button
@@ -63,58 +61,19 @@ const BackToTop = () => {
 
         sm:bottom-7
         sm:right-7
-
-        ${
-          isVisible
-            ? 'translate-y-0 scale-100 opacity-100'
-            : 'pointer-events-none translate-y-4 scale-90 opacity-0'
-        }
       `}
     >
       {/* Lueur discrète au survol */}
-      <span
-        className="
-          pointer-events-none
-          absolute
-          inset-0
-          rounded-xl
-          bg-[#f3f009]/10
-          opacity-0
-          transition-opacity
-          duration-300
-          group-hover:opacity-100
-        "
-      />
+      <span className="pointer-events-none absolute inset-0 rounded-xl bg-[#f3f009]/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
       {/* Ligne lumineuse supérieure */}
-      <span
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-0
-          h-px
-          w-0
-          -translate-x-1/2
-          bg-[#f3f009]
-          shadow-[0_0_8px_rgba(243,240,9,0.8)]
-          transition-all
-          duration-500
-          group-hover:w-1/2
-        "
-      />
+      <span className="pointer-events-none absolute left-1/2 top-0 h-px w-0 -translate-x-1/2 bg-[#f3f009] shadow-[0_0_8px_rgba(243,240,9,0.8)] transition-all duration-500 group-hover:w-1/2" />
 
       {/* Icône */}
       <ArrowUp
         size={17}
         strokeWidth={2}
-        className="
-          relative
-          z-10
-          transition-transform
-          duration-300
-          group-hover:-translate-y-0.5
-        "
+        className="relative z-10 transition-transform duration-300 group-hover:-translate-y-0.5"
       />
     </button>
   );
