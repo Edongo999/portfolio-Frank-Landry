@@ -27,7 +27,10 @@
   "role3": "Maintenance informatique",
   "role4": "Créateur de contenu",
   "role5": "Formateur", 
-  "description": "Passionné par le numérique, je conçois des sites web modernes, des sites vitrines, ainsi que des applications web et desktop. Je crée également des visuels professionnels (flyers, affiches, identités visuelles) et j’assure la maintenance informatique, afin d’offrir des solutions complètes et fiables.",
+"description": "Développeur Full Stack basé au Cameroun, je crée des sites web et applications modernes, performantes et centrées sur l’expérience utilisateur. J’apporte également une vision créative et des solutions numériques complètes pour accompagner chaque projet avec professionnalisme.",
+
+
+ 
   "btnProjects": "Decouvrir mes projets",
   "btnCV": "Contactez-moi",
   "linkedinTooltip": "Mon profil LinkedIn",
@@ -282,7 +285,6 @@
         "date": "Juillet - Septembre 2026",
         "description": "Encadrement des apprenants dans l’initiation à l’informatique, la bureautique et le design graphique. Formation pratique en maintenance informatique pour développer leur autonomie technique et renforcer leurs compétences numériques."
       },
-
      "studio111": {
         "title": "Développeur Frontend – Site vitrine 111Studio",
         "place": "Projet freelance – 111Studio",
