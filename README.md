@@ -1,55 +1,74 @@
-# Portfolio Marketing Digital
+# Portfolio — Frank Landry
 
-Ce projet est un e‑portfolio développé en **React.js**, conçu pour une spécialiste en marketing digital.  
-Il met en valeur ses compétences, expériences et réalisations à travers une interface moderne et animée.
+## 🇫🇷 Version Française
 
----
-
-## ⚙️ Technologies utilisées
-- **React.js** → Framework principal
-- **Tailwind CSS** → Stylisation moderne et rapide
-- **Lucide React** → Icônes vectorielles élégantes
-- **Framer Motion** → Animations fluides et interactives
+Ce projet est le **frontend React/Vite** du portfolio connecté à une API Laravel.  
+Il s’agit de la partie **publique** destinée aux visiteurs, qui peuvent découvrir mes projets, consulter mes articles de blog et explorer mon profil professionnel.  
+Le portfolio consomme uniquement les **API du backend Laravel**, ce qui permet de séparer la gestion (dashboard privé) de la présentation publique.
 
 ---
 
-## 🎯 Objectif
-Présenter les compétences et projets de la cliente dans le domaine du marketing digital, avec un design premium et interactif.
+### 🚀 Stack technique
+
+- React.js + Vite
+- Tailwind CSS + DaisyUI
+- Axios (API calls vers Laravel)
+- API REST Laravel (articles, projets, utilisateurs)
+- Déploiement sur Vercel
 
 ---
 
-## ✨ Fonctionnalités
-- Interface responsive (mobile, tablette, desktop)  
-- Animations fluides avec Framer Motion  
-- Icônes modernes grâce à Lucide React  
-- Support bilingue (Français / Anglais)  
-- Boutons interactifs (WhatsApp)  
+### ✨ Fonctionnalités principales
+
+- Affichage des projets et réalisations
+- Consultation des articles de blog (via API Laravel)
+- Présentation du profil professionnel
+- Interface responsive et moderne
+- Animations UI/UX pour une expérience fluide
 
 ---
 
-# Digital Marketing Portfolio
+### 🌐 Démo en ligne
 
-This project is an **React.js** e‑portfolio designed for a digital marketing specialist.  
-It highlights her skills, experiences, and projects through a modern and animated interface.
-
----
-
-## ⚙️ Technologies used
-- **React.js** → Main framework
-- **Tailwind CSS** → Fast and modern styling
-- **Lucide React** → Elegant vector icons
-- **Framer Motion** → Smooth and interactive animations
+👉 [Voir le portfolio en ligne](https://portfolio-frank-landry.vercel.app/)
 
 ---
 
-## 🎯 Purpose
-Showcase the client’s expertise and projects in digital marketing with a premium, interactive design.
+## 🇬🇧 English Version
+
+This project is the **React/Vite frontend** of the Laravel portfolio.  
+It is the **public interface** designed for visitors to explore my projects, blog articles, and professional profile.  
+The portfolio consumes only the **Laravel backend APIs**, ensuring a clear separation between the private dashboard (management) and the public presentation.
 
 ---
 
-## ✨ Features
-- Responsive interface (mobile, tablet, desktop)  
-- Smooth animations powered by Framer Motion  
-- Modern icons with Lucide React  
-- Bilingual support (French / English)  
-- Interactive buttons (WhatsApp)
+### 🚀 Tech Stack
+
+- React.js + Vite
+- Tailwind CSS + DaisyUI
+- Axios (API calls to Laravel)
+- Laravel REST API (articles, projects, users)
+- Deployment on Vercel / Render
+
+---
+
+### ✨ Key Features
+
+- Display of projects and achievements
+- Blog article consultation (via Laravel API)
+- Professional profile presentation
+- Responsive and modern interface
+- Smooth UI/UX animations for visitors
+
+---
+
+### 🌐 Live Demo
+
+👉 [Check out the portfolio online](https://portfolio-frank-landry.vercel.app/)
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Edongo Amengne Frank Landry**  
+Full‑Stack Developer | React.js & Laravel | UI/UX Design | Digital Solutions
