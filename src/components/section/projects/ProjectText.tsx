@@ -87,6 +87,10 @@ const ProjectText: React.FC<Props> = ({ project, isVertical = false }) => {
                   className="h-4 w-4"
                 />
               )}
+              {tool === 'Laravel' && (
+                <i className="devicon-laravel-plain colored text-base" />
+              )}
+
               {tool === 'Framer Motion' && (
                 <img
                   src="https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png"

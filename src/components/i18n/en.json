@@ -133,61 +133,68 @@
     "multiple": "projects"
   },
 
-          "items": {
-              "siteVirtuel": {
-          "title": "E-Technology – Showcase Website",
-          "description": "Ongoing design and development of a modern showcase website as part of a personal project.",
-          "results": "A modern professional showcase website designed to clearly present the project’s activity, services, and identity.",
-          "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
-        },
-              
-        "111Studio": {
-          "title": "111Studio – Showcase Website",
-          "description": "Modern showcase website developed for a photography company specializing in weddings.",
-          "results": "Modern and responsive showcase website, fully functional and deployed, currently on hold pending the finalization of discussions with the client.",
-          "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-        },
-      "portfolioMarketing": {
-        "title": "Digital Marketing Portfolio",
-        "description": "Modern portfolio designed to showcase the services of a digital marketing professional.",
-        "results": "A modern professional portfolio developed and deployed to effectively showcase the client's business.",
-        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-      },
+        "items": {
+  "portfolioRefonte": {
+    "title": "Premium Portfolio Redesign",
+    "description": "I designed and developed this portfolio as a modern showcase to present my background, skills, and digital achievements.",
+    "results": "A professional and responsive portfolio integrating a blog, multilingual support, animations, and personalized content management.",
+    "tools": ["React.js", "TypeScript", "Tailwind CSS", "Laravel", "Supabase", "Vercel"]
+  },
 
-      "imageCompression": {
-        "title": "Image Compression Application",
-        "description": "Modern web application for easily compressing and converting multimedia files.",
-        "results": "A functional application allowing users to easily optimize files through a responsive interface.",
-        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-      },
+  "siteVirtuel": {
+    "title": "E-Technology – Showcase Website",
+    "description": "I designed the mockup and started developing a modern showcase website to present the company’s professional activities and highlight its digital identity.",
+    "results": "A professional and responsive showcase website under development, created to enhance the project’s image and services.",
+    "tools": ["Adobe XD", "React.js", "Tailwind CSS", "Supabase"]
+  },
+  "digitalMarketing": {
+  "title": "Digital Marketing Portfolio – Freelance",
+  "place": "Freelance Project – E-Technology",
+  "date": "February - June 2026",
+  "description": "Design and development of a modern portfolio for a client in digital marketing. The project was deployed and made accessible online after payment was completed."
+},
 
-      "photographerPortfolio": {
-        "title": "Portfolio for Photographers",
-        "description": "Modern portfolio designed to showcase photographers' work and projects online.",
-        "results": "A modern and responsive portfolio designed to effectively showcase photographic work and strengthen the professional image.",
-        "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-      },
+"studio111": {
+  "title": "Frontend Developer – 111Studio Showcase Website",
+  "place": "Freelance Project – 111Studio",
+  "date": "March - June 2026",
+  "description": "Design and development of the 111Studio showcase website to present its universe and services around wedding photography. The project is functional and deployed, currently on hold awaiting finalization with the client."
+},
 
-      "adminDashboard": {
-        "title": "Admin Dashboard",
-        "description": "Modern and responsive dashboard created during a technical assessment to display statistics.",
-        "results": "A functional dashboard providing a clear interface, detailed statistics and useful management indicators.",
-        "tools": "React.js, Tailwind CSS, Recharts, Lucide React"
-      },
+  "imageCompression": {
+    "title": "Image Compression Application",
+    "description": "I designed my own tool to simplify and speed up the process of converting and compressing images directly from the browser.",
+    "results": "A modern web application enabling easy image conversion and compression into different formats without external services.",
+    "tools": ["React.js", "Tailwind CSS", "Framer Motion", "Vercel"]
+  },
 
-      "fecacfop": {
-        "title": "Internship – FECACFOP Web Platform",
-        "description": "Web platform developed during my internship to centralize training programs and job opportunities.",
-        "results": "A first functional version of the platform completed before the project was put on hold.",
-        "tools": "PHP, MySQL, HTML, CSS"
-      },
+  "photographerPortfolio": {
+    "title": "Photographers’ Portfolio",
+    "description": "I designed this portfolio as a demonstration for photographers to showcase their work and professional identity.",
+    "results": "A modern and responsive solution grouping galleries, achievements, and essential information on a single page.",
+    "tools": ["React.js", "Tailwind CSS", "Framer Motion", "Vercel"]
+  },
 
-      "javaDesktop": {
-        "title": "Internship – Java Desktop Application",
-        "description": "Desktop application developed in Java to facilitate the management of trainee information.",
-        "results": "An operational desktop application providing structured management of trainee information.",
-        "tools": "Java, NetBeans, MySQL"
-      },
+  "adminDashboard": {
+    "title": "Administrator Dashboard",
+    "description": "This dashboard was created as part of a technical test to design a modern interface for displaying various statistics.",
+    "results": "A responsive and functional interface allowing clear consultation of indicators useful for daily management.",
+    "tools": ["React.js", "Tailwind CSS", "Recharts", "Lucide React"]
+  },
+
+  "fecacfop": {
+    "title": "Internship – FECACFOP Web Platform",
+    "description": "During my internship at FECACFOP, I developed a web platform designed to centralize professional training and job offers.",
+    "results": "A first modern and functional version of the platform completed before the project was put on hold.",
+    "tools": ["PHP", "MySQL", "HTML", "CSS"]
+  },
+
+  "javaDesktop": {
+    "title": "Internship – Java Desktop Application",
+    "description": "During my internship at HGOPED, I designed a desktop application to facilitate the management of trainee information.",
+    "results": "A modern and operational desktop application enabling clear and structured management of trainee data.",
+    "tools": ["Java", "NetBeans", "MySQL"]
+  },
 
       "salons": {
         "title": "Visual Campaigns – Salons & Dressmaker",
@@ -277,6 +284,13 @@
         "date": "July - September 2026",
         "description": "Training learners in computer basics, office tools and graphic design. Providing practical IT maintenance training to develop their technical independence and strengthen their digital skills."
       },
+      "studio111": {
+        "title": "Frontend Developer – 111Studio Showcase Website",
+        "place": "Freelance Project – 111Studio",
+        "date": "March - June 2026",
+        "description": "Design and development of the 111Studio showcase website to present its universe and services around wedding photography. The project is functional and deployed, currently on hold awaiting finalization with the client."
+      },
+
 
      "etechnology": {
           "title": "Online Structure E-Technology - Personal Projects",
@@ -299,12 +313,11 @@
         "date": "February - June 2026",
         "description": "Design of a demonstration portfolio allowing photographers to professionally showcase their galleries online. The portfolio highlights their skills and allows clients to contact them directly through the platform."
       },
-
-      "digitalMarketing": {
-        "title": "Digital Marketing Portfolio",
-        "place": "Online Structure E-Technology",
-        "date": "February - June 2026",
-        "description": "Development of a modern portfolio for a digital marketing client. The project is now live and accessible following payment."
+        "digitalMarketing": {
+          "title": "Digital Marketing Portfolio – Freelance",
+          "place": "Freelance Project – E-Technology",
+          "date": "February - June 2026",
+          "description": "Design and development of a modern portfolio for a digital marketing client. The project was deployed and made accessible online after payment was completed."
         },
 
       "imageCompressor": {

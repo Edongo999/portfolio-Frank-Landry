@@ -4,6 +4,23 @@ export const useProjectsData = (): Project[] => {
     // =====================================================
     // DÉVELOPPEMENT WEB
     // =====================================================
+    {
+      title: 'projects.items.portfolioRefonte.title',
+      description: 'projects.items.portfolioRefonte.description',
+      results: 'projects.items.portfolioRefonte.results',
+      tools: ['React.js', 'Tailwind CSS', 'Laravel', 'Supabase', 'Vercel'],
+
+      medias: [
+        { type: 'image', src: '/images/portfolio/refonte0.webp' },
+        { type: 'image', src: '/images/portfolio/refonte1.webp' },
+        { type: 'image', src: '/images/portfolio/refonte2.webp' },
+        { type: 'image', src: '/images/portfolio/refonte3.webp' },
+        { type: 'image', src: '/images/portfolio/refonte4.webp' },
+        { type: 'image', src: '/images/portfolio/refonte5.webp' },
+      ],
+      category: 'Développement Web',
+      cardId: 'portfolio-1',
+    },
 
     {
       title: 'projects.items.siteVirtuel.title',
@@ -64,7 +81,7 @@ export const useProjectsData = (): Project[] => {
       tools: ['React.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
       category: 'Développement Web',
       cardId: 'app-1',
-      link: 'https://image-compression.vercel.app',
+      link: 'https://landrytech.vercel.app',
       medias: [
         {
           type: 'video',
@@ -93,12 +110,7 @@ export const useProjectsData = (): Project[] => {
       title: 'projects.items.adminDashboard.title',
       description: 'projects.items.adminDashboard.description',
       results: 'projects.items.adminDashboard.results',
-      tools: [
-        'React.js',
-        'Tailwind CSS',
-        'Recharts & Lucide React',
-        'Lucide React',
-      ],
+      tools: ['React.js', 'Tailwind CSS', 'Recharts & Lucide React'],
       medias: [
         {
           type: 'image',

@@ -129,61 +129,69 @@
   },
 
   "items": {
+    "portfolioRefonte": {
+  "title": "Refonte portfolio premium",
+  "description": "J’ai conçu et développé ce portfolio comme une vitrine moderne pour présenter mon parcours, mes compétences et mes réalisations numériques.",
+  "results": "Un portfolio professionnel et responsive intégrant un blog, le multilingue, des animations et une gestion de contenu personnalisée.",
+  "tools": ["React.js", "TypeScript", "Tailwind CSS", "Laravel", "Supabase", "Vercel"]
+},
 
 "siteVirtuel": {
   "title": "E-Technology – Site vitrine",
-  "description": "Conception et développement en cours d’un site vitrine moderne dans le cadre d’un projet personnel.",
-  "results": "Une vitrine professionnelle moderne destinée à présenter clairement l’activité, les services proposés et l’identité du projet.",
-  "tools": "Adobe XD, React.js, Tailwind CSS, Supabase"
+  "description": "J’ai conçu la maquette et j’entame le développement d’un site vitrine moderne destiné à présenter les activités professionnelles de l’entreprise.",
+  "results": "Un site vitrine professionnel et responsive en cours de réalisation, conçu pour valoriser l’image du projet et ses services.",
+  "tools": ["Adobe XD", "React.js", "Tailwind CSS", "Supabase"]
 },
 
- 
-    "111Studio": {
+
+"111Studio": {
   "title": "111Studio – Site vitrine",
-  "description": "Site vitrine moderne développé pour une entreprise de photographie spécialisée dans les mariages.",
-  "results": "Site vitrine moderne et responsive, fonctionnel et déployé, actuellement en pause dans l’attente de la finalisation des échanges avec le client.",
+  "description": "J’ai conçu et développé le site vitrine de 111Studio afin de présenter son univers, ses services et son activité autour de la photographie de mariage.",
+  "results": "Un site vitrine moderne et responsive, fonctionnel et déployé, actuellement en pause en attente de finalisation avec le client.",
   "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
 },
 
-    "portfolioMarketing": {
-      "title": "Portfolio marketing digital",
-      "description": "Portfolio moderne conçu pour présenter les services d’une professionnelle du marketing digital.",
-      "results": "Un portfolio professionnel moderne développé et déployé pour présenter efficacement son activité.",
-      "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-    },
+"portfolioMarketing": {
+  "title": "Portfolio marketing digital",
+  "description": "Une professionnelle du marketing digital avait besoin d’un portfolio pour présenter son activité, ses services et ses réalisations en ligne.",
+  "results": "Un portfolio moderne et responsive, déployé pour valoriser efficacement son identité et faciliter sa présentation auprès des clients.",
+  "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+},
 
-    "imageCompression": {
-      "title": "Application compression images",
-      "description": "Application web moderne permettant de compresser et convertir facilement les fichiers multimédias.",
-      "results": "Une application fonctionnelle permettant d’optimiser facilement les fichiers avec une interface responsive.",
-      "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-    },
-    "photographerPortfolio": {
-      "title": "Portfolio pour photographes",
-      "description": "Portfolio moderne conçu pour mettre en avant les travaux et réalisations des photographes en ligne.",
-      "results": "Un portfolio moderne et responsive permettant de présenter efficacement les travaux photographiques et renforcer l’image pro.",
-      "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
-    },
+"imageCompression": {
+  "title": "Application compression images",
+  "description": "J’ai conçu mon propre outil pour simplifier et accélérer le processus de conversion et compression des images directement depuis le navigateur.",
+  "results": "Une application web moderne permettant de convertir et compresser facilement les images dans différents formats sans service externe.",
+  "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+},
 
-      "adminDashboard": {
-        "title": "Tableau de bord administrateur",
-        "description": "Dashboard moderne et responsive réalisé lors d’un test technique pour afficher des statistiques.",
-        "results": "Dashboard fonctionnel offrant une interface claire, des statistiques détaillées et des indicateurs utiles pour la gestion.",
-        "tools": "React.js, Tailwind CSS, Recharts, Lucide React"
-      },
-      "fecacfop": {
-        "title": "Stage – Plateforme web FECACFOP",
-        "description": "Développement d’une plateforme web destinée à centraliser les formations professionnelles et à faciliter la diffusion des offres d’emploi de la FECACFOP.",
-        "results": "Première version fonctionnelle de la plateforme réalisée avant la mise en pause du projet.",
-        "tools": "PHP, MySQL, HTML, CSS"
-      },
+"photographerPortfolio": {
+  "title": "Portfolio pour photographes",
+  "description": "J’ai conçu ce portfolio comme une démonstration destinée aux photographes pour présenter leurs travaux et leur identité professionnelle.",
+  "results": "Une solution moderne et responsive regroupant galeries, réalisations et informations essentielles sur une seule page.",
+  "tools": "React.js, Tailwind CSS, Framer Motion, Vercel"
+},
 
-    "javaDesktop": {
-      "title": "Stage – Application desktop Java",
-      "description": "Application desktop développée en Java pour faciliter la gestion des informations des stagiaires.",
-      "results": "Une application desktop opérationnelle permettant une gestion structurée des informations des stagiaires.",
-      "tools": "Java, NetBeans, MySQL"
-    },
+"adminDashboard": {
+  "title": "Tableau de bord administrateur",
+  "description": "Ce dashboard a été réalisé dans le cadre d’un test technique visant à concevoir une interface moderne pour afficher différentes statistiques.",
+  "results": "Une interface responsive et fonctionnelle permettant de consulter clairement les indicateurs utiles à la gestion quotidienne.",
+  "tools": "React.js, Tailwind CSS, Recharts, Lucide React"
+},
+"fecacfop": {
+  "title": "Stage – Plateforme web FECACFOP",
+  "description": "Lors de mon stage à la FECACFOP, j’ai développé une plateforme web destinée à centraliser les formations professionnelles et les offres d’emploi.",
+  "results": "Une première version moderne et fonctionnelle de la plateforme réalisée avant la mise en pause du projet.",
+  "tools": ["PHP", "MySQL", "HTML", "CSS"]
+},
+
+"javaDesktop": {
+  "title": "Stage – Application desktop Java",
+  "description": "Lors de mon stage à l’HGOPED, j’ai conçu une application desktop pour faciliter la gestion des informations liées aux stagiaires.",
+  "results": "Une application desktop moderne et opérationnelle permettant une gestion claire et structurée des données des stagiaires.",
+  "tools": ["Java", "NetBeans", "MySQL"]
+},
+
 
     "salons": {
       "title": "Campagnes visuelles – Salons & couturière",
@@ -274,6 +282,12 @@
         "date": "Juillet - Septembre 2026",
         "description": "Encadrement des apprenants dans l’initiation à l’informatique, la bureautique et le design graphique. Formation pratique en maintenance informatique pour développer leur autonomie technique et renforcer leurs compétences numériques."
       },
+     "studio111": {
+        "title": "Développeur Frontend – Site vitrine 111Studio",
+        "place": "Projet freelance – 111Studio",
+        "date": "Mars - Juin 2026",
+        "description": "Conception et développement du site vitrine de 111Studio pour présenter son univers et ses services autour de la photographie de mariage. Projet fonctionnel et déployé, actuellement en pause en attente de finalisation avec le client."
+      },
 
       "etechnology": {
         "title": "Structure en ligne E-Technology - Projets personnels",
@@ -297,14 +311,12 @@
         "description": "Conception d’un portfolio de démonstration permettant aux photographes d’exposer leurs galeries en ligne de manière professionnelle. Le portfolio met en avant leurs compétences et offre aux clients la possibilité de les contacter directement via la plateforme."
       },
 
-      "digitalMarketing": {
-          "title": "Portfolio marketing digital",
-          "place": "Structure en ligne E-Technology",
-          "date": "Février - Juin 2026",
-          "description": "Réalisation d’un portfolio moderne pour une cliente en marketing digital. Le projet est en ligne et accessible suite au règlement effectué."
-        },
-
-
+    "digitalMarketing": {
+      "title": "Portfolio marketing digital – Freelance",
+      "place": "Projet freelance – E-Technology",
+      "date": "Février - Juin 2026",
+      "description": "Conception et développement d’un portfolio moderne pour une cliente en marketing digital. Projet déployé et accessible en ligne suite au règlement effectué."
+    },
       "imageCompressor": {
         "title": "Application frontend de conversion et compression d’images",
         "place": "Entreprise en ligne",

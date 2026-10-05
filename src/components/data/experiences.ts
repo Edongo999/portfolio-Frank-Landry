@@ -3,6 +3,7 @@ import {
   FaBriefcase,
   FaRocket,
   FaChalkboardTeacher,
+  FaLaptopCode,
 } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
 
@@ -25,6 +26,15 @@ export const experiences: Experience[] = [
     descKey: 'experience.items.trainer.description',
     icon: FaChalkboardTeacher,
     tech: ['Pack Office', 'Photoshop', 'Maintenance PC'],
+  },
+  {
+    type: 'formation', // ou 'projet' si ton composant ne gère pas 'experience'
+    titleKey: 'experience.items.studio111.title',
+    placeKey: 'experience.items.studio111.place',
+    dateKey: 'experience.items.studio111.date',
+    descKey: 'experience.items.studio111.description',
+    icon: FaLaptopCode,
+    tech: ['React.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
   },
 
   {
