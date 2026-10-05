@@ -282,24 +282,30 @@
         "date": "Juillet - Septembre 2026",
         "description": "Encadrement des apprenants dans l’initiation à l’informatique, la bureautique et le design graphique. Formation pratique en maintenance informatique pour développer leur autonomie technique et renforcer leurs compétences numériques."
       },
+
      "studio111": {
         "title": "Développeur Frontend – Site vitrine 111Studio",
         "place": "Projet freelance – 111Studio",
-        "date": "Mars - Juin 2026",
+        "date": "2026",
         "description": "Conception et développement du site vitrine de 111Studio pour présenter son univers et ses services autour de la photographie de mariage. Projet fonctionnel et déployé, actuellement en pause en attente de finalisation avec le client."
       },
-
+      "portfolioRefonte": {
+        "title": "Développeur Fullstack – Refonte portfolio premium",
+        "place": "Projet personnel",
+        "date": "2026",
+        "description": "J’ai conçu et développé ce portfolio comme une vitrine moderne pour présenter mon parcours, mes compétences et mes réalisations numériques. Cette refonte m’a permis de mettre en œuvre une architecture complète combinant frontend et backend, d’intégrer un blog multilingue, des animations avancées et une gestion de contenu personnalisée. Le projet est déployé en ligne avec un frontend hébergé sur Vercel et un backend connecté à Laravel/Supabase."
+      },
       "etechnology": {
         "title": "Structure en ligne E-Technology - Projets personnels",
         "place": "Projets personnels",
-        "date": "Février - Juin 2026",
+        "date": "2026",
         "description": "Projet personnel : création d’une structure en ligne pour simuler un environnement professionnel et renforcer mes compétences en développement web et design. Tous les projets sont hébergés sur Vercel."
       },
 
       "companyWebsite": {
         "title": "Site web vitrine de l’entreprise en ligne",
         "place": "Entreprise en ligne E-Technology",
-        "date": "Février 2026 - Juin 2026 (en cours)",
+        "date": "2026 (en cours)",
         "description": "Conception de la maquette et développement du site vitrine avec intégration d'une base de données Supabase. Projet en cours de réalisation, incluant la mise en place d'une interface moderne et responsive."
       },
 
@@ -307,20 +313,20 @@
       "photographerPortfolio": {
         "title": "Portfolio démonstratif pour photographes",
         "place": "Entreprise en ligne E-Technology",
-        "date": "Février - Juin 2026",
+        "date": "2026",
         "description": "Conception d’un portfolio de démonstration permettant aux photographes d’exposer leurs galeries en ligne de manière professionnelle. Le portfolio met en avant leurs compétences et offre aux clients la possibilité de les contacter directement via la plateforme."
       },
 
     "digitalMarketing": {
       "title": "Portfolio marketing digital – Freelance",
       "place": "Projet freelance – E-Technology",
-      "date": "Février - Juin 2026",
+      "date": "2026",
       "description": "Conception et développement d’un portfolio moderne pour une cliente en marketing digital. Projet déployé et accessible en ligne suite au règlement effectué."
     },
       "imageCompressor": {
         "title": "Application frontend de conversion et compression d’images",
         "place": "Entreprise en ligne",
-        "date": "Février - Juin 2026",
+        "date": "2026",
         "description": "Développement d’une application 100 % frontend permettant de convertir, compresser et optimiser les images directement depuis le navigateur."
       },
 

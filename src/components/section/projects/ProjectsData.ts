@@ -38,7 +38,7 @@ export const useProjectsData = (): Project[] => {
         { type: 'image', src: '/images/maquette/maquette7.webp' },
         { type: 'image', src: '/images/maquette/maquette8.webp' },
       ],
-      link: 'https://ton-site-web.com',
+
       category: 'Développement Web',
       cardId: 'site-virtuel',
     },

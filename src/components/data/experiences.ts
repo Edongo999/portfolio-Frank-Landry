@@ -36,6 +36,22 @@ export const experiences: Experience[] = [
     icon: FaLaptopCode,
     tech: ['React.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
   },
+  {
+    type: 'projet', // ou 'experience' si tu veux le mettre comme étape clé
+    titleKey: 'experience.items.portfolioRefonte.title',
+    placeKey: 'experience.items.portfolioRefonte.place',
+    dateKey: 'experience.items.portfolioRefonte.date',
+    descKey: 'experience.items.portfolioRefonte.description',
+    icon: FaLaptopCode,
+    tech: [
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Laravel',
+      'Supabase',
+      'Vercel',
+    ],
+  },
 
   {
     type: 'projet',

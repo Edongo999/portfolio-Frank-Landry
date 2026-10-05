@@ -287,15 +287,20 @@
       "studio111": {
         "title": "Frontend Developer – 111Studio Showcase Website",
         "place": "Freelance Project – 111Studio",
-        "date": "March - June 2026",
+        "date": "2026",
         "description": "Design and development of the 111Studio showcase website to present its universe and services around wedding photography. The project is functional and deployed, currently on hold awaiting finalization with the client."
       },
 
-
+      "portfolioRefonte": {
+        "title": "Fullstack Developer – Premium Portfolio Redesign",
+        "place": "Personal Project",
+        "date": "2026",
+        "description": "I designed and developed this portfolio as a modern showcase to present my journey, skills and digital achievements. This redesign allowed me to implement a complete architecture combining frontend and backend, integrate a multilingual blog, advanced animations and a customized content management system. The project is deployed online with the frontend hosted on Vercel and the backend connected to Laravel/Supabase."
+      },
      "etechnology": {
           "title": "Online Structure E-Technology - Personal Projects",
           "place": "Personal Projects",
-          "date": "February - June 2026",
+          "date": "2026",
           "description": "Personal project: creation of an online structure to simulate a professional environment and strengthen my skills in web development and design. All projects are hosted on Vercel."
         },
 
@@ -303,27 +308,27 @@
     "companyWebsite": {
         "title": "Corporate Website Showcase",
         "place": "E-Technology Online Company",
-        "date": "February 2026 - June 2026 (ongoing)",
+        "date": "2026",
         "description": "Design and development of the corporate showcase website with Supabase database integration. The project is currently in progress, featuring the implementation of a modern, responsive interface."
       },
 
       "photographerPortfolio": {
         "title": "Demonstration Portfolio for Photographers",
         "place": "E-Technology Online Company",
-        "date": "February - June 2026",
+        "date": "2026",
         "description": "Design of a demonstration portfolio allowing photographers to professionally showcase their galleries online. The portfolio highlights their skills and allows clients to contact them directly through the platform."
       },
         "digitalMarketing": {
           "title": "Digital Marketing Portfolio – Freelance",
           "place": "Freelance Project – E-Technology",
-          "date": "February - June 2026",
+          "date": "2026",
           "description": "Design and development of a modern portfolio for a digital marketing client. The project was deployed and made accessible online after payment was completed."
         },
 
       "imageCompressor": {
         "title": "Frontend Image Conversion & Compression Application",
         "place": "Online Company",
-        "date": "February - June 2026",
+        "date": "2026",
         "description": "Development of a 100% frontend application allowing users to convert, compress and optimize images directly from their browser."
       },
 
