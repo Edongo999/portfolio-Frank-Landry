@@ -9,6 +9,7 @@ import WhatsAppFloatingButton from '@/components/ui/WhatsAppFloatingButton';
 import ScrollToTop from './components/pages/ScrollToTop';
 import CustomCursor from './components/layout/common/CustomCursor';
 import PageLoader from './components/loaders/PageLoader';
+import { Analytics } from '@vercel/analytics/react';
 
 import {
   PageTransitionProvider,
@@ -48,6 +49,7 @@ function App() {
       <PageTransitionProvider>
         <AppContent />
       </PageTransitionProvider>
+      <Analytics />
     </Router>
   );
 }
