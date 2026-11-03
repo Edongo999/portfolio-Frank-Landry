@@ -5,6 +5,26 @@ export const useProjectsData = (): Project[] => {
     // DÉVELOPPEMENT WEB
     // =====================================================
     {
+      title: 'projects.items.simonDupong.title',
+      description: 'projects.items.simonDupong.description',
+      results: 'projects.items.simonDupong.results',
+
+      tools: [
+        'React.js',
+        'TypeScript',
+        'Tailwind CSS',
+        'Three.js',
+        'Framer Motion',
+        'i18next',
+        'Vercel',
+      ],
+      link: 'https://simon-dupong.vercel.app',
+      medias: [{ type: 'video', src: '/images/simon/simonDupong.mp4' }],
+
+      category: 'Développement Web',
+      cardId: 'simon-dupong-1',
+    },
+    {
       title: 'projects.items.portfolioRefonte.title',
       description: 'projects.items.portfolioRefonte.description',
       results: 'projects.items.portfolioRefonte.results',

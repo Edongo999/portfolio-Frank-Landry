@@ -16,7 +16,7 @@ export default function Navbar() {
 
   /*
    * ============================================================
-   * 🎨 NAVBAR PREMIUM
+   *  NAVBAR PREMIUM
    *
    * En haut :
    * → transparente

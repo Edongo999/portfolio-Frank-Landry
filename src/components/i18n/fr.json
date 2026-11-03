@@ -138,6 +138,12 @@
   "results": "Un portfolio professionnel et responsive intégrant un blog, le multilingue, des animations et une gestion de contenu personnalisée.",
   "tools": ["React.js", "TypeScript", "Tailwind CSS", "Laravel", "Supabase", "Vercel"]
 },
+"simonDupong": {
+  "title": "Site institutionnel – Simon Dupong",
+  "description": "Ce site institutionnel met en valeur le parcours, les engagements et les réalisations de Simon Dupong à travers une présentation moderne et structurée.",
+  "results": "Un site professionnel et responsive intégrant le multilingue, des animations interactives, une galerie et une navigation fluide.",
+  "tools": ["React.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion", "i18next", "Vercel"]
+},
 
 "siteVirtuel": {
   "title": "E-Technology – Site vitrine",
