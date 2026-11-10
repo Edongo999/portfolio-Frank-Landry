@@ -19,7 +19,12 @@ export const useProjectsData = (): Project[] => {
         'Vercel',
       ],
       link: 'https://simon-dupong.vercel.app',
-      medias: [{ type: 'video', src: '/images/simon/simonDupong.mp4' }],
+      medias: [
+        {
+          type: 'video',
+          src: 'https://pndvshlhovmciipvzbup.supabase.co/storage/v1/object/public/portfolio-videos/1102.mp4',
+        },
+      ],
 
       category: 'Développement Web',
       cardId: 'simon-dupong-1',
@@ -41,7 +46,6 @@ export const useProjectsData = (): Project[] => {
       category: 'Développement Web',
       cardId: 'portfolio-1',
     },
-
     {
       title: 'projects.items.siteVirtuel.title',
       description: 'projects.items.siteVirtuel.description',
