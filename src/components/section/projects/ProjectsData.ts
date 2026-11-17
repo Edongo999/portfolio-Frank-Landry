@@ -18,7 +18,7 @@ export const useProjectsData = (): Project[] => {
         'i18next',
         'Vercel',
       ],
-      link: 'https://simon-dupong.vercel.app',
+      link: 'https://simon-landing-page.vercel.app',
       medias: [
         {
           type: 'video',
