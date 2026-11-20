@@ -28,6 +28,13 @@ export const skills: Skill[] = [
     desc: 'skills.items.react',
   },
   {
+    name: 'Next.js',
+    category: 'frontend',
+    icon: 'https://cdn.simpleicons.org/nextdotjs/FFFFFF',
+    level: 90,
+    desc: 'skills.items.next',
+  },
+  {
     name: 'TypeScript',
     category: 'frontend',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',

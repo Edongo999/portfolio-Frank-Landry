@@ -87,6 +87,7 @@
   "html": "Je l’utilise pour structurer mes pages et organiser le contenu des interfaces.",
   "css": "Je l’utilise pour créer des interfaces modernes et responsives.",
   "react": "Je l’utilise pour développer des interfaces dynamiques et interactives.",
+ "next": "Je l’utilise pour développer des interfaces web optimisées.",
   "typescript": "Je l’utilise pour sécuriser mon code et fiabiliser mes applications React.",
   "tailwind": "Je l’utilise pour concevoir rapidement des interfaces responsives.",
   "php": "Je l’utilise pour développer la logique backend et les fonctionnalités serveur.",
